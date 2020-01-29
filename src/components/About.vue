@@ -23,14 +23,14 @@ export default {
 
 <style>
   #bio-wrapper {
-    margin-top: 100px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
   }
   #pic {
-    height: 175px;
-    width: 175px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     display: block;
     margin-left: auto;

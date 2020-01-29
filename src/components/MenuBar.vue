@@ -2,19 +2,13 @@
   <div>
     <div id="menu-wrapper">
       <div class="menu-option">
-        <p>
-        About
-        </p>
+        <p>About</p>
       </div>
       <div class="menu-option">
-        <p>
-        Portfolio
-        </p>
+        <p>Portfolio</p>
       </div>
       <div class="menu-option">
-        <p>
-        Contact
-        </p>
+        <p>Contact</p>
       </div>
     </div>
   </div>
