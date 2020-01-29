@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <MenuBar/>
+    <About/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import About from './components/About.vue'
+import MenuBar from './components/MenuBar.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MenuBar,
+    About
   }
 }
 </script>
 
 <style>
+  body {
+    background-image: url('./images/oakland-sunset.jpg');
+    background-position: center top;
+  }
 </style>
