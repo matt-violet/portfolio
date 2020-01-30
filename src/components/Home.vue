@@ -28,9 +28,10 @@ export default {
     width: 250px;
   }
   #pic {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
+    border: 1px solid;
     display: block;
     margin-left: auto;
     margin-right: auto;

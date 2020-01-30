@@ -1,22 +1,22 @@
 <template>
   <div id="menu-wrapper">
     <div class="menu-option">
-      <p v-on:click="$emit('menuClick', 'home')">
+      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
         Home
       </p>
     </div>
     <div class="menu-option">
-      <p v-on:click="$emit('menuClick', 'about')">
+      <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
         About
       </p>
     </div>
     <div class="menu-option">
-      <p v-on:click="$emit('menuClick', 'portfolio')">
+      <p v-on:click="$emit('onMenuClick', 'portfolio')" v-bind:class="currentPage === 'portfolio' ? 'currentPg' : ''">
         Portfolio
       </p>
     </div>
     <div class="menu-option">
-      <p v-on:click="$emit('menuClick', 'contact')">
+      <p v-on:click="$emit('onMenuClick', 'contact')" v-bind:class="currentPage === 'contact' ? 'currentPg' : ''">
         Contact
       </p>
     </div>
@@ -27,7 +27,18 @@
 export default {
   name: 'MenuBar',
   props: {
-    menuClick: { type: Function },
+    onMenuClick: { type: Function },
+    currentPg: { type: String }
+  },
+  data() {
+    return {
+      currentPage: 'home'
+    }
+  },
+  watch: {
+    currentPg: function() {
+      this.$data.currentPage = this.currentPg
+    }
   }
 }
 </script>
@@ -54,6 +65,9 @@ export default {
   .menu-option:hover {
     color: slateblue;
     cursor: pointer;
+  }
+  .currentPg {
+    color: slateblue;
   }
   @keyframes slideRight {
     from { transform: translateX(-1200px); }

@@ -1,5 +1,14 @@
 <template>
-  <div id="bg">
+  <div class="about-wrapper">
+    <div class="split left-side">
+      <div class="centered">
+        <img :src="aboutPic" class="aboutPic"/>
+      </div>
+    </div>
+    <div class="split right-side">
+      <div class="centered">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -8,19 +17,39 @@ export default {
   name: 'About',
   data() {
     return {
-      bgPic: require('../images/matt-taj.jpg')
+      aboutPic: require('../images/matt-taj.jpg')
     }
   }
 }
 </script>
 
 <style scoped>
-  #bg {
-    height: 500px;
-    width: 500px;
-    background-color: green;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+  }
+  .left-side {
+    left: 0;
+    background-color: gainsboro;
+  }
+  .right-side {
+    right: 0;
+    background-color: gray;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 200px;
+    height: 200px;
+  }
+  .aboutPic {
+    width: 100%;
   }
 </style>

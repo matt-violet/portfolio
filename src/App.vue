@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <MenuBar class="components menu" @menuClick="menuClick"/>
+    <MenuBar class="components menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <Home class="components about" v-if="home"/>
     <About v-if="about"/>
-    <div v-if="home" class="background img1"/>
   </div>
 </template>
 
@@ -21,6 +20,7 @@ export default {
   },
   data() {
     return {
+      currentPg: '',
       home: true,
       about: false,
       portfolio: false,
@@ -28,12 +28,13 @@ export default {
     }
   },
   methods: {
-    menuClick(option) {
+    onMenuClick(option) {
       this.home = false;
       this.about = false;
       this.portfolio = false;
       this.contact = false;
       this[option] = true;
+      this.currentPg = option;
     }
   }
 }
@@ -56,17 +57,5 @@ export default {
   .about {
     position: inline-block;
     margin-top: 120px;
-  }
-  .background {
-    z-index: 1;
-    height: 1000px;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .img1 {
-    background-image: url('./images/oakland-sunset.jpg');
-    height: 900px;
-    opacity: .75;
   }
 </style>
