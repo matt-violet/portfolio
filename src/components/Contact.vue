@@ -1,7 +1,6 @@
 <template>
   <div class="contact-wrapper">
     <div class='centered'>
-      <h1>Contact</h1>
       <p>{{ email }}</p>
       <p>{{ github }}</p>
       <p>{{ linkedin }}</p>
@@ -23,9 +22,6 @@ export default {
 </script>
 
 <style scoped>
-  h1 {
-    font-size: 40px;
-  }
   p {
     font-size: 14px;
     line-height: normal;

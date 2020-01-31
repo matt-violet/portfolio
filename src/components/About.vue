@@ -1,11 +1,11 @@
 <template>
   <div class="about-wrapper">
-    <div class="left outer">
+    <div class="leftt outer">
       <div class="inner-left">
         <img :src="aboutPic" class="aboutPic"/>
       </div>
     </div>
-    <div class="right outer">
+    <div class="rightt outer">
       <div class="inner-right">
         <h1>about me</h1>
         <p>
@@ -25,8 +25,7 @@ export default {
   name: 'About',
   data() {
     return {
-      aboutPic: require('../images/matt-violet.jpg'),
-      bio: ''
+      aboutPic: require('../images/matt-taj.jpg'),
     }
   }
 }
@@ -34,8 +33,9 @@ export default {
 
 <style scoped>
   h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin: 0;
+    text-align: left;
   }
   p {
     font-size: 14px;
@@ -50,20 +50,18 @@ export default {
     bottom: 0;
     overflow-x: hidden;
   }
-  .left {
+  .leftt {
     left: 0;
-    background-color: gainsboro;
   }
-  .right {
+  .rightt {
     right: 0;
-    background-color: gainsboro;
   }
   .inner-left {
     bottom: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-45%, -80%);
+    transform: translate(-50%, -80%);
     text-align: left;
     width: 80%;
   }
@@ -72,12 +70,13 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-90%, -85%);
+    transform: translate(-85%, -85%);
     text-align: left;
   }
   .aboutPic {
-    width: 300px;
+    width: 350px;
     float: right;
     border: 1px solid;
+    transform: rotate(6deg);
   }
 </style>

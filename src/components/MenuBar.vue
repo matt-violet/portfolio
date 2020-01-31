@@ -52,25 +52,25 @@ export default {
   }
   .menu-option {
     animation-duration: 1s;
-    animation-name: slideRight;
     color: white;
     display: inline-block;
-    width: 100px;
     height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   p {
     line-height: 40px;
     font-size: 20px;
   }
   .menu-option:hover {
-    color: slateblue;
     cursor: pointer;
+    transform: scale(1.2);
   }
   .currentPg {
     color: slateblue;
   }
   @keyframes slideRight {
-    from { transform: translateX(-1200px); }
+    from { transform: translateX(-900px); }
     to { transform: translateX(0px); }
   }
 </style>

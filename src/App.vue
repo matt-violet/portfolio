@@ -5,6 +5,7 @@
     <About v-if="about"/>
     <Portfolio v-if='portfolio'/>
     <Contact v-if='contact'/>
+    <img src="./images/oakland-sunset.jpg" class="oakland-bg"/>
   </div>
 </template>
 
@@ -52,7 +53,13 @@ export default {
     width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gainsboro;
+    /* background-color: black; */
+  }
+  .oakland-bg {
+    opacity: .85;
+    background-position: right top;
+    position: fixed;
+    z-index: -1;
   }
   .components {
     width: 100%;
