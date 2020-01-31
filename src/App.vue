@@ -3,6 +3,7 @@
     <MenuBar class="components menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <Home class="components about" v-if="home"/>
     <About v-if="about"/>
+    <Portfolio v-if='portfolio'/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
 import About from './components/About.vue'
+import Portfolio from './components/Portfolio.vue'
 
 export default {
   name: 'app',
   components: {
     MenuBar,
     Home,
-    About
+    About,
+    Portfolio
   },
   data() {
     return {
