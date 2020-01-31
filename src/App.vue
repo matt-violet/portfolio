@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <MenuBar class="components menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
-    <Home class="components about" v-if="home"/>
+    <Home class="components home" v-if="home"/>
     <About v-if="about"/>
     <Portfolio v-if='portfolio'/>
+    <Contact v-if='contact'/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
 import About from './components/About.vue'
 import Portfolio from './components/Portfolio.vue'
+import Contact from './components/Contact.vue'
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
     MenuBar,
     Home,
     About,
-    Portfolio
+    Portfolio,
+    Contact
   },
   data() {
     return {
@@ -58,7 +61,7 @@ export default {
     transform: translate(-50%);
     position: fixed;
   }
-  .about {
+  .home {
     position: inline-block;
     margin-top: 120px;
   }

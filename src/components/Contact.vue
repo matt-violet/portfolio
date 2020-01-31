@@ -1,0 +1,43 @@
+<template>
+  <div class="contact-wrapper">
+    <div class='centered'>
+      <h1>Contact</h1>
+      <p>{{ email }}</p>
+      <p>{{ github }}</p>
+      <p>{{ linkedin }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Contact',
+  data() {
+    return {
+      email: 'mattviolet@gmail.com',
+      github: 'https://github.com/matt-violet',
+      linkedin: 'https://www.linkedin.com/in/mattviolet/'
+    }
+  }
+}
+</script>
+
+<style scoped>
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .contact-wrapper {
+    margin-top: 150px;
+    position: fixed;
+    width: 100%;
+  }
+  .centered {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

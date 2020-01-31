@@ -1,5 +1,5 @@
 <template>
-  <div id='bio-wrapper'>
+  <div id='home-wrapper'>
     <img :src='pic' id='pic'/>
     <div id='titleSection'>
       <h1 class='words'>{{ name }}</h1>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-  #bio-wrapper {
+  #home-wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 250px;
