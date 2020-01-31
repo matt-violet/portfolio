@@ -1,12 +1,20 @@
 <template>
   <div class="about-wrapper">
-    <div class="split left-side">
-      <div class="centered">
+    <div class="left outer">
+      <div class="inner-left">
         <img :src="aboutPic" class="aboutPic"/>
       </div>
     </div>
-    <div class="split right-side">
-      <div class="centered">
+    <div class="right outer">
+      <div class="inner-right">
+        <h1>about me</h1>
+        <p>
+          Software Engineer with a background in marketing/communications and graphic design. My experience includes building/maintaining full stack web applications through agile workflow, test driven development, and continuous integration.
+          <br><br>
+          My passion for software engineering comes from the role technological innovation plays in my own life, as someone who uses an insulin pump integrated with continuous glucose monitoring to manage type one diabetes. I have designed, optimized, and deployed complete systems using technologies such as HTML5, CSS, JavaScript, React, Vue, JQuery, Node.js, Express, MongoDB, PostgreSQL, MySQL, GraphQL, Cassandra, Jest/Enzyme, Mocha/Chai, Webpack, Amazon Web Services, and more. I look forward to building responsive, dynamic applications that make a meaningful difference in people's lives.
+          <br><br>
+          When not coding I can be found making music, sketching, and hanging out in my hometown of Oakland, CA. Check out my Github at https://github.com/matt-violet or shoot me an email at mattviolet@gmail.com.
+        </p>
       </div>
     </div>
   </div>
@@ -17,39 +25,59 @@ export default {
   name: 'About',
   data() {
     return {
-      aboutPic: require('../images/matt-taj.jpg')
+      aboutPic: require('../images/matt-violet.jpg'),
+      bio: ''
     }
   }
 }
 </script>
 
 <style scoped>
-  .split {
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+  p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .outer {
+    margin-top: 150px;
     height: 100%;
     width: 50%;
     position: fixed;
     z-index: 1;
-    top: 0;
+    bottom: 0;
     overflow-x: hidden;
   }
-  .left-side {
+  .left {
     left: 0;
     background-color: gainsboro;
   }
-  .right-side {
+  .right {
     right: 0;
-    background-color: gray;
+    background-color: gainsboro;
   }
-  .centered {
+  .inner-left {
+    bottom: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 200px;
-    height: 200px;
+    transform: translate(-45%, -80%);
+    text-align: left;
+    width: 80%;
+  }
+  .inner-right {
+    bottom: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -85%);
+    text-align: left;
   }
   .aboutPic {
-    width: 100%;
+    width: 300px;
+    float: right;
+    border: 1px solid;
   }
 </style>

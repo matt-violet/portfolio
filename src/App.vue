@@ -46,6 +46,7 @@ export default {
     width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: gainsboro;
   }
   .components {
     width: 100%;
