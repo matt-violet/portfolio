@@ -3,7 +3,9 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div v-if="project" class="modal-container">
-
+          <div class="img-div">
+            <img :src="project.image" class='img'/>
+          </div>
           <div class="modal-header">
             <slot name="header">
               {{ project.title }}
@@ -12,13 +14,13 @@
 
           <div class="modal-body">
             <slot name="body">
-              default body
+              {{ project.details }}
             </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
+              {{ project.stack }}
               <button class="modal-default-button" @click="$emit('viewProjectDetails')">
                 OK
               </button>
@@ -33,15 +35,32 @@
 <script>
 export default {
   name: "ProjectDetails",
+  props: {
+    project: { type: Object }
+  },
   data() {
     return {
-      project: {},
+      clickedProject: {},
+    }
+  },
+  mounted: {
+    setProject: function() {
+      this.$data.clickedProject = this.project;
     }
   }
 }
 </script>
 
 <style scoped>
+  .img-div {
+      width: 100%;
+      height: 150px;
+      border: 1px solid black;
+    }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
   .modal-mask {
   position: fixed;
   z-index: 9998;

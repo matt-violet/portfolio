@@ -32,7 +32,6 @@
         </div>
         <h2>{{ project.title }}</h2>
           <p>{{ project.description }}</p>
-          <p>{{ project.stack }}</p>
       </div>
     </div>
   </div>
@@ -48,6 +47,7 @@ export default {
           id: 1,
           title: 'Connect Four',
           description: 'Single Page Connect Four Game',
+          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
           stack: 'HTML, CSS, Javascript, React',
           image: require('../images/connect-four.png')
         },
@@ -55,6 +55,7 @@ export default {
           id: 2,
           title: 'My Bolus',
           description: 'Insulin dose calculator for diabetics',
+          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
           image: require('../images/bolus-calculator.png')
         },
@@ -62,6 +63,7 @@ export default {
           id: 3,
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
+          details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
           stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
           image: require('../images/open-restaurant.png')
         },
@@ -69,6 +71,7 @@ export default {
           id: 4,
           title: 'Social Inn',
           description: 'Scaled back end of housing app',
+          details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
           image: require('../images/social-inn.png')
         }
@@ -134,7 +137,6 @@ export default {
   .project {
     border: 1px solid;
     width: 300px;
-    height: 300px;
     background-color: white; opacity: .85;
     margin: 20px;
     padding: 10px;
