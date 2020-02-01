@@ -3,8 +3,9 @@
     <MenuBar class="components menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <Home class="components home" v-if="home"/>
     <About v-if="about"/>
-    <Portfolio v-if='portfolio'/>
-    <Contact v-if='contact'/>
+    <Portfolio v-if="portfolio" @viewProjectDetails="viewProjectDetails"/>
+    <Contact v-if="contact"/>
+    <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
     <img src="./images/oakland-sunset.jpg" class="oakland-bg"/>
   </div>
 </template>
@@ -15,6 +16,7 @@ import MenuBar from './components/MenuBar.vue'
 import About from './components/About.vue'
 import Portfolio from './components/Portfolio.vue'
 import Contact from './components/Contact.vue'
+import ProjectDetails from './components/ProjectDetails.vue'
 
 export default {
   name: 'app',
@@ -23,7 +25,8 @@ export default {
     Home,
     About,
     Portfolio,
-    Contact
+    Contact,
+    ProjectDetails
   },
   data() {
     return {
@@ -31,7 +34,9 @@ export default {
       home: true,
       about: false,
       portfolio: false,
-      contact: false
+      contact: false,
+      projectDetails: false,
+      project: {},
     }
   },
   methods: {
@@ -42,6 +47,10 @@ export default {
       this.contact = false;
       this[option] = true;
       this.currentPg = option;
+    },
+    viewProjectDetails(project) {
+      this.project = project;
+      this.projectDetails = !this.projectDetails;
     }
   }
 }

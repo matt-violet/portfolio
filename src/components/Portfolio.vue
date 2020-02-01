@@ -21,7 +21,12 @@
     </table>
 
     <div class="projects-wrapper">
-      <div v-for="project in portfolio" v-bind:key="project.id" class="project">
+      <div
+        v-for="project in portfolio" 
+        v-on:click="$emit('viewProjectDetails', project)"
+        v-bind:key="project.id"
+        class="project"
+      >
         <div class="img-div">
           <img :src="project.image" class='img'/>
         </div>

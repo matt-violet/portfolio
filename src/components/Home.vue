@@ -38,7 +38,6 @@ export default {
   }
   #pic {
     height: 200px;
-    width: 200px;
     border-radius: 50%;
     border: 1px solid;
     display: block;
