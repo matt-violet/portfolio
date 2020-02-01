@@ -2,7 +2,10 @@
   <div class="contact-wrapper">
     <div class='centered'>
       <p>{{ email }}</p>
-      <p>{{ github }}</p>
+      <p>
+        <i class="devicon-github-plain colored"></i>
+        {{ github }}
+      </p>
       <p>{{ linkedin }}</p>
     </div>
   </div>
