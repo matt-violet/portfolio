@@ -4,8 +4,16 @@
     <table cellpadding="0" cellspacing="0">
       <tr cellpadding="0" cellspacing="0">
         <td>Skills:</td>
-        <td><i class="icon devicon-html5-plain-wordmark"></i></td>
-        <td><i class="icon devicon-css3-plain"></i></td>
+        <td class="icon">
+          <svg viewBox="0 0 128 128">
+            <path fill="#000000" d="M19.569 27l8.087 89.919 36.289 9.682 36.39-9.499 8.096-90.102h-88.862zm72.041 20.471l-.507 5.834-.223 2.695h-42.569l1.017 12h40.54l-.271 2.231-2.615 28.909-.192 1.69-22.79 6.134v-.005l-.027.012-22.777-5.916-1.546-17.055h11.168l.791 8.46 12.385 3.139.006-.234v.012l12.412-2.649 1.296-13.728h-38.555l-2.734-30.836-.267-3.164h55.724000000000004l-.266 2.471zM27.956 1.627h5.622v5.556h5.144v-5.556h5.623v16.822h-5.623v-5.633h-5.143v5.633h-5.623v-16.822zM51.738 7.206h-4.95v-5.579h15.525v5.579h-4.952v11.243h-5.623v-11.243zM64.777 1.627h5.862l3.607 5.911 3.603-5.911h5.865v16.822h-5.601v-8.338l-3.867 5.981h-.098l-3.87-5.981v8.338h-5.502v-16.822zM86.513 1.627h5.624v11.262h7.907v5.561h-13.531v-16.823z"></path>
+          </svg>
+        </td>
+        <td class="icon">
+          <svg viewBox="0 0 128 128">
+            <path fill="#000000" d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063 8.078-90.48h-88.66zm69.21 50.488l-2.35 21.892.009 1.875-22.539 6.295v.001l-.018.015-22.719-6.225-1.537-17.341h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495 1.308-14.549h-25.907000000000004l-.222-2.355-.506-5.647-.265-2.998h27.886000000000003l1.014-11h-42.473l-.223-2.589-.506-6.03-.265-3.381h55.597l-.267 3.334-2.685 30.154"></path><path fill="#000000" d="M89 14.374l-7.149-8.374h7.149v-5h-16v4.363l8.39 7.637h-8.39v5h16zM70 14.374l-6.807-8.374h6.807v-5h-15v4.363l7.733 7.637h-7.733v5h15zM52 13h-8v-7h8v-5h-14v17h14z"></path>
+          </svg>
+        </td>
         <td><i class="icon devicon-javascript-plain"></i></td>
         <td><i class="icon devicon-react-original-wordmark"></i></td>
         <td><i class="icon devicon-vuejs-plain-wordmark"></i></td>
@@ -83,21 +91,23 @@ export default {
 
 <style scoped>
   h2 {
-    margin: 10px 0px 10px 0px;
+    margin: 5px 0px 5px 0px;
     color: black;
   }
   p {
     font-size: 14px;
     line-height: normal;
     color: black;
+    margin: 0;
+  }
+  tr {
+    height: 30px;
   }
   td {
     border-spacing: 0;
-    padding: 0;
-    margin: 0;
     text-align: center;
-    height: 70px;
-    /* border: 1px solid black; */
+    height: 30px;
+    width: 30px;
   }
   table {
     margin-left: auto;
@@ -105,18 +115,11 @@ export default {
     border-collapse: collapse;
     left: 0;
     right: 0;
-    width: 900px;
-    height: 70px;
   }
   .icon {
-    height: 100%;
-    width: 100%;
-    border: .5px solid;
     background-color: white;
     border-radius: 50%;
     padding: 10px;
-    left: 0;
-    right: 0;
   }
   .outer-wrapper {
     margin-top: 125px;
@@ -152,10 +155,11 @@ export default {
   .img-div {
     width: 100%;
     height: 150px;
+    overflow: hidden;
     border: 1px solid black;
   }
   .img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 </style>

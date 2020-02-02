@@ -7,6 +7,11 @@
         {{ github }}
       </p>
       <p>{{ linkedin }}</p>
+      <a href = "mailto: abc@example.com">Send Email</a>
+      <form>
+        <label>Name</label>
+        <input type="text">
+      </form>
     </div>
   </div>
 </template>

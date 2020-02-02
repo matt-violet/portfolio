@@ -56,10 +56,11 @@ export default {
       width: 100%;
       height: 150px;
       border: 1px solid black;
+      overflow: hidden;
     }
   .img {
     width: 100%;
-    height: 100%;
+    /* height: auto; */
   }
   .modal-mask {
   position: fixed;
