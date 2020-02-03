@@ -1,9 +1,7 @@
 <template>
-  <div id="menu-wrapper">
-    <div class="menu-option">
-      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
-        Home
-      </p>
+  <div class="menu-wrapper">
+    <div class="menu-option home-btn">
+      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">Home</p>
     </div>
     <div class="menu-option">
       <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
@@ -44,7 +42,7 @@ export default {
 </script>
 
 <style>
-  #menu-wrapper {
+  .menu-wrapper {
     width: 100%;
     height: 80px;
     text-align: center;
@@ -61,6 +59,12 @@ export default {
   p {
     line-height: 40px;
     font-size: 20px;
+  }
+  .home-btn {
+    color: white;
+    float: left;
+    margin-left: 25px;
+    display: inline-block;
   }
   .menu-option:hover {
     cursor: pointer;

@@ -3,27 +3,27 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div v-if="project" class="modal-container">
+          <a class="modal-default-button" @click="$emit('viewProjectDetails')">
+            &times;
+          </a>
           <div class="img-div">
             <img :src="project.image" class='img'/>
           </div>
           <div class="modal-header">
             <slot name="header">
-              {{ project.title }}
+              <h1>{{ project.title }}</h1>
             </slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              {{ project.details }}
+              <p>{{ project.details }}</p>
             </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              {{ project.stack }}
-              <button class="modal-default-button" @click="$emit('viewProjectDetails')">
-                OK
-              </button>
+              <p>{{ project.stack }}</p>
             </slot>
           </div>
         </div>
@@ -52,15 +52,25 @@ export default {
 </script>
 
 <style scoped>
+  h1 {
+    text-align: left;
+  }
+  p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  a:hover {
+    cursor: pointer;
+  } 
   .img-div {
       width: 100%;
-      height: 150px;
+      height: 200px;
+      margin-bottom: 20px;
       border: 1px solid black;
       overflow: hidden;
     }
   .img {
     width: 100%;
-    /* height: auto; */
   }
   .modal-mask {
   position: fixed;
@@ -80,9 +90,9 @@ export default {
   }
 
   .modal-container {
-    width: 300px;
+    width: 400px;
     margin: 0px auto;
-    padding: 20px 30px;
+    padding: 10px 20px;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
@@ -92,15 +102,15 @@ export default {
 
   .modal-header h3 {
     margin-top: 0;
-    color: #42b983;
   }
 
   .modal-body {
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   .modal-default-button {
-    float: right;
+    float: left;
+    margin-bottom: 10px;
   }
 
   /*
