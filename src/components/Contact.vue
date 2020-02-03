@@ -1,18 +1,16 @@
 <template>
   <div class="contact-wrapper">
-    <div class='centered'>
-      <p>{{ email }}</p>
-      <p>
-        <i class="devicon-github-plain colored"></i>
-        {{ github }}
-      </p>
-      <p>{{ linkedin }}</p>
-      <a href = "mailto: abc@example.com">Send Email</a>
-      <form>
-        <label>Name</label>
-        <input type="text">
-      </form>
-    </div>
+    <p>{{ email }}</p>
+    <p>
+      <i class="devicon-github-plain colored"></i>
+      {{ github }}
+    </p>
+    <p>{{ linkedin }}</p>
+    <a href = "mailto: abc@example.com">Send Email</a>
+    <form>
+      <label>Name</label>
+      <input type="text">
+    </form>
   </div>
 </template>
 
@@ -35,13 +33,12 @@ export default {
     line-height: normal;
   }
   .contact-wrapper {
-    margin-top: 150px;
-    position: fixed;
-    width: 100%;
-  }
-  .centered {
-    width: 250px;
+    margin-top: 125px;
     margin-left: auto;
     margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 300px;
   }
 </style>

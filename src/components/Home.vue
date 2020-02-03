@@ -2,8 +2,8 @@
   <div id='home-wrapper'>
     <img :src='pic' id='pic'/>
     <div class='words-wrapper'>
-      <h1 class='words left'>{{ name }}</h1>
-      <h4 class='words right'>{{ title }}</h4>
+      <h1 class='words name'>{{ name }}</h1>
+      <h4 class='words title'>{{ title }}</h4>
     </div>
   </div>
 </template>
@@ -14,8 +14,8 @@ export default {
   data () {
     return {
       pic: require('../images/matt-violet.jpg'),
-      title: "Software Engineer",
-      name: "Matt Violet"
+      title: "Welcome to my page!",
+      name: "I'm Matt."
     }
   }
 }
@@ -54,11 +54,11 @@ export default {
   .words {
     margin-top: 5;
   }
-  .left {
+  .name {
     animation-duration: .75s;
     animation-name: slideLeft;
   }
-  .right {
+  .title {
     animation-duration: .75s;
     animation-name: slideRight;
   }

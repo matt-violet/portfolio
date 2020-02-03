@@ -9,7 +9,7 @@
         </td>
         <td class="about-sec-cells">
           <div class="about-text-div">
-            <h1>About Me</h1>
+            <h1 class="about-header">About Me</h1>
             <h3>I'm a web developer based in Oakland, CA.</h3>
             <p>Software Engineer with a background in marketing/communications and graphic design. My experience includes building/maintaining full stack web applications through agile workflow, test driven development, and continuous integration.</p>
           </div>
@@ -118,19 +118,23 @@ export default {
     margin: 0;
     line-height: normal;
   }
+  .about-header {
+    animation-duration: .75s;
+    animation-name: slideDown;
+  }
   .about-table {
-    margin: 25px auto 0px auto;
     width: auto;
+    animation-duration: .75s;
+    animation-name: slideRight;
   }
   .about-sec-cells {
     vertical-align: top;
     padding: 30px;
   }
   .about-wrapper {
-    margin-top: 80px;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 125px;
+    margin-left: 25px;
+    margin-right: 25px;
     left: 0;
     right: 0;
     position: absolute;
@@ -138,6 +142,8 @@ export default {
   .skills-wrapper {
     width: 800px;
     margin-top: 40px;
+    animation-duration: .75s;
+    animation-name: slideLeft;
   }
   .aboutPic {
     width: 200px;
@@ -153,5 +159,17 @@ export default {
     width: 40px;
     padding: 10px;
     background-color: white;
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-500px); }
+    to { transform: translateY(0px); }
+  }
+  @keyframes slideRight {
+    from { transform: translateX(-1000px); }
+    to { transform: translateX(0px); }
+  }
+  @keyframes slideLeft {
+    from { transform: translateX(1000px); }
+    to { transform: translateX(0px); }
   }
 </style>

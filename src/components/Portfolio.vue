@@ -1,19 +1,17 @@
 <template>
   <div class="outer-wrapper">
-    <div class="projects-wrapper">
-      <h2 class="header">Web Development Projects</h2>
-      <div
-        v-for="project in portfolio" 
-        v-on:click="$emit('viewProjectDetails', project)"
-        v-bind:key="project.id"
-        class="project"
-      >
-        <div class="img-div">
-          <img :src="project.image" class='img'/>
-        </div>
-        <h2>{{ project.title }}</h2>
-          <p>{{ project.description }}</p>
+    <h2 class="projects-header">Web Development Projects</h2>
+    <div
+      v-for="project in portfolio" 
+      v-on:click="$emit('viewProjectDetails', project)"
+      v-bind:key="project.id"
+      class="project"
+    >
+      <div class="img-div">
+        <img :src="project.image" class='img'/>
       </div>
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description }}</p>
     </div>
   </div>
 </template>
@@ -73,18 +71,21 @@ export default {
     color: black;
     margin: 0;
   }
+  .header {
+    margin-left: 20px;
+  }
   .outer-wrapper {
     margin-top: 125px;
+    margin-left: 25px;
+    margin-right: 25px;
     left: 0;
     right: 0;
-    width: 100%;
     height: 100%;
     position: absolute;
   }
-  .projects-wrapper {
-    margin-top: 25px;
-    margin-left: 25px;
-    position: absolute;
+  .projects-header {
+    animation-duration: .75s;
+    animation-name: slideDown;
   }
   .project {
     border: 1px solid;
@@ -94,6 +95,8 @@ export default {
     padding: 10px;
     float: left;
     display: inline-block;
+    animation-duration: .75s;
+    animation-name: slideLeft;
   }
   .project:hover {
     -webkit-transform: scale(1.01);
@@ -110,5 +113,13 @@ export default {
   .img {
     width: 100%;
     height: auto;
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-500px); }
+    to { transform: translateY(0px); }
+  }
+  @keyframes slideLeft {
+    from { transform: translateX(1000px); }
+    to { transform: translateX(0px); }
   }
 </style>
