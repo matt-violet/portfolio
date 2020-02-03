@@ -1,23 +1,29 @@
 <template>
   <div class="menu-wrapper">
     <div class="menu-option home-btn">
-      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">Home</p>
-    </div>
-    <div class="menu-option">
-      <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
-        About
+      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
+        Home
       </p>
     </div>
-    <div class="menu-option">
-      <p v-on:click="$emit('onMenuClick', 'portfolio')" v-bind:class="currentPage === 'portfolio' ? 'currentPg' : ''">
-        Portfolio
-      </p>
+
+    <div class="centered-menu-div">
+      <div class="menu-option">
+        <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
+          About
+        </p>
+      </div>
+      <div class="menu-option">
+        <p v-on:click="$emit('onMenuClick', 'portfolio')" v-bind:class="currentPage === 'portfolio' ? 'currentPg' : ''">
+          Portfolio
+        </p>
+      </div>
+      <div class="menu-option">
+        <p v-on:click="$emit('onMenuClick', 'contact')" v-bind:class="currentPage === 'contact' ? 'currentPg' : ''">
+          Contact
+        </p>
+      </div>
     </div>
-    <div class="menu-option">
-      <p v-on:click="$emit('onMenuClick', 'contact')" v-bind:class="currentPage === 'contact' ? 'currentPg' : ''">
-        Contact
-      </p>
-    </div>
+
   </div>
 </template>
 
@@ -43,14 +49,24 @@ export default {
 
 <style>
   .menu-wrapper {
-    width: 100%;
-    height: 80px;
+    min-width: 600px;
+    height: 70px;
+    position: absolute;
     text-align: center;
-    background-color: black;
+    background-color: slateblue;
+    border-bottom: 1px solid;
+  }
+  .centered-menu-div {
+    width: 400px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
   .menu-option {
     animation-duration: 1s;
-    color: white;
+    color: black;
     display: inline-block;
     height: 100%;
     padding-left: 25px;
@@ -61,7 +77,7 @@ export default {
     font-size: 20px;
   }
   .home-btn {
-    color: white;
+    color: black;
     float: left;
     margin-left: 25px;
     display: inline-block;
@@ -71,7 +87,7 @@ export default {
     transform: scale(1.2);
   }
   .currentPg {
-    color: slateblue;
+    color: white;
   }
   @keyframes slideRight {
     from { transform: translateX(-900px); }

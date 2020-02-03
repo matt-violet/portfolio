@@ -6,7 +6,7 @@
     <Portfolio v-if="portfolio" @viewProjectDetails="viewProjectDetails"/>
     <Contact v-if="contact"/>
     <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
-    <img src="./images/oakland-sunset.jpg" class="oakland-bg"/>
+    <!-- <img src="./images/oakland-sunset.jpg" class="oakland-bg"/> -->
   </div>
 </template>
 
@@ -62,7 +62,7 @@ export default {
     width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: black; */
+    background-color: lightgray;
   }
   .oakland-bg {
     opacity: .85;

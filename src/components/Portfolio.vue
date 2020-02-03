@@ -1,18 +1,23 @@
 <template>
   <div class="outer-wrapper">
-    <h2 class="projects-header">Web Development Projects</h2>
-    <div
-      v-for="project in portfolio" 
-      v-on:click="$emit('viewProjectDetails', project)"
-      v-bind:key="project.id"
-      class="project"
-    >
-      <div class="img-div">
-        <img :src="project.image" class='img'/>
+    <h1 class="projects-header">Software Projects</h1>
+    <div class="projects-wrapper">
+      <div
+        v-for="project in portfolio" 
+        v-on:click="$emit('viewProjectDetails', project)"
+        v-bind:key="project.id"
+        class="project"
+      >
+        <div class="img-div">
+          <img :src="project.image" class='img'/>
+        </div>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
       </div>
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
     </div>
+    <a class="resume-link" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
+      View Resume
+    </a>
   </div>
 </template>
 
@@ -22,22 +27,6 @@ export default {
   data() {
     return {
       portfolio: {
-        connect4: {
-          id: 1,
-          title: 'Connect Four',
-          description: 'Single Page Connect Four Game',
-          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
-          stack: 'HTML, CSS, Javascript, React',
-          image: require('../images/connect-four.png')
-        },
-        MyBolus: {
-          id: 2,
-          title: 'My Bolus',
-          description: 'Insulin dose calculator for diabetics',
-          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
-          stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          image: require('../images/bolus-calculator.png')
-        },
         OpenRestaurant: {
           id: 3,
           title: 'Open Restaurant',
@@ -53,6 +42,22 @@ export default {
           details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
           image: require('../images/social-inn.png')
+        },
+        connect4: {
+          id: 1,
+          title: 'Connect Four',
+          description: 'Single Page Connect Four Game',
+          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
+          stack: 'HTML, CSS, Javascript, React',
+          image: require('../images/connect-four.png')
+        },
+        MyBolus: {
+          id: 2,
+          title: 'My Bolus',
+          description: 'Insulin dose calculator for diabetics',
+          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
+          stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
+          image: require('../images/bolus-calculator.png')
         }
       }
     }
@@ -71,26 +76,30 @@ export default {
     color: black;
     margin: 0;
   }
-  .header {
-    margin-left: 20px;
-  }
   .outer-wrapper {
     margin-top: 125px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     left: 0;
     right: 0;
     height: 100%;
     position: absolute;
   }
   .projects-header {
+    text-align: left;
+    font-size: 50px;
     animation-duration: .75s;
     animation-name: slideDown;
+  }
+  .projects-wrapper {
+    margin-left: 50px;
+    margin-bottom: 50px;
   }
   .project {
     border: 1px solid;
     width: 300px;
-    background-color: white;
+    background-color: lavender;
     margin: 20px;
     padding: 10px;
     float: left;
@@ -99,9 +108,7 @@ export default {
     animation-name: slideLeft;
   }
   .project:hover {
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    transform: scale(1.03);
     cursor: pointer;
   }
   .img-div {
@@ -113,6 +120,10 @@ export default {
   .img {
     width: 100%;
     height: auto;
+  }
+  .resume-link {
+    display: inline-block;
+    margin-top: 50px;
   }
   @keyframes slideDown {
     from { transform: translateY(-500px); }
