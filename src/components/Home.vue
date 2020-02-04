@@ -13,7 +13,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      pic: require('../images/matt-violet.jpg'),
+      pic: require('../images/matt-violet.png'),
       line1: "Welcome!",
       line2: "I'm Matt. Have a look around!",
     }
@@ -39,8 +39,8 @@ export default {
   }
   #pic {
     height: 200px;
-    border-radius: 50%;
-    border: 1px solid;
+    /* border-radius: 50%; */
+    /* border: 1px solid; */
     display: block;
     margin-left: auto;
     margin-right: auto;
