@@ -115,6 +115,11 @@
         </tr>
       </table>
     </div>
+
+    <div class="random-wrapper">
+      <h2 class="header">Random Facts</h2>
+    </div>
+
   </div>
 </template>
 
@@ -151,7 +156,6 @@ export default {
     width: 100%;
   }
   .about-wrapper {
-    margin-top: 125px;
     margin-left: 25px;
     margin-right: 25px;
     left: 0;
@@ -164,6 +168,7 @@ export default {
   }
   .about-table {
     width: 800px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     animation-duration: .75s;
@@ -180,13 +185,11 @@ export default {
     margin-right: auto;
     left: 0;
     right: 0;
-    position: absolute;
     animation-duration: .75s;
     animation-name: slideLeft;
   }
   .skills-table {
     margin-left: 50px;
-    /* margin-right: auto; */
   }
   .aboutPic {
     width: 200px;
@@ -195,10 +198,10 @@ export default {
     transform: rotate(7deg);
   }
   .icon {
-    /* border-radius: 50%; */
+    border-radius: 10%;
     border: 1px solid;
     text-align: center;
-    width: 55px;
+    width: 40px;
     padding: 5px;
     background-color: lavender;
   }
@@ -210,6 +213,15 @@ export default {
   }
   .row2 :hover {
     color: black;
+  }
+  .random-wrapper {
+    width: 800px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
   }
   @keyframes slideDown {
     from { transform: translateY(-500px); }

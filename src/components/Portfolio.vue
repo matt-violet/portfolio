@@ -122,16 +122,14 @@ export default {
   }
   .outer-wrapper {
     margin-top: 125px;
-    width: 800px;
+    width: 850px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    height: 100%;
     position: absolute;
   }
   .projects-wrapper {
-    margin-left: 50px;
     margin-bottom: 50px;
     display: inline-block;
   }
@@ -147,9 +145,9 @@ export default {
   }
   .project {
     border: 1px solid;
-    width: 300px;
+    width: 225px;
     background-color: lavender;
-    margin: 20px;
+    margin: 15px;
     padding: 10px;
     display: inline-block;
     animation-duration: .75s;
@@ -160,8 +158,7 @@ export default {
     cursor: pointer;
   }
   .img-div {
-    width: 100%;
-    height: 150px;
+    height: 110px;
     overflow: hidden;
     border: 1px solid black;
   }
@@ -170,12 +167,12 @@ export default {
     height: auto;
   }
   .design-wrapper {
-    width: 800px;
+    width: 850px;
     margin-left: auto;
     margin-right: auto;
   }
   .design-project-div {
-    margin: 20px;
+    margin: 15px;
     display: inline-block;
     overflow: hidden;
     padding: 10px;
