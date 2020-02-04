@@ -11,7 +11,7 @@
         <td class="about-sec-cells">
           <div class="about-text-div">
             <h1 class="about-header">About Me</h1>
-            <h3>I'm a software engineer based in Oakland, CA.</h3>
+            <h3>I'm a multitalented software engineer based in Oakland, CA.</h3>
             <p>Software Engineer with a background in marketing/communications and graphic design. My experience includes building/maintaining full stack web applications through agile workflow, test driven development, and continuous integration.</p>
           </div>
         </td>

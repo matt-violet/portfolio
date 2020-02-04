@@ -2,7 +2,8 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
-        <div v-if="project" class="modal-container">
+
+        <div v-if="!project.type" class="modal-container">
           <a class="modal-default-button" @click="$emit('viewProjectDetails')">
             &times;
           </a>
@@ -27,6 +28,16 @@
             </slot>
           </div>
         </div>
+
+        <div v-if="project.type" class="modal-container-design">
+          <a class="modal-default-button" @click="$emit('viewProjectDetails')">
+            &times;
+          </a>
+          <div class="img-div-design">
+            <img :src="project.image" class='img-design'/>
+          </div>
+        </div>
+
       </div>
     </div>
   </transition>
@@ -69,7 +80,16 @@ export default {
       border: 1px solid black;
       overflow: hidden;
     }
+  .img-div-design {
+    max-height: 600px;
+    margin: 20px;
+    border: 1px solid black;
+    overflow: auto;
+  }
   .img {
+    width: 100%;
+  }
+  .img-design {
     width: 100%;
   }
   .modal-mask {
@@ -93,7 +113,17 @@ export default {
     width: 400px;
     margin: 0px auto;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: lavender;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .modal-container-design {
+    width: 800px;
+    margin: 0px auto;
+    padding: 10px 20px;
+    background-color: lavender;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;

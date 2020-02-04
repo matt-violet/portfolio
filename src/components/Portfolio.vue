@@ -1,9 +1,13 @@
 <template>
   <div class="outer-wrapper">
+    <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
+      View Resume
+    </a>
     <h1 class="projects-header">Software Projects</h1>
+
     <div class="projects-wrapper">
       <div
-        v-for="project in portfolio" 
+        v-for="project in softwarePortfolio" 
         v-on:click="$emit('viewProjectDetails', project)"
         v-bind:key="project.id"
         class="project"
@@ -15,9 +19,17 @@
         <p>{{ project.description }}</p>
       </div>
     </div>
-    <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
-      View Resume
-    </a>
+
+    <div class="design-wrapper">
+      <h1 class="design-header">Graphic Design</h1>
+      <div v-for="project in designPortfolio"
+        v-on:click="$emit('viewProjectDetails', project)"
+        v-bind:key="project.id"
+        class="design-project-div"
+      >
+        <img :src="project.image" class="design-imgs"/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -26,7 +38,7 @@ export default {
   name: 'Portfolio',
   data() {
     return {
-      portfolio: {
+      softwarePortfolio: {
         OpenRestaurant: {
           id: 3,
           title: 'Open Restaurant',
@@ -59,6 +71,38 @@ export default {
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
           image: require('../images/bolus-calculator.png')
         }
+      },
+      designPortfolio: {
+        ga2016: {
+          id: 1,
+          image: require('../images/GA2016-flyer.png'),
+          type: 'design'
+        },
+        ga2017: {
+          id: 2,
+          image: require('../images/GA2017-flyer.png'),
+          type: 'design'
+        },
+        ga2018: {
+          id: 3,
+          image: require('../images/GA2018-flyer.png'),
+          type: 'design'
+        },
+        ga2019: {
+          id: 4,
+          image: require('../images/Symposium2019.jpg'),
+          type: 'design'
+        },
+        symposium2019: {
+          id: 5,
+          image: require('../images/GA2017.png'),
+          type: 'design'
+        },
+        sksmBanner: {
+          id: 6,
+          image: require('../images/SKSM-banner.jpg'),
+          type: 'design'
+        }
       }
     }
   }  
@@ -86,15 +130,20 @@ export default {
     height: 100%;
     position: absolute;
   }
+  .projects-wrapper {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+  }
   .projects-header {
     text-align: left;
     font-size: 50px;
     animation-duration: .75s;
     animation-name: slideDown;
   }
-  .projects-wrapper {
-    margin-left: 50px;
-    margin-bottom: 50px;
+  .design-header {
+    text-align: left;
+    font-size: 50px;
   }
   .project {
     border: 1px solid;
@@ -102,7 +151,6 @@ export default {
     background-color: lavender;
     margin: 20px;
     padding: 10px;
-    float: left;
     display: inline-block;
     animation-duration: .75s;
     animation-name: slideLeft;
@@ -121,9 +169,33 @@ export default {
     width: 100%;
     height: auto;
   }
+  .design-wrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .design-project-div {
+    margin: 20px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px;
+    background-color: lavender;
+    border: 1px solid;
+    vertical-align: top;
+  }
+  .design-project-div:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  .design-imgs {
+    border: 1px solid;
+    width: 200px;
+  }
   .resume-link {
     display: inline-block;
     margin-top: 50px;
+    animation-duration: .75s;
+    animation-name: slideRight;
   }
   @keyframes slideDown {
     from { transform: translateY(-500px); }
