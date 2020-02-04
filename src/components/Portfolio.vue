@@ -15,7 +15,7 @@
         <p>{{ project.description }}</p>
       </div>
     </div>
-    <a class="resume-link" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
+    <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
       View Resume
     </a>
   </div>
