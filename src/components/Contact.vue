@@ -85,14 +85,14 @@ export default {
   }
   .github {
     animation-duration: .75s;
-    animation-name: slideDown;
+    animation-name: slideUp;
   }
   .linkedin {
     animation-duration: .75s;
     animation-name: slideLeft;
   }
-  @keyframes slideDown {
-    from { transform: translateY(-500px); }
+  @keyframes slideUp {
+    from { transform: translateY(500px); }
     to { transform: translateY(0px); }
   }
   @keyframes slideRight {

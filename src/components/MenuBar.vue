@@ -1,12 +1,11 @@
 <template>
   <div class="menu-wrapper">
-    <div class="menu-option home-btn">
-      <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
-        Home
-      </p>
-    </div>
-
     <div class="centered-menu-div">
+      <div class="menu-option">
+        <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
+          Home
+        </p>
+      </div>
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
           About
@@ -23,7 +22,6 @@
         </p>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -57,7 +55,7 @@ export default {
     border-bottom: 1px solid;
   }
   .centered-menu-div {
-    width: 400px;
+    width: 500px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -76,18 +74,17 @@ export default {
     line-height: 40px;
     font-size: 20px;
   }
-  .home-btn {
-    color: black;
-    float: left;
-    margin-left: 25px;
-    display: inline-block;
-  }
   .menu-option:hover {
     cursor: pointer;
     transform: scale(1.2);
   }
   .currentPg {
     color: white;
+  }
+  .home-icon {
+    width: 40px;
+    border: 1px solid;
+    vertical-align: middle
   }
   @keyframes slideRight {
     from { transform: translateX(-900px); }

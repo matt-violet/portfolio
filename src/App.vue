@@ -72,28 +72,29 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: lightgray; */
   }
+    /* -------------------------- SUNSET BACKGROUND -------------------------- */
   .bg-div-sunset {
     position: fixed;
     z-index: -1;
   }
+  /* -------------------------- MAP BACKGROUND -------------------------- */
   .bg-div-map {
     position: absolute;
+    overflow: hidden;
     z-index: -1;
+    width: 100%;
     height: 430px;
     border: 1px solid lightgray;
   }
+  .bg-img-map {
+    opacity: .33;
+    min-height: 100%;
+    min-width: 100%;
+  }
+    /* -------------------------- CODE BACKGROUND -------------------------- */
   .bg-div-code {
     position: absolute;
     height: 350px;
-  }
-  .bg-img-sunset {
-    /* position: relative; */
-  }
-  .bg-img-map {
-    opacity: .4;
-    height: 100%;
-    top: 0;
-    object-fit: cover;
   }
   .bg-img-code {
     z-index: -1;
