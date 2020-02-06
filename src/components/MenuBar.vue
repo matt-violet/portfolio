@@ -51,7 +51,7 @@ export default {
     height: 70px;
     position: absolute;
     text-align: center;
-    background-color: slateblue;
+    background-color: black;
     border-bottom: 1px solid;
   }
   .centered-menu-div {
@@ -64,7 +64,7 @@ export default {
   }
   .menu-option {
     animation-duration: 1s;
-    color: black;
+    color: white;
     display: inline-block;
     height: 100%;
     padding-left: 25px;
@@ -79,7 +79,7 @@ export default {
     transform: scale(1.2);
   }
   .currentPg {
-    color: white;
+    color: gold;
   }
   .home-icon {
     width: 40px;

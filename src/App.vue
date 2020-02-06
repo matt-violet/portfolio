@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <MenuBar class="components menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
-    <Home class="components home" v-if="home"/>
-    <About v-if="about"/>
-    <Portfolio v-if="portfolio" @viewProjectDetails="viewProjectDetails"/>
-    <Contact v-if="contact"/>
-    <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
-    <div v-if="home" class="bg-div-sunset">
-      <img src="./images/oakland-sunset.jpg" class="bg-img-sunset"/>
+    <MenuBar class="menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
+    <div class="components">
+      <Home class="home" v-if="home"/>
+      <About v-if="about"/>
+      <Portfolio v-if="portfolio" @viewProjectDetails="viewProjectDetails"/>
+      <Contact v-if="contact"/>
+      <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
+      
+      <div v-if="portfolio" class="bg-div-portfolio">
+        <img src="./images/laptop5.jpg" class="bg-img-portfolio"/>
+        <!-- <div class="white-overlay"/> -->
+      </div>
+      
+      <div v-if="contact" class="contact-bg-div">
+        <img src="./images/radio.jpg" class="contact-bg-img"/>
+          <!-- <div class="white-overlay"/> -->
+      </div>
     </div>
-    <div v-if="about" class="bg-div-map">
-      <img src="./images/oakland-map.png" class="bg-img-map"/>
-    </div>
-    <!-- <div v-if="portfolio" class="bg-div-code">
-      <img src="./images/code.png" class="bg-img-code"/>
-    </div> -->
+  
   </div>
 </template>
 
@@ -70,48 +74,88 @@ export default {
     width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: lightgray; */
   }
-    /* -------------------------- SUNSET BACKGROUND -------------------------- */
-  .bg-div-sunset {
+  .menu {
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 1;
+  }
+  .components {
+    width: 100%;
+    /* height: 100%; */
+    /* position: fixed; */
+  }
+    /* -------------------------- HOME PAGE -------------------------- */
+  .home {
     position: fixed;
-    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
   }
-  /* -------------------------- MAP BACKGROUND -------------------------- */
-  .bg-div-map {
+  /* -------------------------- ABOUT PAGE -------------------------- */
+  .about-bg-div {
     position: absolute;
     overflow: hidden;
     z-index: -1;
     width: 100%;
-    height: 430px;
-    border: 1px solid lightgray;
   }
-  .bg-img-map {
-    opacity: .33;
-    min-height: 100%;
-    min-width: 100%;
-  }
-    /* -------------------------- CODE BACKGROUND -------------------------- */
-  .bg-div-code {
-    position: absolute;
-    height: 350px;
-  }
-  .bg-img-code {
-    z-index: -1;
-    opacity: .2;
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  .components {
+  .about-bg-img1 {
+    opacity: .75;
     width: 100%;
-    z-index: 2;
-    left: 50%;
-    transform: translate(-50%);
-    position: fixed;
+    min-height: (100% - 70px);
   }
-  .home {
-    position: inline-block;
-    margin-top: 120px;
+  .about-bg-img2 {
+    width: 100%;
+    height: 420px;
+    opacity: .6;
+    position: relative;
+    background-color: lightgray;
+  }
+  /* -------------------------- PORTFOLIO PAGE -------------------------- */
+  .bg-div-portfolio {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+  .bg-img-portfolio {
+    position: fixed;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+
+  }
+  .white-overlay {
+    margin: 0 auto 0 auto;
+    height: 100%;
+    width: 1000px;
+    background-color: white; 
+    opacity: .5;
+    border: 1px solid gray;
+    animation-duration: .75s;
+    animation-name: slideDown;
+  }
+  /* -------------------------- CONTACT PAGE -------------------------- */
+  .contact-bg-div {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  .contact-bg-img {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    /* opacity: .5; */
+    z-index: -1;
+  }
+  /* ----------------------------------------------------------------- */
+  @keyframes slideDown {
+    from { transform: translateY(-1000px); }
+    to { transform: translateY(0px); }
   }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="outer-wrapper">
+  <!-- <div class="white"> -->
     <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
       View Resume
     </a>
@@ -30,6 +31,7 @@
         <img :src="project.image" class="design-imgs"/>
       </div>
     </div>
+  <!-- </div> -->
   </div>
 </template>
 
@@ -43,65 +45,75 @@ export default {
           id: 3,
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
-          details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
+          details: 'Welcome to the photos module for Open Restaurant! The photos module presents the user with an image gallery for a given restaurant. The photos module enables full-screen modal viewing of each gallery photo with responsive sizing, associated photo details, and intuitive navigation of gallery photos. The "restaurant_id" is determined by the 1-8 digit number included at the end of the url. When the gallery page component mounts, the restuarant_id is sent in a GET request to an Express server that queries a MongoDB database for image urls of photos stored on Amazon Web Services.',
           stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
-          image: require('../images/open-restaurant.png')
+          image: require('../images/open-restaurant.png'),
+          github: 'https://github.com/krummurk/photos-module'
         },
         SocialInn: {
           id: 4,
           title: 'Social Inn',
           description: 'Scaled back end of housing app',
-          details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
+          details: 'Social-Inn is an online marketplace for users to book or offer lodging. This module displays all reviews associated with a particular room. I scaled this module\'s back end to handle 10 million records and 100 requests per second. I benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. I deployed app on AWS and stress tested server to identify performance bottlenecks',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
-          image: require('../images/social-inn.png')
+          image: require('../images/social-inn.png'),
+          github: 'https://github.com/social-inn/Reviews'
         },
         connect4: {
           id: 1,
           title: 'Connect Four',
           description: 'Single Page Connect Four Game',
-          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
+          details: 'This app is modeled after the popular "Connect Four" game published by Milton Bradley in 1974 in which two players alternate dropping pieces into a 7x7 board trying to occupy 4 adjacent spaces. The app utilizes CSS animations and a dynamically rendering board (based on a two dimensional array), game status, head-to-head score, and rematch button',
           stack: 'HTML, CSS, Javascript, React',
-          image: require('../images/connect-four.png')
+          image: require('../images/connect-four.png'),
+          github: 'https://github.com/matt-violet/connect4'
         },
         MyBolus: {
           id: 2,
           title: 'My Bolus',
-          description: 'Insulin dose calculator for diabetics',
-          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
+          description: 'A personalized insulin dose (bolus) calculator for diabetics',
+          details: 'This app simulates modern insulin pump technology by implementing a complex algorithm allowing users to calculate their bolus based on meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          image: require('../images/bolus-calculator.png')
+          image: require('../images/bolus-calculator.png'),
+          github: 'https://github.com/matt-violet/My-Bolus'
         }
       },
       designPortfolio: {
         ga2016: {
           id: 1,
           image: require('../images/GA2016-flyer.png'),
-          type: 'design'
+          description: 'Full Page Ad in UU World Magazine, 2016',
+          design: true
         },
         ga2017: {
           id: 2,
           image: require('../images/GA2017-flyer.png'),
-          type: 'design'
+          description: 'Full Page Ad in UU World Magazine, 2017',
+          design: true
         },
         ga2018: {
           id: 3,
           image: require('../images/GA2018-flyer.png'),
-          type: 'design'
+          description: 'Full Page Ad in UU World Magazine, 2018',
+          design: true
         },
         ga2019: {
           id: 4,
           image: require('../images/Symposium2019.jpg'),
-          type: 'design'
+          description: 'Event Flyer, 2019',
+          design: true
         },
         symposium2019: {
           id: 5,
           image: require('../images/GA2017.png'),
-          type: 'design'
+          description: 'Projected Slide at UUA General Assembly, 2017',
+          design: true
         },
         sksmBanner: {
           id: 6,
           image: require('../images/SKSM-banner.jpg'),
-          type: 'design'
+          description: 'Retractable Banner, 2017',
+          design: true
         }
       }
     }
@@ -121,7 +133,7 @@ export default {
     margin: 0;
   }
   .outer-wrapper {
-    margin-top: 125px;
+    margin-top: 25px;
     width: 850px;
     margin-left: auto;
     margin-right: auto;
@@ -144,9 +156,9 @@ export default {
     font-size: 50px;
   }
   .project {
-    border: 1px solid;
+    border: 1px solid gray;
     width: 225px;
-    background-color: lavender;
+    background-color: wheat;
     margin: 15px;
     padding: 10px;
     display: inline-block;
@@ -160,7 +172,7 @@ export default {
   .img-div {
     height: 110px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid gray;
   }
   .img {
     width: 100%;
@@ -170,14 +182,16 @@ export default {
     width: 850px;
     margin-left: auto;
     margin-right: auto;
+    animation-duration: .75s;
+    animation-name: slideRight;
   }
   .design-project-div {
     margin: 15px;
     display: inline-block;
     overflow: hidden;
     padding: 10px;
-    background-color: lavender;
-    border: 1px solid;
+    background-color: wheat;
+    border: 1px solid gray;
     vertical-align: top;
   }
   .design-project-div:hover {
@@ -185,7 +199,7 @@ export default {
     cursor: pointer;
   }
   .design-imgs {
-    border: 1px solid;
+    border: 1px solid gray;
     width: 200px;
   }
   .resume-link {
@@ -197,6 +211,10 @@ export default {
   @keyframes slideDown {
     from { transform: translateY(-500px); }
     to { transform: translateY(0px); }
+  }
+  @keyframes slideRight {
+    from { transform: translateX(-1000px); }
+    to { transform: translateX(0px); }
   }
   @keyframes slideLeft {
     from { transform: translateX(1000px); }

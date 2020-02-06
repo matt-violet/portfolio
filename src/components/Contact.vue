@@ -57,7 +57,7 @@ export default {
     display: none;
   }
   .contact-wrapper {
-    margin-top: 125px;
+    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     left: 0;

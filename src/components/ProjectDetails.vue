@@ -3,39 +3,35 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
 
-        <div v-if="!project.type" class="modal-container">
-          <a class="modal-default-button" @click="$emit('viewProjectDetails')">
+        <div v-if="!project.design" class="modal-container">
+          <a class="modal-close-button" @click="$emit('viewProjectDetails')">
             &times;
           </a>
           <div class="img-div">
             <img :src="project.image" class='img'/>
           </div>
           <div class="modal-header">
-            <slot name="header">
-              <h1>{{ project.title }}</h1>
-            </slot>
+            <h1>{{ project.title }}</h1>
           </div>
-
           <div class="modal-body">
-            <slot name="body">
-              <p>{{ project.details }}</p>
-            </slot>
+            <p>{{ project.details }}</p>
           </div>
-
           <div class="modal-footer">
-            <slot name="footer">
-              <p>{{ project.stack }}</p>
-            </slot>
+            <p>{{ project.stack }}</p>
+          </div>
+          <div v-if="!project.design" class="github-link-div">
+            <a :href="project.github" target="_blank">GitHub Repository</a>
           </div>
         </div>
 
-        <div v-if="project.type" class="modal-container-design">
-          <a class="modal-default-button" @click="$emit('viewProjectDetails')">
+        <div v-if="project.design" class="modal-container-design">
+          <a class="modal-close-button-design" @click="$emit('viewProjectDetails')">
             &times;
           </a>
           <div class="img-div-design">
             <img :src="project.image" class='img-design'/>
           </div>
+          <div class="modal-footer">{{ project.description }}</div>
         </div>
 
       </div>
@@ -74,16 +70,16 @@ export default {
     cursor: pointer;
   } 
   .img-div {
-      width: 100%;
-      height: 200px;
-      margin-bottom: 20px;
-      border: 1px solid black;
-      overflow: hidden;
-    }
+    height: 380px;
+    margin: 20px;
+    border: 1px solid black;
+    overflow: hidden;
+  }
   .img-div-design {
     max-height: 600px;
     margin: 20px;
-    border: 1px solid black;
+    margin-top: 10px;
+    /* border: 1px solid black; */
     overflow: auto;
   }
   .img {
@@ -93,54 +89,46 @@ export default {
     width: 100%;
   }
   .modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: table;
+    transition: opacity .3s ease;
   }
-
   .modal-wrapper {
     display: table-cell;
     vertical-align: middle;
   }
-
   .modal-container {
-    width: 400px;
+    width: 800px;
     margin: 0px auto;
-    padding: 10px 20px;
-    background-color: lavender;
+    padding: 20px 20px;
+    background-color: wheat;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    box-shadow: 0 20px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
   }
   .modal-container-design {
     width: 800px;
     margin: 0px auto;
-    padding: 10px 20px;
-    background-color: lavender;
+    padding: 20px 20px;
+    background-color: wheat;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
   }
-
-  .modal-header h3 {
-    margin-top: 0;
+  .modal-header, .modal-body, .modal-footer, .github-link-div {
+    margin-left: 20px;
   }
-
-  .modal-body {
-    margin: 10px 0;
-  }
-
-  .modal-default-button {
+  .modal-close-button {
     float: left;
-    margin-bottom: 10px;
+    margin: 0px;
   }
 
   /*
