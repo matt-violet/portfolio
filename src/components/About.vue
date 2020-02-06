@@ -127,21 +127,26 @@
               </td>
             </tr>
           </table>
-          <div class="bike-div">
-            <img src="../images/matt-bike.png" class="bike-img"/>
-          </div>
         </div>
       </div>
+
       <div class="fun-facts-wrapper">
-        <h1 class="header">Fun Facts</h1>
-        <ul>
-          <li>Born and raised in the Town (Oakland, CA) &#127795;</li>
-          <li>Type 1 diabetic since 2015 &#128137; </li>
-          <li>2004 Grammy Award co-winner &#127942;</li>
-          <li>I once filled up my entire passport &#128745;</li>
-        </ul>
+        <div class="fun-facts-text">
+          <h1 class="header">Fun Facts</h1>
+          <ul>
+            <li>Born and raised in the Town (Oakland, CA) &#127795;</li>
+            <li>Type 1 diabetic since 2015 &#128137; </li>
+            <li>2004 Grammy Award co-winner &#127942;</li>
+            <li>I once filled up my entire passport &#128745;</li>
+          </ul>
+        </div>
+        <div class="bike-div">
+          <img src="../images/matt-bike.png" class="bike-img"/>
+        </div>
       </div>
+        <img src="../images/up-arrow.png" class="up-arrow" onClick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"/>
     </div>
+
     <div class="background-div">
     <img src="../images/matt-sksm.png" class="background-img"/>
     </div>
@@ -192,7 +197,7 @@ export default {
   }
   .background-img {
     position: absolute;
-    min-height: 100%;
+    min-height: 80%;
     width: 100%;
     z-index: -1;
   }
@@ -262,14 +267,6 @@ export default {
     width: 100%;
     margin-top: 10px;
   }
-  .bike-div {
-    display: inline-block;
-    margin-left: 50px;
-    width: 450px;
-  }
-  .bike-img {
-    width: 100%;
-  }
   /* ------------------ TOOL TIP ------------------ */
   .icon .tool-tip {
     visibility: hidden;
@@ -286,12 +283,36 @@ export default {
   /* -------------------- FUN FACTS -------------------------- */
   .fun-facts-wrapper {
     width: 1000px;
-    height: 500px;
-    margin-top: 40px;
+    margin: 70px auto 0px auto;
+
+  }
+  .fun-facts-text {
+    width: 400px;
+    height: 350px;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+  }
+  .bike-div {
+    display: inline-block;
+    margin-left: 50px;
+    width: 300px;
+  }
+  .bike-img {
+    width: 100%;
+  }
+  .up-arrow {
+    margin: 0px auto 50px auto;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+  .up-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
   }
   /* -------------------- TRANSITIONS -------------------------- */
   @keyframes slideDown {

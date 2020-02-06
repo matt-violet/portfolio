@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-wrapper">
+  <div class="menu-wrapper" id="menu">
     <div class="centered-menu-div">
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
