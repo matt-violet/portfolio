@@ -1,37 +1,38 @@
 <template>
-  <div class="outer-wrapper">
-  <!-- <div class="white"> -->
-    <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
-      View Resume
-    </a>
-    <h1 class="projects-header">Software Projects</h1>
+  <div class="portfolio-component">
+    <img src="../images/laptop5.jpg" class="bg-img-portfolio"/>
+    <div class="outer-wrapper">
+      <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
+        View Resume
+      </a>
+      <h1 class="projects-header">Software Projects</h1>
 
-    <div class="projects-wrapper">
-      <div
-        v-for="project in softwarePortfolio" 
-        v-on:click="$emit('viewProjectDetails', project)"
-        v-bind:key="project.id"
-        class="project"
-      >
-        <div class="img-div">
-          <img :src="project.image" class='img'/>
+      <div class="projects-wrapper">
+        <div
+          v-for="project in softwarePortfolio" 
+          v-on:click="$emit('viewProjectDetails', project)"
+          v-bind:key="project.id"
+          class="project"
+        >
+          <div class="img-div">
+            <img :src="project.image" class='img'/>
+          </div>
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
         </div>
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
       </div>
-    </div>
 
-    <div class="design-wrapper">
-      <h1 class="design-header">Graphic Design</h1>
-      <div v-for="project in designPortfolio"
-        v-on:click="$emit('viewProjectDetails', project)"
-        v-bind:key="project.id"
-        class="design-project-div"
-      >
-        <img :src="project.image" class="design-imgs"/>
+      <div class="design-wrapper">
+        <h1 class="design-header">Graphic Design</h1>
+        <div v-for="project in designPortfolio"
+          v-on:click="$emit('viewProjectDetails', project)"
+          v-bind:key="project.id"
+          class="design-project-div"
+        >
+          <img :src="project.image" class="design-imgs"/>
+        </div>
       </div>
     </div>
-  <!-- </div> -->
   </div>
 </template>
 
@@ -132,8 +133,15 @@ export default {
     color: black;
     margin: 0;
   }
+  .bg-img-portfolio {
+    position: fixed;
+    height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    right: 0;
+  }
   .outer-wrapper {
-    margin-top: 25px;
+    margin-top: 100px;
     width: 850px;
     margin-left: auto;
     margin-right: auto;

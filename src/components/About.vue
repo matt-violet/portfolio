@@ -1,5 +1,5 @@
 <template>
-  <div class="about-component-div">
+  <div class="about-component">
 
     <div class="about-wrapper">
       <img src="../images/matt-nyc.png" class="about-bg-img"/>
@@ -8,7 +8,7 @@
           <h1 class="header1">About Me</h1>
           <h3 class="header2">I'm a software engineer with roots in marketing and design.</h3>
           <p class="header3">As someone taking advantage of <a href="https://www.youtube.com/watch?v=A0kDqPCi1fU" target="_blank">hybrid closed-loop algorithms</a> to manage type one diabetes, I love working with software! When not coding I can be found making music, sketching, and enjoying life in my hometown of Oakland, CA.</p>
-          <img src="../images/down-arrow.png"
+          <img src="../images/down-arrow-white.png"
             class="down-arrow"
             onClick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })"
           />
@@ -136,7 +136,7 @@
               </td>
             </tr>
           </table>
-          <img src="../images/down-arrow.png"
+          <img src="../images/down-arrow-white.png"
             class="down-arrow"
             onClick="document.getElementById('fun').scrollIntoView({ behavior: 'smooth' })"
           />
@@ -155,7 +155,7 @@
             <li>2004 Grammy Award co-winner &#127942;</li>
             <li>I once filled up my entire passport &#128745;</li>
           </ul>
-          <img src="../images/up-arrow.png" class="up-arrow" onClick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"/>
+          <img src="../images/up-arrow-white.png" class="up-arrow" onClick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"/>
         </div>
       </div>
     </div>
@@ -190,7 +190,11 @@ export default {
   li {
     line-height: 2;
   }
-  .about-component-div {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  .about-component {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -212,10 +216,11 @@ export default {
     height: 100%;
     position: absolute;
     overflow: hidden;
-    background: slateblue; opacity: .9;
+    background: black; opacity: .7;
     border-right: solid 1px black;
   }
   .about-text-div {
+    color: white;
     padding: 50px;
     width: 350px;
     height: 100%;
@@ -255,7 +260,7 @@ export default {
   .skills-bg-img {
     position: absolute;
     min-height: 100%;
-    width: 100%;
+    min-width: 100%;
     transform: scaleX(-1);
     z-index: -1;
   }
@@ -263,8 +268,9 @@ export default {
     float: right;
     width: 50%;
     height: 100%;
-    background-color: slateblue; opacity: .9;
+    background-color: black; opacity: .7;
     border-left: 1px solid black;
+    color: white;
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -285,16 +291,14 @@ export default {
     vertical-align: bottom;
   }
   .icon {
-    border-radius: 10%;
+    border-radius: 50%;
     border: 1px solid;
     text-align: center;
-    width: 40px;
-    padding: 5px;
-    background-color: wheat;
+    padding: 10px;
+    background-color: white;
   }
   .saved-icons {
-    width: 100%;
-    margin-top: 10px;
+    width: 40px;
   }
   /* ------------------ TOOL TIP ------------------ */
   .icon .tool-tip {
@@ -320,13 +324,14 @@ export default {
     height: 100%;
     min-width: 100%;
     z-index: -1;
+    right: 0;
   }
   .fun-facts-text {
     margin: 0px auto;
-    padding: 50px;
-    width: 400px;
+    padding: 0px 50px;
+    width: 420px;
     height: 100%;
-    background-color: slateblue;
+    color: white;
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -334,7 +339,7 @@ export default {
   }
   .up-arrow {
     margin: 50px auto 0px auto;
-    height: 40px;
+    height: 20px;
     flex-direction: column;
     justify-content: center;
     display: flex;

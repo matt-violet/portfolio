@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-component">
     <div class='home-wrapper'>
       <img :src='pic' class='pic'/>
       <div class='words-wrapper'>
@@ -27,7 +27,7 @@ export default {
 <style>
   .home-wrapper {
     width: 100%;
-    margin-top: 75px;
+    margin-top: 100px;
     position: absolute;
   }
   .bg-img {
