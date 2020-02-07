@@ -79,7 +79,7 @@ export default {
     transform: scale(1.2);
   }
   .currentPg {
-    color: gold;
+    color: slateblue;
   }
   .home-icon {
     width: 40px;

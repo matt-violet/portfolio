@@ -77,16 +77,14 @@ export default {
   }
   .menu {
     width: 100%;
-    position: relative;
+    position: absolute;
     display: block;
     z-index: 1;
   }
   .components {
     width: 100%;
-    /* height: 100%; */
-    /* position: fixed; */
   }
-    /* -------------------------- HOME PAGE -------------------------- */
+  /* -------------------------- HOME PAGE -------------------------- */
   .home {
     position: fixed;
     min-width: 100%;

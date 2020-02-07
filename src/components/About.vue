@@ -1,15 +1,24 @@
 <template>
-  <div>
+  <div class="about-component-div">
+
     <div class="about-wrapper">
-      <div class="about-me">
+      <img src="../images/matt-nyc.png" class="about-bg-img"/>
+      <div class="left-side">
         <div class="about-text-div">
-          <h1 class="header">About Me</h1>
+          <h1 class="header1">About Me</h1>
           <h3 class="header2">I'm a software engineer with roots in marketing and design.</h3>
           <p class="header3">As someone taking advantage of <a href="https://www.youtube.com/watch?v=A0kDqPCi1fU" target="_blank">hybrid closed-loop algorithms</a> to manage type one diabetes, I love working with software! When not coding I can be found making music, sketching, and enjoying life in my hometown of Oakland, CA.</p>
-          <img src="../images/down-arrow.png" class="down-arrow" onClick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })"/>
+          <img src="../images/down-arrow.png"
+            class="down-arrow"
+            onClick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })"
+          />
         </div>
       </div>
-      <div class="skills-wrapper" id="skills">
+    </div>
+
+    <div class="skills-wrapper" id="skills">
+      <img src="../images/matt-bike.jpg" class="skills-bg-img"/>
+      <div class="right-side">
         <div class="skills-container">
           <h1 class="header">Technical Skills</h1>
           <table class="skills-table" cellspacing="10">
@@ -127,10 +136,17 @@
               </td>
             </tr>
           </table>
+          <img src="../images/down-arrow.png"
+            class="down-arrow"
+            onClick="document.getElementById('fun').scrollIntoView({ behavior: 'smooth' })"
+          />
         </div>
       </div>
+    </div>
 
-      <div class="fun-facts-wrapper">
+    <div class="fun-facts-wrapper" id="fun">
+      <img src="../images/matt-ocean.jpg" class="fun-bg-img"/>
+      <div class="left-side">
         <div class="fun-facts-text">
           <h1 class="header">Fun Facts</h1>
           <ul>
@@ -139,28 +155,17 @@
             <li>2004 Grammy Award co-winner &#127942;</li>
             <li>I once filled up my entire passport &#128745;</li>
           </ul>
-        </div>
-        <div class="bike-div">
-          <img src="../images/matt-bike.png" class="bike-img"/>
+          <img src="../images/up-arrow.png" class="up-arrow" onClick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"/>
         </div>
       </div>
-        <img src="../images/up-arrow.png" class="up-arrow" onClick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"/>
     </div>
 
-    <div class="background-div">
-    <img src="../images/matt-sksm.png" class="background-img"/>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'About',
-  data() {
-    return {
-      aboutPic: require('../images/matt-taj.jpg'),
-    }
-  }
 }
 </script>
 
@@ -185,48 +190,50 @@ export default {
   li {
     line-height: 2;
   }
-  .about-wrapper {
+  .about-component-div {
     width: 100%;
     height: 100%;
     position: absolute;
   }
   /* ------------------------------ ABOUT ME ----------------------------- */
-  .about-me {
+  .about-wrapper {
     width: 100%;
     height: 100%;
   }
-  .background-img {
+  .about-bg-img {
     position: absolute;
-    min-height: 80%;
-    width: 100%;
-    z-index: -1;
-  }
-  .background-div{
     height: 100%;
-    width: 100%;
+    min-width: 100%;
+    z-index: -1;
+    right: 0;
+  }
+  .left-side {
+    width: 50%;
+    height: 100%;
+    position: absolute;
     overflow: hidden;
-    position: absolute;
-    z-index: -1;
+    background: slateblue; opacity: .9;
+    border-right: solid 1px black;
   }
   .about-text-div {
-    margin-left: 20%;
+    padding: 50px;
     width: 350px;
     height: 100%;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     display: flex;
+    position: relative;
   }
   .down-arrow {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto 0px auto;
     height: 20px;
   }
   .down-arrow:hover {
     cursor: pointer;
     transform: scale(1.2);
   }
-  .header {
+  .header1 {
     animation-duration: .75s;
     animation-name: slideDown;
   }
@@ -240,19 +247,41 @@ export default {
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skills-wrapper {
-    height: 400px;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .skills-bg-img {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+  .right-side {
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: slateblue; opacity: .9;
+    border-left: 1px solid black;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
   }
   .skills-container {
-    vertical-align: middle;
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    position: relative;
   }
   .skills-table {
     margin-left: 50px;
     margin-top: 30px;
-    display: inline-block;
     vertical-align: bottom;
   }
   .icon {
@@ -282,29 +311,29 @@ export default {
   }
   /* -------------------- FUN FACTS -------------------------- */
   .fun-facts-wrapper {
-    width: 1000px;
-    margin: 70px auto 0px auto;
-
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .fun-bg-img {
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    z-index: -1;
   }
   .fun-facts-text {
+    margin: 0px auto;
+    padding: 50px;
     width: 400px;
-    height: 350px;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  }
-  .bike-div {
-    display: inline-block;
-    margin-left: 50px;
-    width: 300px;
-  }
-  .bike-img {
-    width: 100%;
+    height: 100%;
+    background-color: slateblue;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    position: relative;
   }
   .up-arrow {
-    margin: 0px auto 50px auto;
+    margin: 50px auto 0px auto;
     height: 40px;
     flex-direction: column;
     justify-content: center;
