@@ -194,6 +194,9 @@ export default {
     width: 40px;
     height: 40px;
   }
+  a:visited {
+    color: gray;
+  }
   .about-component {
     width: 100%;
     height: 100%;
