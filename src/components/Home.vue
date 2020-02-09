@@ -7,7 +7,7 @@
         <h4 class='words title'>{{ line2 }}</h4>
       </div>
     </div>
-    <img src="../images/hills.jpg" class="bg-img"/>
+    <img src="../images/paper.jpg" class="bg-img"/>
   </div>
 </template>
 
@@ -35,6 +35,7 @@ export default {
     height: 100%;
     min-width: 100%;
     z-index: -1;
+    opacity: .7;
   }
   h1 {
     margin-top: 10px;

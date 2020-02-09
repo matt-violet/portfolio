@@ -31,7 +31,6 @@
           <div class="img-div-design">
             <img :src="project.image" class='img-design'/>
           </div>
-          <div class="modal-footer">{{ project.description }}</div>
         </div>
 
       </div>
@@ -72,7 +71,7 @@ export default {
   .img-div {
     height: 380px;
     margin: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     overflow: hidden;
   }
   .img-div-design {
@@ -107,21 +106,21 @@ export default {
     width: 800px;
     margin: 0px auto;
     padding: 20px 20px;
-    background-color: wheat;
+    background-color: white;
     border-radius: 2px;
     box-shadow: 0 20px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
+    border: 1px solid gray;
   }
   .modal-container-design {
     width: 800px;
     margin: 0px auto;
     padding: 20px 20px;
-    background-color: wheat;
+    background-color: white;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
+    border: 1px solid gray;
   }
   .modal-header, .modal-body, .modal-footer, .github-link-div {
     margin-left: 20px;

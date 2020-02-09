@@ -17,10 +17,10 @@
     </div>
 
     <div class="skills-wrapper" id="skills">
-      <img src="../images/matt-bike.jpg" class="skills-bg-img"/>
+      <img src="../images/matt-guitar2.jpg" class="skills-bg-img"/>
       <div class="right-side">
         <div class="skills-container">
-          <h1 class="header">Technical Skills</h1>
+          <h1 class="header1">Technical Skills</h1>
           <table class="skills-table" cellspacing="10">
             Front End:
             <tr>
@@ -148,7 +148,7 @@
       <img src="../images/matt-ocean.jpg" class="fun-bg-img"/>
       <div class="left-side">
         <div class="fun-facts-text">
-          <h1 class="header">Fun Facts</h1>
+          <h1 class="header1">Fun Facts</h1>
           <ul>
             <li>Born and raised in the Town (Oakland, CA) &#127795;</li>
             <li>Type 1 diabetic since 2015 &#128137; </li>
@@ -203,6 +203,7 @@ export default {
   .about-wrapper {
     width: 100%;
     height: 100%;
+    border-bottom: 1px solid;
   }
   .about-bg-img {
     position: absolute;
@@ -216,7 +217,7 @@ export default {
     height: 100%;
     position: absolute;
     overflow: hidden;
-    background: black; opacity: .7;
+    background: rgb(24, 24, 24, 0.8);
     border-right: solid 1px black;
   }
   .about-text-div {
@@ -241,6 +242,9 @@ export default {
   .header1 {
     animation-duration: .75s;
     animation-name: slideDown;
+    color: rgb(131, 131, 255);
+    font-size: 65px;
+    margin-bottom: 30px;
   }
   .header3 {
     animation-duration: .75s;
@@ -256,19 +260,21 @@ export default {
     height: 100%;
     overflow: hidden;
     position: relative;
+    border-bottom: solid 1px;
   }
   .skills-bg-img {
     position: absolute;
     min-height: 100%;
-    min-width: 100%;
-    transform: scaleX(-1);
+    width: 100%;
+    /* transform: scaleX(-1); */
+    vertical-align: bottom;
     z-index: -1;
   }
   .right-side {
     float: right;
     width: 50%;
     height: 100%;
-    background-color: black; opacity: .7;
+    background-color: rgb(24, 24, 24, 0.8);
     border-left: 1px solid black;
     color: white;
     position: relative;
@@ -312,6 +318,10 @@ export default {
   }
   .icon:hover .tool-tip {
     visibility: visible;
+    color: white;
+  }
+  .icon:hover {
+    background-color: rgb(131, 131, 255);
   }
   /* -------------------- FUN FACTS -------------------------- */
   .fun-facts-wrapper {

@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio-component">
-    <img src="../images/laptop5.jpg" class="bg-img-portfolio"/>
+    <img src="../images/paper.jpg" class="bg-img-portfolio"/>
     <div class="outer-wrapper">
       <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
         View Resume
@@ -12,7 +12,7 @@
           v-for="project in softwarePortfolio" 
           v-on:click="$emit('viewProjectDetails', project)"
           v-bind:key="project.id"
-          class="project"
+          class="project-div"
         >
           <div class="img-div">
             <img :src="project.image" class='img'/>
@@ -30,6 +30,7 @@
           class="design-project-div"
         >
           <img :src="project.image" class="design-imgs"/>
+          <p>{{ project.description }}</p>
         </div>
       </div>
     </div>
@@ -45,7 +46,7 @@ export default {
         OpenRestaurant: {
           id: 3,
           title: 'Open Restaurant',
-          description: 'Photos module for restaurant app',
+          description: 'Responsive photo gallery for a restaurant review app',
           details: 'Welcome to the photos module for Open Restaurant! The photos module presents the user with an image gallery for a given restaurant. The photos module enables full-screen modal viewing of each gallery photo with responsive sizing, associated photo details, and intuitive navigation of gallery photos. The "restaurant_id" is determined by the 1-8 digit number included at the end of the url. When the gallery page component mounts, the restuarant_id is sent in a GET request to an Express server that queries a MongoDB database for image urls of photos stored on Amazon Web Services.',
           stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
           image: require('../images/open-restaurant.png'),
@@ -54,17 +55,17 @@ export default {
         SocialInn: {
           id: 4,
           title: 'Social Inn',
-          description: 'Scaled back end of housing app',
-          details: 'Social-Inn is an online marketplace for users to book or offer lodging. This module displays all reviews associated with a particular room. I scaled this module\'s back end to handle 10 million records and 100 requests per second. I benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. I deployed app on AWS and stress tested server to identify performance bottlenecks',
+          description: 'Scaled the back end of a rental accommodations app',
+          details: 'Social-Inn is an online marketplace for users to book or offer lodging. This module displays all reviews associated with a particular room. I scaled this module\'s back end to handle 10 million records and 100 requests per second. I benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. I deployed app on AWS and stress tested server to identify performance bottlenecks.',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
-          image: require('../images/social-inn.png'),
+          image: require('../images/couch.jpg'),
           github: 'https://github.com/social-inn/Reviews'
         },
         connect4: {
           id: 1,
           title: 'Connect Four',
-          description: 'Single Page Connect Four Game',
-          details: 'This app is modeled after the popular "Connect Four" game published by Milton Bradley in 1974 in which two players alternate dropping pieces into a 7x7 board trying to occupy 4 adjacent spaces. The app utilizes CSS animations and a dynamically rendering board (based on a two dimensional array), game status, head-to-head score, and rematch button',
+          description: 'Game in which two players drop discs into slots and connect four to win',
+          details: 'This app is modeled after the popular "Connect Four" game published by Milton Bradley in 1974 in which two players alternate dropping pieces into a 7x7 board trying to occupy 4 adjacent spaces. The app utilizes CSS animations and a dynamically rendering board (based on a two dimensional array), game status, head-to-head score, and rematch button.',
           stack: 'HTML, CSS, Javascript, React',
           image: require('../images/connect-four.png'),
           github: 'https://github.com/matt-violet/connect4'
@@ -72,10 +73,10 @@ export default {
         MyBolus: {
           id: 2,
           title: 'My Bolus',
-          description: 'A personalized insulin dose (bolus) calculator for diabetics',
-          details: 'This app simulates modern insulin pump technology by implementing a complex algorithm allowing users to calculate their bolus based on meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
+          description: 'Calculating the proper dose of medication can be tough for diabetics. My Bolus makes it easy!',
+          details: 'This app simulates modern insulin pump technology by implementing a complex algorithm allowing users to calculate their bolus based on meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          image: require('../images/bolus-calculator.png'),
+          image: require('../images/math.jpg'),
           github: 'https://github.com/matt-violet/My-Bolus'
         }
       },
@@ -83,19 +84,19 @@ export default {
         ga2016: {
           id: 1,
           image: require('../images/GA2016-flyer.png'),
-          description: 'Full Page Ad in UU World Magazine, 2016',
+          description: 'Ad in UU World Magazine, 2016',
           design: true
         },
         ga2017: {
           id: 2,
           image: require('../images/GA2017-flyer.png'),
-          description: 'Full Page Ad in UU World Magazine, 2017',
+          description: 'Ad in UU World Magazine, 2017',
           design: true
         },
         ga2018: {
           id: 3,
           image: require('../images/GA2018-flyer.png'),
-          description: 'Full Page Ad in UU World Magazine, 2018',
+          description: 'Ad in UU World Magazine, 2018',
           design: true
         },
         ga2019: {
@@ -107,15 +108,21 @@ export default {
         symposium2019: {
           id: 5,
           image: require('../images/GA2017.png'),
-          description: 'Projected Slide at UUA General Assembly, 2017',
+          description: 'Recruitment Flyer, 2018',
+          design: true
+        },
+        SEAsia: {
+          id: 6,
+          image: require('../images/SEAsia.png'),
+          description: 'Personal Side Project, 2015',
           design: true
         },
         sksmBanner: {
           id: 6,
           image: require('../images/SKSM-banner.jpg'),
-          description: 'Retractable Banner, 2017',
+          description: '8-foot Retractable Banner, 2017',
           design: true
-        }
+        },
       }
     }
   }  
@@ -126,9 +133,10 @@ export default {
   h2 {
     margin: 5px 0px 5px 0px;
     color: black;
+    font-size: 18px;
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: normal;
     color: black;
     margin: 0;
@@ -138,7 +146,7 @@ export default {
     height: 100%;
     min-width: 100%;
     z-index: -1;
-    right: 0;
+    opacity: .7;
   }
   .outer-wrapper {
     margin-top: 100px;
@@ -163,12 +171,13 @@ export default {
     text-align: left;
     font-size: 50px;
   }
-  .project {
+  .project-div {
     border: 1px solid gray;
-    width: 225px;
-    background-color: wheat;
+    border-radius: 5px;
+    width: 235px;
+    background-color: white;
     margin: 15px;
-    padding: 10px;
+    padding: 7px;
     display: inline-block;
     animation-duration: .75s;
     animation-name: slideLeft;
@@ -181,6 +190,7 @@ export default {
     height: 110px;
     overflow: hidden;
     border: 1px solid gray;
+    border-radius: 5px;
   }
   .img {
     width: 100%;
@@ -195,11 +205,13 @@ export default {
   }
   .design-project-div {
     margin: 15px;
+    width: 235px;
     display: inline-block;
     overflow: hidden;
-    padding: 10px;
-    background-color: wheat;
+    padding: 7px;
+    background-color: white;
     border: 1px solid gray;
+    border-radius: 5px;
     vertical-align: top;
   }
   .design-project-div:hover {
@@ -208,7 +220,8 @@ export default {
   }
   .design-imgs {
     border: 1px solid gray;
-    width: 200px;
+    border-radius: 5px;
+    width: 100%;
   }
   .resume-link {
     display: inline-block;

@@ -69,12 +69,14 @@ export default {
     position: absolute;
     display: block;
     z-index: 1;
+    animation-duration: .75s;
+    animation-name: slideDown;
   }
   .components {
     width: 100%;
   }
   @keyframes slideDown {
-    from { transform: translateY(-1000px); }
+    from { transform: translateY(-100px); }
     to { transform: translateY(0px); }
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="contact-component">
-    <img src="../images/matt-phone.jpg" class="contact-bg-img"/>
+    <img src="../images/paper.jpg" class="contact-bg-img"/>
     <div class="contact-wrapper">
       <div class="icon-div email" v-on:click="copyText">
         <textarea id="textarea" name="mattviolet@gmail.com" style="display:none;"/>
@@ -60,13 +60,14 @@ export default {
     min-height: 100%;
     min-width: 100%;
     z-index: -1;
+    opacity: .7;
   }
   .textarea {
     color: black;
     display: none;
   }
   .contact-wrapper {
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
