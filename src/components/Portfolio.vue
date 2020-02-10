@@ -171,7 +171,7 @@ export default {
     animation-duration: .75s;
     animation-name: slideLeft;
   }
-  .project:hover {
+  .project-div:hover {
     transform: scale(1.03);
     cursor: pointer;
   }
