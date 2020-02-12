@@ -1,6 +1,5 @@
 <template>
-  <div class="portfolio-component">
-    <img src="../images/paper.jpg" class="bg-img-portfolio"/>
+  <div class="portfolio-component" id="portfolio">
     <div class="outer-wrapper">
       <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
         View Resume
@@ -130,21 +129,14 @@ export default {
     color: black;
     margin: 0;
   }
-  .bg-img-portfolio {
-    position: fixed;
-    height: 100%;
-    min-width: 100%;
-    z-index: -1;
-    opacity: .7;
+  .portfolio-component {
+    padding-top: 150px;
   }
   .outer-wrapper {
-    margin-top: 100px;
     width: 850px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     left: 0;
     right: 0;
-    position: absolute;
   }
   .projects-wrapper {
     margin-bottom: 50px;
@@ -153,8 +145,6 @@ export default {
   .projects-header {
     text-align: left;
     font-size: 50px;
-    animation-duration: .75s;
-    animation-name: slideDown;
   }
   .design-header {
     text-align: left;
@@ -168,8 +158,6 @@ export default {
     margin: 15px;
     padding: 7px;
     display: inline-block;
-    animation-duration: .75s;
-    animation-name: slideLeft;
   }
   .project-div:hover {
     transform: scale(1.03);
@@ -189,8 +177,6 @@ export default {
     width: 850px;
     margin-left: auto;
     margin-right: auto;
-    animation-duration: .75s;
-    animation-name: slideRight;
   }
   .design-project-div {
     margin: 15px;
@@ -214,20 +200,5 @@ export default {
   }
   .resume-link {
     display: inline-block;
-    margin-top: 50px;
-    animation-duration: .75s;
-    animation-name: slideRight;
-  }
-  @keyframes slideDown {
-    from { transform: translateY(-500px); }
-    to { transform: translateY(0px); }
-  }
-  @keyframes slideRight {
-    from { transform: translateX(-1000px); }
-    to { transform: translateX(0px); }
-  }
-  @keyframes slideLeft {
-    from { transform: translateX(1000px); }
-    to { transform: translateX(0px); }
   }
 </style>

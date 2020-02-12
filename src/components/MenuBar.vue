@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'about')" onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
           About
         </p>
       </div>

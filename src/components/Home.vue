@@ -1,81 +1,63 @@
 <template>
-  <div class="home-component">
+  <div class="home-component" id="home">
     <div class='home-wrapper'>
-      <img :src='pic' class='pic'/>
-      <div class='words-wrapper'>
-        <h1 class='words name'>{{ line1 }}</h1>
-        <h4 class='words title'>{{ line2 }}</h4>
-      </div>
+      <table class='table'>
+        <tr>
+          <td>
+            <h1 class='line1'>Matt Violet</h1>
+            <h1 class='line2'>Software engineer</h1>
+            <h1 class='line3'>Oakland, CA</h1>
+            <img src="../images/down-arrow.png"
+              class="down-arrow"
+              onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+            />
+          </td>
+          <td>
+            <img class='photo' src='../images/matt-violet.png'/>
+          </td>
+        </tr>
+      </table>
     </div>
-    <img src="../images/paper.jpg" class="bg-img"/>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  data () {
-    return {
-      pic: require('../images/matt-violet.png'),
-      line1: "Welcome!",
-      line2: "I'm Matt. Have a look around!",
-    }
-  }
 }
 </script>
 
 <style>
   .home-wrapper {
     width: 100%;
-    margin-top: 100px;
     position: absolute;
   }
-  .bg-img {
-    position: absolute;
-    height: 100%;
-    min-width: 100%;
-    z-index: -1;
-    opacity: .7;
+  .table {
+    width: 50%;
+    margin: 0px auto;
+    line-height: normal;
   }
-  h1 {
-    margin-top: 10px;
-    margin-bottom: 0;
-    text-align: center;
+  .line1 {
     font-size: 50px;
   }
-  h4 {
-    margin: 0;
-    text-align: center;
+  .line2, .line3 {
+    font-size: 20px;
+    line-height: 15px;
   }
-  .pic {
-    height: 200px;
+  .photo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid;
+    background-color: white;
+  }
+  .down-arrow {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    animation-duration: .75s;
-    animation-name: slideDown;
+    margin: 70px auto 0px auto;
+    height: 20px;
   }
-  .words {
-    margin-top: 5;
-  }
-  .name {
-    animation-duration: .75s;
-    animation-name: slideLeft;
-  }
-  .title {
-    animation-duration: .75s;
-    animation-name: slideRight;
-  }
-  @keyframes slideDown {
-    from { transform: translateY(-500px); }
-    to { transform: translateY(0px); }
-  }
-  @keyframes slideRight {
-    from { transform: translateX(-1000px); }
-    to { transform: translateX(0px); }
-  }
-  @keyframes slideLeft {
-    from { transform: translateX(1000px); }
-    to { transform: translateX(0px); }
+  .down-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
   }
 </style>

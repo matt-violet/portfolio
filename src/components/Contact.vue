@@ -1,6 +1,5 @@
 <template>
-  <div class="contact-component">
-    <img src="../images/paper.jpg" class="contact-bg-img"/>
+  <div class="contact-component" id="contact">
     <div class="contact-wrapper">
       <div class="icon-div email" v-on:click="copyText">
         <textarea id="textarea" name="mattviolet@gmail.com" style="display:none;"/>
@@ -55,24 +54,12 @@ export default {
     padding-left: 10px;
     vertical-align: middle;
   }
-  .contact-bg-img {
-    position: fixed;
-    min-height: 100%;
-    min-width: 100%;
-    z-index: -1;
-    opacity: .7;
-  }
   .textarea {
     color: black;
     display: none;
   }
   .contact-wrapper {
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    position: absolute;
+    margin: 150px auto 0 auto;
     width: 300px;
     text-align: center;
   }
@@ -89,29 +76,5 @@ export default {
   }
   .icon {
     width: 100%;
-  }
-  .email {
-    animation-duration: .75s;
-    animation-name: slideRight;
-  }
-  .github {
-    animation-duration: .75s;
-    animation-name: slideUp;
-  }
-  .linkedin {
-    animation-duration: .75s;
-    animation-name: slideLeft;
-  }
-  @keyframes slideUp {
-    from { transform: translateY(500px); }
-    to { transform: translateY(0px); }
-  }
-  @keyframes slideRight {
-    from { transform: translateX(-1000px); }
-    to { transform: translateX(0px); }
-  }
-  @keyframes slideLeft {
-    from { transform: translateX(1000px); }
-    to { transform: translateX(0px); }
   }
 </style>
