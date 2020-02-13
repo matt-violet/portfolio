@@ -46,7 +46,7 @@ export default {
   }
   .photo {
     height: 300px;
-    width: 300px;
+    /* width: 300px; */
     border-radius: 50%;
     border: 1px solid;
     background-color: white;

@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-wrapper" id="menu">
+  <div class="menu-wrapper" id="menu" :class="{ 'menu--hidden': !showMenu }">
     <div class="centered-menu-div">
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
@@ -7,7 +7,7 @@
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'about')" onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
           About
         </p>
       </div>
@@ -34,12 +34,35 @@ export default {
   },
   data() {
     return {
-      currentPage: 'home'
+      currentPage: 'home',
+      showMenu: true,
+      lastScrollPosition: 0
     }
   },
   watch: {
     currentPg: function() {
       this.$data.currentPage = this.currentPg
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  // beforeDestroy () {
+  //   window.removeEventListener('scroll', this.onScroll)
+  // },
+  methods: {
+    onScroll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return;
+      }
+      this.showMenu = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
     }
   }
 }
@@ -53,6 +76,10 @@ export default {
     text-align: center;
     background-color: black;
     border-bottom: 1px solid;
+    transition: 0.3s all ease-out;
+  }
+  .menu-wrapper.menu--hidden {
+    transform: translate3d(0, -100%, 0);
   }
   .centered-menu-div {
     width: 500px;
