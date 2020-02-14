@@ -2,22 +2,22 @@
   <div class="menu-wrapper" id="menu" :class="{ 'menu--hidden': !showMenu }">
     <div class="centered-menu-div">
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'home')" v-bind:class="currentPage === 'home' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'home')" :class="currentPage === 'home' ? 'currentPg' : ''">
           Home
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'about')" v-bind:class="currentPage === 'about' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'about')" :class="currentPage === 'about' ? 'currentPg' : ''">
           About
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'portfolio')" v-bind:class="currentPage === 'portfolio' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'portfolio')" :class="currentPage === 'portfolio' ? 'currentPg' : ''">
           Portfolio
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'contact')" v-bind:class="currentPage === 'contact' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'contact')" :class="currentPage === 'contact' ? 'currentPg' : ''">
           Contact
         </p>
       </div>
@@ -47,17 +47,12 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.onScroll)
   },
-  // beforeDestroy () {
-  //   window.removeEventListener('scroll', this.onScroll)
-  // },
   methods: {
     onScroll () {
       const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScrollPosition < 0) {
         return;
       }
-      // Stop executing this function if the difference between
-      // current scroll position and last scroll position is less than some offset
       if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
         return;
       }
@@ -74,8 +69,7 @@ export default {
     height: 70px;
     position: absolute;
     text-align: center;
-    background-color: black;
-    border-bottom: 1px solid;
+    background-color: rgb(0, 0, 0, .85);
     transition: 0.3s all ease-out;
   }
   .menu-wrapper.menu--hidden {
@@ -99,11 +93,11 @@ export default {
   }
   p {
     line-height: 40px;
-    font-size: 20px;
+    font-size: 15px;
   }
   .menu-option:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   .currentPg {
     color: rgb(131, 131, 255);

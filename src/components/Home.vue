@@ -1,22 +1,15 @@
 <template>
   <div class="home-component" id="home">
-    <div class='home-wrapper'>
-      <table class='table'>
-        <tr>
-          <td>
-            <h1 class='line1'>Matt Violet</h1>
-            <h1 class='line2'>Software engineer</h1>
-            <h1 class='line3'>Oakland, CA</h1>
-            <img src="../images/down-arrow.png"
-              class="down-arrow"
-              onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
-            />
-          </td>
-          <td>
-            <img class='photo' src='../images/matt-violet.png'/>
-          </td>
-        </tr>
-      </table>
+    <img class="photo" src="../images/matt-violet.png"/>
+    <div class='headers-div'>
+      <h1 class='line1'>Matt Violet</h1>
+      <h1 class='line2'>Software engineer</h1>
+    </div>
+    <div class='down-arrow-div'>
+      <img src="../images/down-arrow.png"
+        onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+        class="down-arrow"
+      />
     </div>
   </div>
 </template>
@@ -28,32 +21,41 @@ export default {
 </script>
 
 <style>
-  .home-wrapper {
-    width: 100%;
-    position: absolute;
+  td {
+    padding: 0 10px;
   }
-  .table {
-    width: 50%;
-    margin: 0px auto;
-    line-height: normal;
+  .home-component {
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    justify-content: center;
   }
-  .line1 {
-    font-size: 50px;
-  }
-  .line2, .line3 {
-    font-size: 20px;
-    line-height: 15px;
+  .headers-div {
+    text-align: center;
   }
   .photo {
-    height: 300px;
-    /* width: 300px; */
+    width: 200px;
     border-radius: 50%;
-    border: 1px solid;
     background-color: white;
   }
+  .line1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .line2 {
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .down-arrow-div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
   .down-arrow {
-    display: block;
-    margin: 70px auto 0px auto;
+    margin: 0 auto;
     height: 20px;
   }
   .down-arrow:hover {
