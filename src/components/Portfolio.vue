@@ -5,8 +5,9 @@
         View Resume
       </a>
       <h1 class="projects-header">Software Projects</h1>
+        <CarouselSoftware class='carousel' :project="project" @viewProjectDetails="viewProjectDetails"/>
 
-      <div class="projects-wrapper">
+      <!-- <div class="projects-wrapper">
         <div
           v-for="(project, i) in softwarePortfolio" 
           v-on:click="$emit('viewProjectDetails', project)"
@@ -19,7 +20,7 @@
           <h2>{{ project.title }}</h2>
           <p>{{ project.description }}</p>
         </div>
-      </div>
+      </div> -->
 
       <div class="design-wrapper">
         <h1 class="design-header">Graphic Design</h1>
@@ -37,8 +38,17 @@
 </template>
 
 <script>
+import CarouselSoftware from './CarouselSoftware.vue'
+
 export default {
   name: 'Portfolio',
+  components: {
+    CarouselSoftware,
+  },
+  props: {
+    viewProjectDetails: {type: Function},
+    project: {type: Object},
+  },
   data() {
     return {
       softwarePortfolio: {

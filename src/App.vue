@@ -5,7 +5,7 @@
     <div class="components">
       <Home class='home'/>
       <About class='about'/>
-      <Portfolio class='portfolio' @viewProjectDetails="viewProjectDetails"/>
+      <Portfolio class='portfolio' :project="project" @viewProjectDetails="viewProjectDetails"/>
       <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
       <Contact class='contact'/>
     </div> 
@@ -60,6 +60,7 @@ export default {
       }
     },
     viewProjectDetails(project) {
+      alert('clicked')
       this.project = project;
       this.projectDetails = !this.projectDetails;
     }
