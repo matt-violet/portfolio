@@ -10,7 +10,9 @@
         />
       </div>
     </div>
-        <p>{{ designPortfolio[currentSlide].description }}</p>
+    <div class="text-div">
+      <p>{{ designPortfolio[currentSlide].description }}</p>
+    </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
     <div class="carousel-nav">
       <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"></button>
@@ -100,17 +102,18 @@ export default {
     line-height: 1.5;
   }
   .carousel {
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 380px;
     position: relative;
     margin: 0 auto;
-    text-align: center;
     background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .track-container {
     margin: 0 auto;
     padding: 10px;
-    height: 83%;
+    height: 75%;
     display: flex;
     align-items: center;
   }
@@ -128,6 +131,10 @@ export default {
   }
   .img:hover {
     cursor: pointer;
+  }
+  .text-div {
+    /* padding: 15px; */
+    text-align: center;
   }
   .arrow {
     position: absolute;

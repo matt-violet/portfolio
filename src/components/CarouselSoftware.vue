@@ -55,7 +55,7 @@ export default {
           description: 'Responsive photo gallery for a restaurant review app',
           details: 'Welcome to the photos module for Open Restaurant! The photos module presents the user with an image gallery for a given restaurant. The photos module enables full-screen modal viewing of each gallery photo with responsive sizing, associated photo details, and intuitive navigation of gallery photos. The "restaurant_id" is determined by the 1-8 digit number included at the end of the url. When the gallery page component mounts, the restuarant_id is sent in a GET request to an Express server that queries a MongoDB database for image urls of photos stored on Amazon Web Services.',
           stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
-          image: require('../images/open-restaurant.png'),
+          image: require('../images/restaurant.jpg'),
           github: 'https://github.com/krummurk/photos-module'
         },
         {
@@ -63,7 +63,7 @@ export default {
           description: 'Scaled the back end of a rental accommodations app',
           details: 'Social-Inn is an online marketplace for users to book or offer lodging. This module displays all reviews associated with a particular room. I scaled this module\'s back end to handle 10 million records and 100 requests per second. I benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. I deployed app on AWS and stress tested server to identify performance bottlenecks.',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
-          image: require('../images/couch.jpg'),
+          image: require('../images/bed.jpg'),
           github: 'https://github.com/social-inn/Reviews'
         },
         {
@@ -79,7 +79,7 @@ export default {
           description: 'Calculating the proper dose of medication can be tough for diabetics. My Bolus makes it easy!',
           details: 'This app simulates modern insulin pump technology by implementing a complex algorithm allowing users to calculate their bolus based on meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          image: require('../images/math.jpg'),
+          image: require('../images/vial.jpg'),
           github: 'https://github.com/matt-violet/My-Bolus'
         }
       ]
@@ -94,22 +94,26 @@ export default {
   }
   p {
     line-height: 1.5;
+    margin: 5px 0px;
   }
   .carousel {
-    width: 500px;
-    height: 420px;
+    width: 480px;
+    height: 380px;
     position: relative;
     margin: 0 auto;
     background: white;
-  }
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
   .track-container {
-    padding: 10px;
     height: 100%;
   }
   .img-div {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 63%;
     overflow: hidden;
-    border: 1px solid;
+    border-bottom: 1px solid gray;
   }
   .img {
     min-width: 100%;
@@ -120,7 +124,7 @@ export default {
     cursor: pointer;
   }
   .text-div {
-    padding: 10px 0px;
+    padding: 15px;
   }
   .arrow {
     position: absolute;
