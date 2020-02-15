@@ -72,14 +72,14 @@ export default {
   body, html {
     height: 100%;
     margin: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;
   }
   .bg {
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: white;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-color: lightblue;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
     background-size: 400% 400%;
     background-repeat: no-repeat;
     animation: gradient 15s ease infinite;
@@ -96,9 +96,8 @@ export default {
     width: 100%;
     height: 100%;
     padding-bottom: 150px;
-    margin-top: 120px;
   }
-  @keyframes slideDown {
+  /* @keyframes slideDown {
     from { transform: translateY(-100px); }
     to { transform: translateY(0px); }
   }
@@ -112,5 +111,5 @@ export default {
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
 </style>

@@ -66,10 +66,10 @@ export default {
 <style>
   .menu-wrapper {
     min-width: 600px;
-    height: 70px;
+    height: 60px;
     position: absolute;
     text-align: center;
-    background-color: rgb(0, 0, 0, .85);
+    background: lightblue;
     transition: 0.3s all ease-out;
   }
   .menu-wrapper.menu--hidden {
@@ -77,6 +77,7 @@ export default {
   }
   .centered-menu-div {
     width: 500px;
+    height: 100%;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -85,22 +86,22 @@ export default {
   }
   .menu-option {
     animation-duration: 1s;
-    color: white;
     display: inline-block;
     height: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
   p {
-    line-height: 40px;
-    font-size: 15px;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 0;
   }
-  .menu-option:hover {
+  p:hover {
     cursor: pointer;
     transform: scale(1.1);
   }
   .currentPg {
-    color: rgb(131, 131, 255);
+    border-bottom: 1px solid;
   }
   .home-icon {
     width: 40px;

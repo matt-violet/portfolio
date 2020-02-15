@@ -166,8 +166,9 @@ export default {
     height: 30px;
   }
   .about-component {
-    padding-top: 150px;
-    height: 600px;
+    padding-top: 100px;
+    height: 100%;
+    background: lightskyblue;
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skills-wrapper {

@@ -25,12 +25,15 @@ export default {
     padding: 0 10px;
   }
   .home-component {
+    padding-top: 160px;
+    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
     height: 500px;
     text-align: center;
     position: relative;
     justify-content: center;
+    background: lightblue;
   }
   .headers-div {
     text-align: center;
@@ -38,15 +41,17 @@ export default {
   .photo {
     width: 200px;
     border-radius: 50%;
-    background-color: white;
+    border: 1px solid gray;
+    background-color: lightsalmon;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .line1 {
-    font-size: 30px;
+    font-size: 50px;
     margin: 0;
   }
   .line2 {
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 18px;
+    line-height: 5px;
     text-align: center;
   }
   .down-arrow-div {
