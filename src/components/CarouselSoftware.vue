@@ -76,7 +76,7 @@ export default {
         },
         {
           title: 'My Bolus',
-          description: 'Calculating the proper dose of medication can be tough for diabetics. My Bolus makes it easy!',
+          description: 'Calculating the proper dose of insulin can be tough for diabetics. My Bolus makes it easy!',
           details: 'This app simulates modern insulin pump technology by implementing a complex algorithm allowing users to calculate their bolus based on meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors.',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
           image: require('../images/vial.jpg'),
@@ -91,9 +91,10 @@ export default {
 <style scoped>
   h2 {
     margin: 0;
+    padding-bottom: 3px;
   }
   p {
-    line-height: 1.5;
+    line-height: 1.2;
     margin: 5px 0px;
   }
   .carousel {

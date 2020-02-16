@@ -53,6 +53,21 @@ export default {
       currentSlide: 0,
       designPortfolio: [
         {
+          image: require('../images/Symposium2019.jpg'),
+          description: 'Event Flyer, 2019',
+          design: true
+        },
+        {
+          image: require('../images/GA2017.png'),
+          description: 'Recruitment Flyer, 2018',
+          design: true
+        },
+        {
+          image: require('../images/SKSM-banner.jpg'),
+          description: '8-foot Retractable Banner, 2017',
+          design: true
+        },
+        {
           image: require('../images/GA2016-flyer.png'),
           description: 'Ad in UU World Magazine, 2016',
           design: true
@@ -68,23 +83,8 @@ export default {
           design: true
         },
         {
-          image: require('../images/Symposium2019.jpg'),
-          description: 'Event Flyer, 2019',
-          design: true
-        },
-        {
-          image: require('../images/GA2017.png'),
-          description: 'Recruitment Flyer, 2018',
-          design: true
-        },
-        {
           image: require('../images/SEAsia.png'),
-          description: 'Personal Side Project, 2015',
-          design: true
-        },
-        {
-          image: require('../images/SKSM-banner.jpg'),
-          description: '8-foot Retractable Banner, 2017',
+          description: 'Graphic for Personal Project, 2015',
           design: true
         },
       ]

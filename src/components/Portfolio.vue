@@ -4,12 +4,22 @@
       <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
         View Resume
       </a>
+      
       <h1 class="projects-header" v-on:click="toggleSoftwareProjects">
         Software Projects
       </h1>
       <CarouselSoftware :project="project" @viewProjectDetails="viewProjectDetails"/>
-      <h1 class="design-header">Graphic Design</h1>
+      
+      <h1 class="design-header">
+        Graphic Design
+      </h1>
       <CarouselDesign :project="project" @viewProjectDetails="viewProjectDetails"/>
+      
+      <h1 class="projects-header">
+        Video Projects
+      </h1>
+      <CarouselVideo/>
+    
     </div>
   </div>
 </template>
@@ -17,12 +27,14 @@
 <script>
 import CarouselSoftware from './CarouselSoftware.vue'
 import CarouselDesign from './CarouselDesign.vue'
+import CarouselVideo from './CarouselVideo.vue'
 
 export default {
   name: 'Portfolio',
   components: {
     CarouselSoftware,
     CarouselDesign,
+    CarouselVideo,
   },
   props: {
     viewProjectDetails: {type: Function},
@@ -51,12 +63,6 @@ export default {
     margin: 5px 0px 5px 0px;
     color: black;
     font-size: 18px;
-  }
-  p {
-    font-size: 12px;
-    line-height: normal;
-    color: black;
-    margin: 0;
   }
   .portfolio-component {
     padding-top: 100px;
@@ -94,7 +100,6 @@ export default {
     display: inline-block;
   }
   .project-div:hover {
-    transform: scale(1.03);
     cursor: pointer;
   }
   .img-div {
@@ -124,7 +129,6 @@ export default {
     vertical-align: top;
   }
   .design-project-div:hover {
-    transform: scale(1.03);
     cursor: pointer;
   }
   .design-imgs {
