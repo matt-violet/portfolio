@@ -93,6 +93,7 @@ export default {
     padding-bottom: 150px;
   }
   .home {
-    padding-top: 60px;
+    /* padding-top: 60px; */
+    width: 100%;
   }
 </style>

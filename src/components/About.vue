@@ -1,9 +1,12 @@
 <template>
   <div class="about-component">
-    <div class='about-inner' id="about">
-      <h1>Hi, I'm Matt.</h1>
-      <h3>
-        I'm a multi-talented software engineer with roots in non-profit communications work. I have 800+ hours of advanced Computer Science / JavaScript curriculum and 5 months of hands-on experience as a Software Engineer Intern.
+    <div class='about-text-div' id="about">
+      <div class="img-div">
+        <img src='../images/matt-oak-blank.png' class='matt-oak'>
+      </div>
+      <h1>Hello,</h1>
+      <h3 class='blurb'>
+        I'm a multi-talented software engineer with roots in non-profit communications work. My skills include software development, design, and videography.
       </h3>
 
     </div>
@@ -176,16 +179,24 @@ export default {
     width: 100%;
     position: absolute;
   }
-  .about-inner {
-    width: 500px;
+  .about-text-div {
+    width: 420px;
     margin: -125px auto 0 auto;
     position: relative;
     padding: 20px;
     border: 1px solid gray;
     border-radius: 20px;
-    background: white;
+    background: seashell;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-
+  }
+  .img-div {
+    margin: -370px auto 0px 80px;
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+  }
+  .blurb {
+    margin: 10px;
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skills-wrapper {

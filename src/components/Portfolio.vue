@@ -63,7 +63,7 @@ export default {
   .portfolio-component {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: peachpuff;
+    background: skyblue;
   }
   .portfolio-wrapper {
     width: 850px;

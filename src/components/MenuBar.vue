@@ -53,7 +53,7 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 40) {
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
         return;
       }
       this.showMenu = currentScrollPosition < this.lastScrollPosition;
@@ -69,9 +69,9 @@ export default {
     height: 60px;
     position: absolute;
     text-align: center;
-    color: black;
-    background: rgba(214, 255, 214, 0.95);
-    border-bottom: solid 1px gray;
+    color: gray;
+    background: rgb(0, 0, 0, .9);
+    /* border-bottom: solid 1px gray; */
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     animation-duration: .75s;
@@ -97,8 +97,7 @@ export default {
     margin-right: 25px;
   }
   .menu-text {
-    line-height: 25px;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 0;
   }
   .menu-text:hover {
@@ -106,8 +105,8 @@ export default {
     transform: scale(1.1);
   }
   .currentPg {
-    border-bottom: 1px solid;
-    color: black;
+    /* border-bottom: 1px solid; */
+    color: white;
   }
   @keyframes slideDown {
     from { transform: translateY(-90px); }
