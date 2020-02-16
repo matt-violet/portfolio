@@ -3,11 +3,7 @@
     <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
     <div class="track-container">
       <div class='img-div'>
-        <img
-          :src="softwarePortfolio[currentSlide].image"
-          class='img'
-          v-on:click="$emit('viewProjectDetails', softwarePortfolio[currentSlide])"
-        />
+        <img class='img' :src="softwarePortfolio[currentSlide].image" v-on:click="$emit('viewProjectDetails', softwarePortfolio[currentSlide])"/>
       </div>
       <div class='text-div'>
         <h2>{{ softwarePortfolio[currentSlide].title }}</h2>
@@ -16,10 +12,10 @@
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
     <div class="carousel-nav">
-      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"></button>
-      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"></button>
-      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"></button>
-      <button class="carousel-indicator" :class="currentSlide === 3 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(3)"></button>
+      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
+      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
+      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
+      <button class="carousel-indicator" :class="currentSlide === 3 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(3)"/>
     </div>
   </div>
 </template>
@@ -112,6 +108,7 @@ export default {
   .img-div {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 100%;
     height: 63%;
     overflow: hidden;
     border-bottom: 1px solid gray;

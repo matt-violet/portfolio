@@ -1,15 +1,13 @@
 <template>
   <div class="home-component" id="home">
-    <img class="photo" src="../images/matt-violet.png"/>
-    <div class='headers-div'>
-      <h1 class='line1'>Matt Violet</h1>
-      <h1 class='line2'>Software engineer</h1>
-    </div>
-    <div class='down-arrow-div'>
-      <img src="../images/down-arrow.png"
-        onClick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
-        class="down-arrow"
-      />
+    <div class='home-inner'>
+      <div class='header'>
+        <h1 class='line1'>Matt Violet</h1>
+        <h1 class='line2'>Designer | Software Engineer | Videographer</h1>
+      </div>
+      <div class="img-div">
+        <img src='../images/matt-oak-blank.png' class='matt-oak'>
+      </div>
     </div>
   </div>
 </template>
@@ -25,21 +23,25 @@ export default {
     padding: 0 10px;
   }
   .home-component {
-    padding-top: 160px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 500px;
-    text-align: center;
-    position: relative;
-    justify-content: center;
     background: lightblue;
+    padding-bottom: 90px;
+    height: 540px;
   }
-  .headers-div {
+  .home-inner {
+    padding-top: 40px;
+    width: 500px;
+    margin: 0 auto 0 auto;
+  }
+  .header {
     text-align: center;
+    padding-bottom: 30px;
+  }
+  .bio {
+    margin: 50px auto;
+    width: 500px;
   }
   .photo {
-    width: 200px;
+    width: 170px;
     border-radius: 50%;
     border: 1px solid gray;
     background-color: lightsalmon;
@@ -50,21 +52,18 @@ export default {
     margin: 0;
   }
   .line2 {
-    font-size: 18px;
-    line-height: 5px;
+    margin: 0;
+    font-size: 16px;
     text-align: center;
   }
-  .down-arrow-div {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  .down-arrow {
+  .img-div {
     margin: 0 auto;
-    height: 20px;
+    width: 350px;
   }
-  .down-arrow:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+  .matt-oak {
+    width:  100%;
+    display: flex;
+    bottom: 0;
+    margin: 0 auto;
   }
 </style>

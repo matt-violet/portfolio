@@ -2,22 +2,22 @@
   <div class="menu-wrapper" id="menu" :class="{ 'menu--hidden': !showMenu }">
     <div class="centered-menu-div">
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'home')" :class="currentPage === 'home' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'home')" class='menu-text' :class="currentPage === 'home' ? 'currentPg' : ''">
           Home
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'about')" :class="currentPage === 'about' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
           About
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'portfolio')" :class="currentPage === 'portfolio' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'portfolio')" class='menu-text' :class="currentPage === 'portfolio' ? 'currentPg' : ''">
           Portfolio
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'contact')" :class="currentPage === 'contact' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'contact')" class='menu-text' :class="currentPage === 'contact' ? 'currentPg' : ''">
           Contact
         </p>
       </div>
@@ -53,7 +53,7 @@ export default {
       if (currentScrollPosition < 0) {
         return;
       }
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 40) {
         return;
       }
       this.showMenu = currentScrollPosition < this.lastScrollPosition;
@@ -69,8 +69,13 @@ export default {
     height: 60px;
     position: absolute;
     text-align: center;
-    background: lightblue;
+    color: black;
+    background: rgba(214, 255, 214, 0.95);
+    border-bottom: solid 1px gray;
     transition: 0.3s all ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-duration: .75s;
+    animation-name: slideDown;
   }
   .menu-wrapper.menu--hidden {
     transform: translate3d(0, -100%, 0);
@@ -91,25 +96,21 @@ export default {
     margin-left: 25px;
     margin-right: 25px;
   }
-  p {
+  .menu-text {
     line-height: 25px;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0;
   }
-  p:hover {
+  .menu-text:hover {
     cursor: pointer;
     transform: scale(1.1);
   }
   .currentPg {
     border-bottom: 1px solid;
+    color: black;
   }
-  .home-icon {
-    width: 40px;
-    border: 1px solid;
-    vertical-align: middle
-  }
-  @keyframes slideRight {
-    from { transform: translateX(-900px); }
+  @keyframes slideDown {
+    from { transform: translateY(-90px); }
     to { transform: translateX(0px); }
   }
 </style>

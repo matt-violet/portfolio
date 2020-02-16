@@ -4,22 +4,18 @@
       <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
         View Resume
       </a>
-      
       <h1 class="projects-header" v-on:click="toggleSoftwareProjects">
         Software Projects
       </h1>
       <CarouselSoftware :project="project" @viewProjectDetails="viewProjectDetails"/>
-      
       <h1 class="design-header">
         Graphic Design
       </h1>
       <CarouselDesign :project="project" @viewProjectDetails="viewProjectDetails"/>
-      
       <h1 class="projects-header">
         Video Projects
       </h1>
       <CarouselVideo/>
-    
     </div>
   </div>
 </template>
@@ -67,7 +63,7 @@ export default {
   .portfolio-component {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: lightsalmon;
+    background: peachpuff;
   }
   .portfolio-wrapper {
     width: 850px;

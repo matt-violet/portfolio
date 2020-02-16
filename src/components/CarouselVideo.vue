@@ -19,9 +19,9 @@
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
     <div class="carousel-nav">
-      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"></button>
-      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"></button>
-      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"></button>
+      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
+      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
+      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
     </div>
   </div>
 </template>
@@ -53,18 +53,18 @@ export default {
       currentSlide: 0,
       videoPortfolio: [
         {
-          title: 'Soaring Sunday',
-          description: 'Join me in the clouds and learn about soaring as I fly over Byron, CA in this meditative-like weekend recap video.',
+          title: 'Soaring Sunday, 2015',
+          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
           url: "https://player.vimeo.com/video/118749275"
         },
         {
-          title: 'Starr King Threshold Ceremony',
-          description: 'Watch as the Starr King community formally welcomes new students to the school.',
+          title: 'Starr King Threshold Ceremony, 2017',
+          description: 'The Starr King community gathers to welcome new students to the school.',
           url: 'https://www.youtube.com/embed/Boi3G8wiEAY'
         },
         {
-          title: 'A Mindful Walk: Immersion Course',
-          description: 'Experience Transylvania\'s hills and river valleys, cultural sites, music, dance, and community in this unforgettable immersion couse.',
+          title: 'A Mindful Walk: Immersion Course, 2018',
+          description: 'Experience Transylvania\'s hills and river valleys, cultural sites, and more in this unforgettable immersion couse.',
           url: 'https://www.youtube.com/embed/6eKqxxVSlKQ'
         }
       ],
@@ -98,6 +98,7 @@ export default {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 64%;
+    width: 100%;
     overflow: hidden;
     border-bottom: 1px solid gray;
   }

@@ -78,11 +78,6 @@ export default {
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: lightblue;
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-    background-size: 400% 400%;
-    background-repeat: no-repeat;
-    animation: gradient 15s ease infinite;
   }
   .menu {
     width: 100%;
@@ -97,19 +92,7 @@ export default {
     height: 100%;
     padding-bottom: 150px;
   }
-  /* @keyframes slideDown {
-    from { transform: translateY(-100px); }
-    to { transform: translateY(0px); }
+  .home {
+    padding-top: 60px;
   }
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  } */
 </style>

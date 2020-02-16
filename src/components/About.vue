@@ -1,6 +1,13 @@
 <template>
-  <div class="about-component" id="about">
-    <div class="skills-wrapper">
+  <div class="about-component">
+    <div class='about-inner' id="about">
+      <h1>Hi, I'm Matt.</h1>
+      <h3>
+        I'm a multi-talented software engineer with roots in non-profit communications work. I have 800+ hours of advanced Computer Science / JavaScript curriculum and 5 months of hands-on experience as a Software Engineer Intern.
+      </h3>
+
+    </div>
+    <!-- <div class="skills-wrapper">
       <div class="skills-container">
         <h1 class="header1">Technical Skills</h1>
         <table class="skills-table" cellspacing="10">
@@ -134,7 +141,7 @@
     <img src="../images/down-arrow.png"
       class="down-arrow"
       onClick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })"
-    />
+    /> -->
   </div>
 </template>
 
@@ -166,9 +173,19 @@ export default {
     height: 30px;
   }
   .about-component {
-    padding-top: 100px;
-    height: 100%;
-    background: lightskyblue;
+    width: 100%;
+    position: absolute;
+  }
+  .about-inner {
+    width: 500px;
+    margin: -125px auto 0 auto;
+    position: relative;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skills-wrapper {
