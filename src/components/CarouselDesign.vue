@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    <div class="text-div">
+    <div class="design-text-div">
       <p>{{ designPortfolio[currentSlide].description }}</p>
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
@@ -132,7 +132,7 @@ export default {
   .img:hover {
     cursor: pointer;
   }
-  .text-div {
+  .design-text-div {
     /* padding: 15px; */
     text-align: center;
   }

@@ -36,12 +36,12 @@ export default {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .line1 {
-    font-size: 50px;
+    font-size: 42px;
     margin: 0;
   }
   .line2 {
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 22px;
   }
   .bg-div {
@@ -53,7 +53,7 @@ export default {
     min-width: 100%;
     height: 590px;
     position: absolute;
-    /* opacity: .9; */
     z-index: -1;
+    position: fixed;
   }
 </style>

@@ -5,9 +5,9 @@
         <img src='../images/matt-oak-blank.png' class='matt-oak'>
       </div>
       <div class=blurb-text-div>
-        <h1 class='hello'>Hello,</h1>
+        <h1 class='hello'>Hi, I'm Matt.</h1>
         <h3 class='blurb'>
-          I'm a multi-talented software engineer with roots in non-profit communications work. My skills include software development, design, and videography.
+          I'm a multi-talented software engineer with roots in non-profit communications work. I enjoy making web applications, graphics, and videos.
         </h3>
       </div>
     </div>
@@ -184,7 +184,7 @@ export default {
   }
   .blurb-div {
     width: 420px;
-    margin: -100px 20% 0 auto;
+    margin: -100px 30% 0 auto;
     position: relative;
     padding: 20px;
     border: 1px solid gray;

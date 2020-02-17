@@ -5,7 +5,7 @@
       <div class='img-div'>
         <img class='img' :src="softwarePortfolio[currentSlide].image" v-on:click="$emit('viewProjectDetails', softwarePortfolio[currentSlide])"/>
       </div>
-      <div class='text-div'>
+      <div class='software-text-div'>
         <h2>{{ softwarePortfolio[currentSlide].title }}</h2>
         <p>{{ softwarePortfolio[currentSlide].description }}</p>
       </div>
@@ -121,7 +121,7 @@ export default {
   .img:hover {
     cursor: pointer;
   }
-  .text-div {
+  .software-text-div {
     padding: 15px;
   }
   .arrow {

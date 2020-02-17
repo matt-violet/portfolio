@@ -3,22 +3,22 @@
     <div class="centered-menu-div">
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'home')" class='menu-text' :class="currentPage === 'home' ? 'currentPg' : ''">
-          Home
+          HOME
         </p>
       </div>
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
-          About
+          ABOUT
         </p>
       </div>
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'portfolio')" class='menu-text' :class="currentPage === 'portfolio' ? 'currentPg' : ''">
-          Portfolio
+          PROJECTS
         </p>
       </div>
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'contact')" class='menu-text' :class="currentPage === 'contact' ? 'currentPg' : ''">
-          Contact
+          CONTACT
         </p>
       </div>
     </div>
@@ -70,7 +70,7 @@ export default {
     position: absolute;
     text-align: center;
     color: gray;
-    background: rgb(0, 0, 0, .9);
+    background: black;
     /* border-bottom: solid 1px gray; */
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -97,13 +97,13 @@ export default {
     margin-right: 25px;
   }
   .menu-text {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
   }
   .menu-text:hover {
     cursor: pointer;
     color: white;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
   }
   .currentPg {
     /* border-bottom: 1px solid; */

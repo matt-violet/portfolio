@@ -85,15 +85,16 @@ export default {
   .menu {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     animation-duration: .75s;
     animation-name: slideDown;
   }
   .components {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     padding-bottom: 150px;
+    overflow: hidden;
   }
   .home {
     width: 100%;

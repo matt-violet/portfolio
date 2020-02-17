@@ -12,7 +12,7 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class='text-div'>
+      <div class='video-text-div'>
         <h2>{{ videoPortfolio[currentSlide].title }}</h2>
         <p>{{ videoPortfolio[currentSlide].description }}</p>
       </div>
@@ -110,7 +110,7 @@ export default {
   .img:hover {
     cursor: pointer;
   }
-  .text-div {
+  .video-text-div {
     padding: 15px;
     height: 30%;
   }
