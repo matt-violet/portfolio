@@ -21,12 +21,14 @@ export default {
   .home-component {
     width: 100%;
     height: 590px;
+    background: rgba(14, 14, 14, 0.3);
   }
   .header {
     text-align: center;
     margin: 90px 70px;
     color: white;
     display: inline-block;
+    padding: 10px;
   }
   .photo {
     width: 170px;
@@ -38,6 +40,7 @@ export default {
   .line1 {
     font-size: 42px;
     margin: 0;
+    color: slateblue;
   }
   .line2 {
     margin: 0;
@@ -55,5 +58,6 @@ export default {
     position: absolute;
     z-index: -1;
     position: fixed;
+
   }
 </style>

@@ -80,7 +80,6 @@ export default {
   .bg {
     height: 100%;
     width: 100%;
-    position: fixed;
   }
   .menu {
     width: 100%;
@@ -93,7 +92,6 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-    padding-bottom: 150px;
     overflow: hidden;
   }
   .home {

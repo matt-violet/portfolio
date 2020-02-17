@@ -54,13 +54,15 @@ export default {
     padding-left: 10px;
     vertical-align: middle;
   }
+  .contact-component {
+    background: white;
+  }
   .textarea {
     color: black;
     display: none;
   }
   .contact-wrapper {
-    margin: 150px auto 0 auto;
-    width: 300px;
+    width: 100%;
     text-align: center;
   }
   .icon-div {

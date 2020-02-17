@@ -1,11 +1,11 @@
 <template>
   <div class="blurb-component">
     <div class='blurb-div' id="about">
-      <div class="img-div">
-        <img src='../images/matt-oak-blank.png' class='matt-oak'>
+      <div class="blurb-photo-div">
+        <img src='../images/matt-oak-blank.png' class='blurb-photo'>
       </div>
       <div class=blurb-text-div>
-        <h1 class='hello'>Hi, I'm Matt.</h1>
+        <h1 class='hello'>Hello,</h1>
         <h3 class='blurb'>
           I'm a multi-talented software engineer with roots in non-profit communications work. I enjoy making web applications, graphics, and videos.
         </h3>
@@ -183,35 +183,32 @@ export default {
     z-index: 1;
   }
   .blurb-div {
+    background: gainsboro;
     width: 420px;
-    margin: -100px 30% 0 auto;
+    margin: -100px auto 0 auto;
     position: relative;
     padding: 20px;
     border: 1px solid gray;
-    border-radius: 20px;
-    background: seashell;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .blurb-text-div {
     padding: 0px 10px;
   }
-  .img-div {
-    margin: -370px auto 0px 80px;
+  .blurb-photo-div {
+    margin: -370px auto;
     width: 350px;
     position: absolute;
     z-index: -1;
   }
-  .matt-oak {
+  .blurb-photo {
     width:  100%;
-    display: flex;
-    bottom: 0;
     margin: 0 auto;
-    position: relative;
     -webkit-filter: drop-shadow(8px 5px 6px #222);
     filter: drop-shadow(8px 5px 6px #222); 
   }
   .hello {
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 10px;
   }
   .blurb {
