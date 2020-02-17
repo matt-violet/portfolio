@@ -1,9 +1,12 @@
 <template>
   <div class="home-component" id="home">
-    <img src='../images/oak-sunset.jpg' class='oak-sunset'>
+    <div class="bg-div">
+      <img src='../images/oak-sunset.jpg' class='oak-sunset'>
+    </div>
     <div class='header'>
       <h1 class='line1'>Matt Violet</h1>
       <h1 class='line2'>Designer | Software Engineer | Videographer</h1>
+      <h1 class='line2'>Oakland, CA</h1>
     </div>
   </div>
 </template>
@@ -16,9 +19,8 @@ export default {
 
 <style>
   .home-component {
-    /* background: lightblue; */
-    padding-bottom: 90px;
-    height: 540px;
+    width: 100%;
+    height: 590px;
   }
   .header {
     text-align: center;
@@ -40,17 +42,16 @@ export default {
   .line2 {
     margin: 0;
     font-size: 15px;
+    line-height: 22px;
   }
-  .matt-oak {
-    width:  100%;
-    display: flex;
-    bottom: 0;
-    margin: 0 auto;
-    position: relative;
+  .bg-div {
+    width: 100%;
+    height: 590px;
+    position: absolute;
   }
   .oak-sunset {
     min-width: 100%;
-    height: 630px;
+    height: 590px;
     position: absolute;
     /* opacity: .9; */
     z-index: -1;

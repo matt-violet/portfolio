@@ -4,7 +4,8 @@
     <MenuBar class="menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <div class="components">
       <Home class='home'/>
-      <About class='about'/>
+      <Blurb class='blurb'/>
+      <About/>
       <Portfolio class='portfolio' :project="project" @viewProjectDetails="viewProjectDetails"/>
       <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
       <Contact class='contact'/>
@@ -15,6 +16,7 @@
 <script>
 import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
+import Blurb from './components/Blurb.vue'
 import About from './components/About.vue'
 import Portfolio from './components/Portfolio.vue'
 import Contact from './components/Contact.vue'
@@ -25,6 +27,7 @@ export default {
   components: {
     MenuBar,
     Home,
+    Blurb,
     About,
     Portfolio,
     Contact,
@@ -93,7 +96,6 @@ export default {
     padding-bottom: 150px;
   }
   .home {
-    /* padding-top: 60px; */
     width: 100%;
   }
 </style>

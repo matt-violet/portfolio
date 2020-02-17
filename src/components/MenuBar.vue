@@ -102,6 +102,7 @@ export default {
   }
   .menu-text:hover {
     cursor: pointer;
+    color: white;
     transform: scale(1.1);
   }
   .currentPg {
