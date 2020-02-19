@@ -69,7 +69,7 @@ export default {
     height: 60px;
     position: absolute;
     text-align: center;
-    color: rgb(179, 179, 179);
+    color: gray;
     background: rgb(53, 53, 53);
     border-bottom: 1px solid black;
     transition: 0.3s all ease-out;

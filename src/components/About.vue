@@ -30,7 +30,7 @@ export default {
 
 <style>
   .about-component {
-    padding: 80px 160px;
+    padding: 80px 20%;
     border-top: 1px solid black;
     background: rgb(236, 236, 236);
   }

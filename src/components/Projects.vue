@@ -4,18 +4,12 @@
       SOFTWARE PROJECTS
     </h1>
     <div class="projects-wrapper">
-      <!-- <a class="resume-link" target="_blank" href="https://docs.google.com/document/d/1QNbQGA8xYZ_rY8bJt6Y7lT9yVWhXIu7WmLypJb6UrZU/edit?usp=sharing">
-        View Resume
-      </a> -->
       <CarouselSoftware class='software-carousel' :project="project" @viewProjectDetails="viewProjectDetails"/>
       <div class='other-div'>
         <h1 class="other-projects-header">
           OTHER PROJECTS
         </h1>
         <CarouselDesign class='inline-carousel' :project="project" @viewProjectDetails="viewProjectDetails"/>
-        <!-- <h1 class="projects-header">
-          VIDEO
-        </h1> -->
         <CarouselVideo class='inline-carousel'/>
       </div>
     </div>
@@ -149,9 +143,6 @@ export default {
     border: 1px solid gray;
     border-radius: 5px;
     width: 100%;
-  }
-  .resume-link {
-    display: inline-block;
   }
   .software-carousel {
     margin: 40px auto;
