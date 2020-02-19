@@ -1,8 +1,6 @@
 <template>
   <div class='skills-component'>
-    <div class='skills-div'>
-      <h1 class='skills-header'>My Skills</h1>
-    </div>
+    <h1 class='skills-header'>My Skills</h1>
     <table class='table'>
       <tr>
         <td class="col">
@@ -158,33 +156,28 @@ export default {
 <style scoped>
   .skills-component {
     background: rgb(53, 53, 53);
-    padding: 60px 0;
-  }
-  .skills-div {
-    padding: 20px;
-    width: 100%;
-    text-align: center;
+    padding: 40px 0;
+
   }
   .skills-header {
+    padding-bottom: 5px;
     text-align: center;
-    font-size: 25px;
     margin: 0 auto;
-    width: 300px;
+    width: 180px;
     border-bottom: white solid 1px;
     color: white;
   }
   .table {
     color: lightgray;
     background: rgb(53, 53, 53);
-    margin: auto;
+    margin: 40px auto;
   }
   .col {
     width: 250px;
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
     vertical-align: top;
     display: inline-block;
-    text-align: center;
   }
   .bullets {
     padding: 0;
@@ -193,7 +186,7 @@ export default {
   /* ----------------------------- SKILLS --------------------------------- */
   .skill-icons-container {
     width: 650px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto;
   }
   .icon {
     width: 40px;

@@ -42,8 +42,9 @@ export default {
   .about-header {
     color: black;
     margin: 0 auto 20px auto;
+    padding: 0 0 5px 0;
     text-align: center;
-    width: 300px;
+    width: 200px;
     border-bottom: 1px solid;
   }
   .bio-text {

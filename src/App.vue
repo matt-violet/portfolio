@@ -6,7 +6,7 @@
       <Home class='home'/>
       <Blurb class='blurb'/>
       <About/>
-      <Portfolio class='portfolio' :project="project" @viewProjectDetails="viewProjectDetails"/>
+      <Projects class='portfolio' :project="project" @viewProjectDetails="viewProjectDetails"/>
       <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
       <Contact class='contact'/>
     </div> 
@@ -18,7 +18,7 @@ import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
 import Blurb from './components/Blurb.vue'
 import About from './components/About.vue'
-import Portfolio from './components/Portfolio.vue'
+import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 import ProjectDetails from './components/ProjectDetails.vue'
 
@@ -29,7 +29,7 @@ export default {
     Home,
     Blurb,
     About,
-    Portfolio,
+    Projects,
     Contact,
     ProjectDetails
   },
@@ -38,7 +38,7 @@ export default {
       currentPg: '',
       home: true,
       about: false,
-      portfolio: false,
+      projects: false,
       contact: false,
       projectDetails: false,
       project: {},
@@ -48,7 +48,7 @@ export default {
     onMenuClick(option) {
       this.home = false;
       this.about = false;
-      this.portfolio = false;
+      this.projects = false;
       this.contact = false;
       this[option] = true;
       this.currentPg = option;

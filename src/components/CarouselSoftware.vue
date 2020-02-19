@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class="software-carousel-component">
     <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
     <div class="track-container">
       <div class='img-div'>
@@ -93,7 +93,7 @@ export default {
     line-height: 1.2;
     margin: 5px 0px;
   }
-  .carousel {
+  .software-carousel-component {
     width: 480px;
     height: 380px;
     position: relative;

@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'portfolio')" class='menu-text' :class="currentPage === 'portfolio' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'portfolio')" class='menu-text' :class="currentPage === 'projects' ? 'currentPg' : ''">
           PROJECTS
         </p>
       </div>
