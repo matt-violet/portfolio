@@ -1,94 +1,55 @@
 <template>
-  <div class="about-component">
-    <div class="left-div">
+  <div>
+    <div class="about-component" id="about">
       <div class="about-me">
-        <h1 class="about-header">What I Can Do</h1>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, voluptatem. Voluptatum eum error dolorem temporibus qui maxime non, itaque alias explicabo deleniti. Repellat molestiae neque, eligendi optio ab facilis quaerat.
-        <ul>
-          <li>asdfasdfasdf</li>
-          <li>asdfasdfasdf</li>
-          <li>asdfasdfasdf</li>
-        </ul>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, voluptatem. Voluptatum eum error dolorem temporibus qui maxime non, itaque alias explicabo deleniti. Repellat molestiae neque, eligendi optio ab facilis quaerat.
+        <h1 class='about-header'>About Me</h1>
+        <p class='bio-text'>
+          Native of Oakland, CA, I have a big heart and I bring passion to everything I do. I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.
+        </p>
+        <p class='bio-text'>
+          My interest in software came in 2015, at a time of major change in my life. Shortly after I was diagnosed with type one diabetes, I started wearing two electronic medical devices that worked together to create a hybrid closed-loop system to help manage my blood sugar levels. As someone whose health is now literally tied to automated algorithms, my appreciation for the power of code has changed forever.
+        </p>
+        <p class='bio-text'>
+          Understanding what technological innovation has done for me, and can do for others, is what motivates me to dream big, learn new things, and tackle complex problems. 
+        </p>
       </div>
-    </div>
-    <div class="right-div">
-      <div class='box-div'>
-        <div class="col">
-          <h2 class="skill-header">Software</h2>
-          <ul class="bullets">
-            <li>5 months as software internship</li>
-            <li>Bootcamp graduate</li>
-            <li>Driven to self teach</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h2 class="skill-header">Design</h2>
-          <ul class="bullets">
-            <li>3+ years hands on experience</li>
-            <li>Photoshop, InDesign, Sketchable</li>
-          </ul>
-        </div>
-         <div class="col">
-          <h2 class="skill-header">Video</h2>
-          <ul class="bullets">
-            <li>3+ years hands on experience</li>
-            <li>iMovie</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>  
+    </div>  
+    <Skills/>
+  </div>
 </template>
 
 <script>
+import Skills from './Skills.vue'
 export default {
   name: 'about',
+  components: {
+    Skills,
+  }
 }
 </script>
 
 <style>
   .about-component {
-    width: 100%;
-    background: darkseagreen;
-  }
-  .left-div {
-    width: 50%;
-    display: inline-block;
-    position: relative;
-  }
-  .right-div {
-    display: inline-block;
-    position: absolute;
-    padding: 100px 60px;
+    padding: 80px 160px;
+    border-top: 1px solid black;
+    background: rgb(236, 236, 236);
   }
   .about-me {
-    padding: 100px 60px;
-    width: 500px;
-    float: right;
+    height: 100%;
+    padding: 20px 40px;
+    background: white;
   }
   .about-header {
-    margin-top: 0;
-    font-size: 40px;
-    color: white;
+    color: black;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 300px;
+    border-bottom: 1px solid;
   }
-  .box-div {
-    margin: 0 auto;
-    width: 500px;
-  }
-  .col {
-    padding: 10px;
-    width: 29%;
-    font-size: 13px;
-    vertical-align: top;
+  .bio-text {
+    margin-bottom: 10px;
+    font-size: 14px;
     display: inline-block;
-  }
-  .skill-header {
-    font-size: 25px;
-    margin-top: 0;
-    color: white;
-  }
-  .bullets {
-    padding: 0;
+    color: rgb(143, 143, 143);
   }
 </style>

@@ -22,6 +22,7 @@
       <button class="carousel-indicator" :class="currentSlide === 4 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(4)"/>
       <button class="carousel-indicator" :class="currentSlide === 5 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(5)"/>
       <button class="carousel-indicator" :class="currentSlide === 6 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(6)"/>
+      <button class="carousel-indicator" :class="currentSlide === 7 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(7)"/>
     </div>
   </div>
 </template>
@@ -35,7 +36,7 @@ export default {
   },
   methods: {
     handleNext: function() {
-      if (this.currentSlide < 6) {
+      if (this.currentSlide < 7) {
         this.currentSlide++
       }
     },
@@ -81,6 +82,10 @@ export default {
           image: require('../images/GA2018-flyer.png'),
           description: 'Ad in UU World Magazine, 2018',
           design: true
+        },
+        {
+          image: require('../images/HLTW.png'),
+          description: 'Designed layout of book "Hunter Leads the Way", 2017'
         },
         {
           image: require('../images/SEAsia.png'),

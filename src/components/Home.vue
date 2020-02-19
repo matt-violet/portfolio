@@ -1,12 +1,11 @@
 <template>
   <div class="home-component" id="home">
     <div class="bg-div">
-      <img src='../images/oak-sunset.jpg' class='oak-sunset'>
+      <img src='../images/skate.jpg' class='bg-img-skate'>
     </div>
     <div class='header'>
-      <h1 class='line1'>Matt Violet</h1>
-      <h1 class='line2'>Designer | Software Engineer | Videographer</h1>
-      <h1 class='line2'>Oakland, CA</h1>
+      <h1 class='line1'>MATT VIOLET</h1>
+      <h1 class='line2'>Software Engineer</h1>
     </div>
   </div>
 </template>
@@ -20,41 +19,35 @@ export default {
 <style>
   .home-component {
     width: 100%;
-    height: 590px;
-    background: rgba(14, 14, 14, 0.3);
+    height: 600px;
+    background: rgba(14, 14, 14, 0.2);
   }
   .header {
-    text-align: center;
-    margin: 90px 70px;
-    color: white;
+    margin: 70px 30px;
+    color: black;
     display: inline-block;
     padding: 10px;
   }
-  .photo {
-    width: 170px;
-    border-radius: 50%;
-    border: 1px solid gray;
-    background-color: lightsalmon;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
   .line1 {
-    font-size: 42px;
+    font-size: 22px;
     margin: 0;
-    color: slateblue;
+    color: lightgray;
   }
   .line2 {
     margin: 0;
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 12px;
+    color: lightgray;
   }
   .bg-div {
     width: 100%;
-    height: 590px;
+    height: 600px;
     position: absolute;
   }
-  .oak-sunset {
+  .bg-img-skate {
+    vertical-align: middle;
     min-width: 100%;
-    height: 590px;
+
+    height: 600px;
     position: absolute;
     z-index: -1;
     position: fixed;

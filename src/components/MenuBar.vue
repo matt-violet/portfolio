@@ -69,9 +69,9 @@ export default {
     height: 60px;
     position: absolute;
     text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.8);
-    border-bottom: solid 1px black;
+    color: rgb(179, 179, 179);
+    background: rgb(53, 53, 53);
+    border-bottom: 1px solid black;
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     animation-duration: .75s;
@@ -102,12 +102,12 @@ export default {
   }
   .menu-text:hover {
     cursor: pointer;
-    color: slateblue;
+    color: white;
     /* transform: scale(1.1); */
   }
   .currentPg {
     /* border-bottom: 1px solid; */
-    color: slateblue;
+    color: white;
   }
   @keyframes slideDown {
     from { transform: translateY(-90px); }
