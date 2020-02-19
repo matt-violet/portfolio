@@ -2,7 +2,6 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
-
         <div v-if="!project.design" class="modal-container">
           <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">
             &times;
@@ -23,7 +22,6 @@
             <a :href="project.github" target="_blank">GitHub Repository</a>
           </div>
         </div>
-
         <div v-if="project.design" class="modal-container-design">
           <a class="modal-close-button-design" @click="$emit('viewProjectDetails')">
             &times;
@@ -32,7 +30,6 @@
             <img :src="project.image" class='img-design'/>
           </div>
         </div>
-
       </div>
     </div>
   </transition>
@@ -71,14 +68,12 @@ export default {
   .img-div {
     height: 380px;
     margin: 20px;
-    /* border: 1px solid black; */
     overflow: hidden;
   }
   .img-div-design {
     max-height: 600px;
     margin: 20px;
     margin-top: 10px;
-    /* border: 1px solid black; */
     overflow: auto;
   }
   .img {
@@ -142,11 +137,9 @@ export default {
   .modal-enter {
     opacity: 0;
   }
-
   .modal-leave-active {
     opacity: 0;
   }
-
   .modal-enter .modal-container,
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);

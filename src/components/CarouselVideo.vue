@@ -4,7 +4,7 @@
     <div class="track-container">
       <div class='img-div'>
         <iframe
-          :src="videoPortfolio[currentSlide].url"
+          :src="projects[currentSlide].url"
           width="100%"
           height="100%"
           frameborder="0"
@@ -13,8 +13,8 @@
         ></iframe>
       </div>
       <div class='video-text-div'>
-        <h2>{{ videoPortfolio[currentSlide].title }}</h2>
-        <p>{{ videoPortfolio[currentSlide].description }}</p>
+        <h2>{{ projects[currentSlide].title }}</h2>
+        <p>{{ projects[currentSlide].description }}</p>
       </div>
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
@@ -28,10 +28,19 @@
 
 <script>
 export default {
-  name: 'CarouselSoftware',
+  name: 'CarouselVideo',
   props: {
     viewProjectDetails: { type: Function },
-    project: { type: Object },
+    videoProjects: { type: Object },
+  },
+  data() {
+    return {
+      currentSlide: 0,
+      projects: []
+    }
+  },
+  mounted() {
+    this.$data.projects = this.videoProjects
   },
   methods: {
     handleNext: function() {
@@ -48,28 +57,7 @@ export default {
       this.currentSlide = index;
     }
   },
-  data() {
-    return {
-      currentSlide: 0,
-      videoPortfolio: [
-        {
-          title: 'Soaring Sunday, 2015',
-          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
-          url: "https://player.vimeo.com/video/118749275"
-        },
-        {
-          title: 'Starr King Threshold Ceremony, 2017',
-          description: 'The Starr King community gathers to welcome new students to the school.',
-          url: 'https://www.youtube.com/embed/Boi3G8wiEAY'
-        },
-        {
-          title: 'A Mindful Walk: Immersion Course, 2018',
-          description: 'Experience Transylvania\'s hills and river valleys, cultural sites, and more in this unforgettable immersion couse.',
-          url: 'https://www.youtube.com/embed/6eKqxxVSlKQ'
-        }
-      ],
-    }
-  }
+  
 }
 </script>
 

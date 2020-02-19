@@ -5,14 +5,29 @@
     </h1>
     <div class="projects-wrapper">
       <div class="software-projects">
-        <SoftwareProjects/>
+        <SoftwareProjects
+          :softwareProjects="softwareProjects"
+          @viewProjectDetails="showProjectDetails"
+        />
       </div>
       <div class='other-div'>
         <h1 class="other-projects-header">
           OTHER PROJECTS
         </h1>
-        <CarouselDesign class='inline-carousel' :project="project" @viewProjectDetails="viewProjectDetails"/>
-        <CarouselVideo class='inline-carousel'/>
+        <CarouselDesign
+          class='inline-carousel'
+          :designProjects="designProjects"
+          @viewProjectDetails="showProjectDetails"
+        />
+        <CarouselVideo
+          class='inline-carousel'
+          :videoProjects="videoProjects"
+        />
+        <ProjectDetails
+          v-if="projectDetails"
+          :project="featuredProject"
+          @viewProjectDetails="showProjectDetails"
+        />
       </div>
     </div>
   </div>
@@ -22,6 +37,7 @@
 import CarouselDesign from './CarouselDesign.vue'
 import CarouselVideo from './CarouselVideo.vue'
 import SoftwareProjects from './SoftwareProjects.vue'
+import ProjectDetails from './ProjectDetails.vue'
 
 export default {
   name: 'Projects',
@@ -29,6 +45,111 @@ export default {
     CarouselDesign,
     CarouselVideo,
     SoftwareProjects,
+    ProjectDetails,
+  },
+  methods: {
+    showProjectDetails(project) {
+      this.featuredProject = project;
+      this.projectDetails = !this.projectDetails;
+    }
+  },
+  data() {
+    return {
+      featuredProject: {},
+      projectDetails: false,
+      softwareProjects: [
+        {
+          id: 1,
+          title: 'Connect Four',
+          description: 'Single Page Connect Four Game',
+          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
+          stack: 'HTML, CSS, Javascript, React',
+          image: require('../images/connect-four.png')
+        },
+        {
+          id: 2,
+          title: 'My Bolus',
+          description: 'Insulin dose calculator for diabetics',
+          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
+          stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
+          image: require('../images/vial.jpg')
+        },
+        {
+          id: 3,
+          title: 'Open Restaurant',
+          description: 'Photos module for restaurant app',
+          details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
+          stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
+          image: require('../images/restaurant.jpg')
+        },
+        {
+          id: 4,
+          title: 'Social Inn',
+          description: 'Scaled back end of housing app',
+          details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
+          stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
+          image: require('../images/bed.jpg')
+        }
+      ],
+      designProjects: [
+        {
+          image: require('../images/Symposium2019.jpg'),
+          description: 'Event Flyer, 2019',
+          design: true
+        },
+        {
+          image: require('../images/GA2017.png'),
+          description: 'Recruitment Flyer, 2018',
+          design: true
+        },
+        {
+          image: require('../images/SKSM-banner.jpg'),
+          description: '8-foot Retractable Banner, 2017',
+          design: true
+        },
+        {
+          image: require('../images/GA2016-flyer.png'),
+          description: 'Ad in UU World Magazine, 2016',
+          design: true
+        },
+        {
+          image: require('../images/GA2017-flyer.png'),
+          description: 'Ad in UU World Magazine, 2017',
+          design: true
+        },
+        {
+          image: require('../images/GA2018-flyer.png'),
+          description: 'Ad in UU World Magazine, 2018',
+          design: true
+        },
+        {
+          image: require('../images/HLTW.png'),
+          description: 'Designed layout of book "Hunter Leads the Way", 2017'
+        },
+        {
+          image: require('../images/SEAsia.png'),
+          description: 'Graphic for Personal Project, 2015',
+          design: true
+        },
+      ],
+      videoProjects: [
+        {
+          title: 'Soaring Sunday, 2015',
+          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
+          url: "https://player.vimeo.com/video/118749275"
+        },
+        {
+          title: 'Starr King Threshold Ceremony, 2017',
+          description: 'The Starr King community gathers to welcome new students to the school.',
+          url: 'https://www.youtube.com/embed/Boi3G8wiEAY'
+        },
+        {
+          title: 'A Mindful Walk: Immersion Course, 2018',
+          description: 'Experience Transylvania\'s hills and river valleys, cultural sites, and more in this unforgettable immersion couse.',
+          url: 'https://www.youtube.com/embed/6eKqxxVSlKQ'
+        }
+      ],
+    }
   }
 }
 </script>
@@ -42,7 +163,6 @@ export default {
   .projects-component {
     width: 100%;
     padding-top: 40px;
-    padding-bottom: 100px;
     background: rgb(236, 236, 236);
   }
   .software-projects-header {
@@ -136,8 +256,7 @@ export default {
     margin: 40px auto;
   }
   .inline-carousel {
-    display: inline-block;
-    margin: 0 80px;
+    margin: 0 auto 80px auto;
   }
   .other-div {
     margin: 0 auto;

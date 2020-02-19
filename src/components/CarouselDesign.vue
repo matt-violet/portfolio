@@ -4,14 +4,14 @@
     <div class="track-container">
       <div class="track-inner">
         <img
-          :src="designPortfolio[currentSlide].image"
+          :src="projects[currentSlide].image"
           class='img'
-          v-on:click="$emit('viewProjectDetails', designPortfolio[currentSlide])"
+          v-on:click="$emit('viewProjectDetails', projects[currentSlide])"
         />
       </div>
     </div>
     <div class="design-text-div">
-      <p>{{ designPortfolio[currentSlide].description }}</p>
+      <p>{{ projects[currentSlide].description }}</p>
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
     <div class="carousel-nav">
@@ -32,7 +32,16 @@ export default {
   name: 'CarouselDesign',
   props: {
     viewProjectDetails: { type: Function },
-    project: { type: Object },
+    designProjects: { type: Array },
+  },
+  data() {
+    return {
+      currentSlide: 0,
+      projects: []
+    }
+  },
+  mounted() {
+    this.$data.projects = this.designProjects
   },
   methods: {
     handleNext: function() {
@@ -49,52 +58,6 @@ export default {
       this.currentSlide = index;
     }
   },
-  data() {
-    return {
-      currentSlide: 0,
-      designPortfolio: [
-        {
-          image: require('../images/Symposium2019.jpg'),
-          description: 'Event Flyer, 2019',
-          design: true
-        },
-        {
-          image: require('../images/GA2017.png'),
-          description: 'Recruitment Flyer, 2018',
-          design: true
-        },
-        {
-          image: require('../images/SKSM-banner.jpg'),
-          description: '8-foot Retractable Banner, 2017',
-          design: true
-        },
-        {
-          image: require('../images/GA2016-flyer.png'),
-          description: 'Ad in UU World Magazine, 2016',
-          design: true
-        },
-        {
-          image: require('../images/GA2017-flyer.png'),
-          description: 'Ad in UU World Magazine, 2017',
-          design: true
-        },
-        {
-          image: require('../images/GA2018-flyer.png'),
-          description: 'Ad in UU World Magazine, 2018',
-          design: true
-        },
-        {
-          image: require('../images/HLTW.png'),
-          description: 'Designed layout of book "Hunter Leads the Way", 2017'
-        },
-        {
-          image: require('../images/SEAsia.png'),
-          description: 'Graphic for Personal Project, 2015',
-          design: true
-        },
-      ]
-    }
-  }
 }
 </script>
 
@@ -138,7 +101,6 @@ export default {
     cursor: pointer;
   }
   .design-text-div {
-    /* padding: 15px; */
     text-align: center;
   }
   .arrow {
