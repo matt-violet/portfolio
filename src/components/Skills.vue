@@ -14,7 +14,7 @@
           <h2 class="software-header">Software Development</h2>
           <div class="software-bullets">
             <ul>
-              <li>2 years of structured education, personal projects, and professional experience</li>
+              <li>2 years of combined education, personal projects, and professional experience</li>
               <li>5 months as an intern working on a team of software developers</li>
               <li>800+ hours of advanced Computer Science curriculum modeling today’s software engineering industry</li>
               <li>Self taught skills such as HTML, CSS, and Vue.js (used for this website)</li>

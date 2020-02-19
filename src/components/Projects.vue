@@ -4,7 +4,9 @@
       SOFTWARE PROJECTS
     </h1>
     <div class="projects-wrapper">
-      <CarouselSoftware class='software-carousel' :project="project" @viewProjectDetails="viewProjectDetails"/>
+      <div class="software-projects">
+        <SoftwareProjects/>
+      </div>
       <div class='other-div'>
         <h1 class="other-projects-header">
           OTHER PROJECTS
@@ -17,35 +19,16 @@
 </template>
 
 <script>
-import CarouselSoftware from './CarouselSoftware.vue'
 import CarouselDesign from './CarouselDesign.vue'
 import CarouselVideo from './CarouselVideo.vue'
+import SoftwareProjects from './SoftwareProjects.vue'
 
 export default {
-  name: 'Portfolio',
+  name: 'Projects',
   components: {
-    CarouselSoftware,
     CarouselDesign,
     CarouselVideo,
-  },
-  props: {
-    viewProjectDetails: {type: Function},
-    project: {type: Object},
-  },
-  methods: {
-    toggleSoftwareProjects() {
-      // alert('click')
-      if (this.$data.showSoftwareCarousel) {
-        this.$data.showSoftwareCarousel = false;
-      } else {
-        this.$data.showSoftwareCarousel = true;
-      }
-    }
-  },
-  data() {
-    return {
-      showSoftwareCarousel: false
-    }
+    SoftwareProjects,
   }
 }
 </script>
@@ -145,6 +128,11 @@ export default {
     width: 100%;
   }
   .software-carousel {
+    margin: 40px auto;
+  }
+  .software-projects {
+    width: 800px;
+    height: 500px;
     margin: 40px auto;
   }
   .inline-carousel {

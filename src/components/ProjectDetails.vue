@@ -4,7 +4,7 @@
       <div class="modal-wrapper">
 
         <div v-if="!project.design" class="modal-container">
-          <a class="modal-close-button" @click="$emit('viewProjectDetails')">
+          <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">
             &times;
           </a>
           <div class="img-div">
@@ -46,12 +46,12 @@ export default {
   },
   data() {
     return {
-      clickedProject: {},
+      featuredProject: {},
     }
   },
   mounted: {
     setProject: function() {
-      this.$data.clickedProject = this.project;
+      this.$data.clickedProject = this.featuredProject;
     }
   }
 }

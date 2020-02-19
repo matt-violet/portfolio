@@ -6,8 +6,7 @@
       <Home class='home'/>
       <Blurb class='blurb'/>
       <About/>
-      <Projects class='portfolio' :project="project" @viewProjectDetails="viewProjectDetails"/>
-      <ProjectDetails v-if="projectDetails" :project="project" @viewProjectDetails="viewProjectDetails"/>
+      <Projects/>
       <Contact class='contact'/>
     </div> 
   </div>
@@ -20,7 +19,7 @@ import Blurb from './components/Blurb.vue'
 import About from './components/About.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
-import ProjectDetails from './components/ProjectDetails.vue'
+// import ProjectDetails from './components/ProjectDetails.vue'
 
 export default {
   name: 'app',
@@ -31,7 +30,7 @@ export default {
     About,
     Projects,
     Contact,
-    ProjectDetails
+    // ProjectDetails
   },
   data() {
     return {
@@ -40,8 +39,8 @@ export default {
       about: false,
       projects: false,
       contact: false,
-      projectDetails: false,
-      project: {},
+      // projectDetails: false,
+      // project: {},
     }
   },
   methods: {
@@ -62,11 +61,6 @@ export default {
       document.getElementById(option).scrollIntoView({ behavior: 'smooth' })
       }
     },
-    viewProjectDetails(project) {
-      alert('clicked')
-      this.project = project;
-      this.projectDetails = !this.projectDetails;
-    }
   }
 }
 </script>
