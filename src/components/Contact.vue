@@ -1,9 +1,12 @@
 <template>
   <div class="contact-component" id="contact">
     <div class="contact-wrapper">
+      <h1>
+        Get in Touch
+      </h1>
       <div class="icon-div email" v-on:click="copyText">
         <textarea id="textarea" name="mattviolet@gmail.com" style="display:none;"/>
-        <img :src="emailIcon" class="icon"/>
+        <img :src="emailIcon" class="icon email"/>
       </div>
       <div class="icon-div github">
         <a v-bind:href="githubLink" target="_blank">
@@ -55,20 +58,24 @@ export default {
     vertical-align: middle;
   }
   .contact-component {
+    background: rgb(53, 53, 53);
+    padding: 80px 20%;
+    height: 300px;
+  }
+  .contact-wrapper {
+    height: 100%;
+    padding: 20px 40px;
+    text-align: center;
     background: white;
   }
   .textarea {
     color: black;
     display: none;
   }
-  .contact-wrapper {
-    width: 100%;
-    text-align: center;
-  }
   .icon-div {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
+    width: 30px;
+    height: 30px;
+    margin: 150px 10px 0 10px;
     vertical-align: middle;
     display: inline-block;
   }
@@ -78,5 +85,9 @@ export default {
   }
   .icon {
     width: 100%;
+  }
+  .email {
+    width: 35px;
+    height: 30px;
   }
 </style>

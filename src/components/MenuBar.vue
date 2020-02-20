@@ -65,9 +65,9 @@ export default {
 
 <style>
   .menu-wrapper {
-    min-width: 600px;
-    height: 60px;
-    position: absolute;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
     text-align: center;
     color: gray;
     background: rgb(53, 53, 53);
@@ -81,24 +81,19 @@ export default {
     transform: translate3d(0, -100%, 0);
   }
   .centered-menu-div {
-    width: 500px;
-    height: 100%;
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
   }
   .menu-option {
     animation-duration: 1s;
     display: inline-block;
-    height: 100%;
-    margin-left: 25px;
-    margin-right: 25px;
+    /* height: 100%; */
+    margin: 0 15px;
   }
   .menu-text {
-    font-size: 18px;
-    margin-bottom: 0;
+    font-size: 16px;
+    height: 100%;
   }
   .menu-text:hover {
     cursor: pointer;

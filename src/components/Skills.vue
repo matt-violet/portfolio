@@ -233,10 +233,10 @@ export default {
     background: rgb(255, 255, 255);
   }
   .back-end {
-    background: rgb(179, 179, 179);
+    background: rgb(172, 172, 172);
   }
   .other {
-    background: rgb(136, 136, 136);
+    background: rgb(119, 119, 119);
   }
   .row-name {
     width: 100px;
@@ -260,7 +260,7 @@ export default {
     color: white;
   }
   .icon:hover {
-    background-color: gray;
+    /* background-color: gray; */
   }
   .resume-link {
     text-align: center;
