@@ -24,8 +24,7 @@ export default {
 <style>
   .about-component {
     padding: 80px 20%;
-    border-top: 1px solid black;
-    background: rgb(236, 236, 236);
+    /* background: rgb(236, 236, 236); */
   }
   .about-me {
     height: 100%;
@@ -38,12 +37,12 @@ export default {
     padding: 0 0 5px 0;
     text-align: center;
     width: 200px;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
   }
   .bio-text {
     margin-bottom: 10px;
     font-size: 14px;
     display: inline-block;
-    color: rgb(143, 143, 143);
+    /* color: rgb(143, 143, 143); */
   }
 </style>

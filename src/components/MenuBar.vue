@@ -67,15 +67,15 @@ export default {
   .menu-wrapper {
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    color: gray;
-    background: rgb(53, 53, 53);
-    border-bottom: 1px solid black;
+    color: hsl(248, 77%, 68%);
+    background: hsl(256, 59%, 26%);
+    /* border-bottom: 1px solid black; */
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    animation-duration: .75s;
-    animation-name: slideDown;
+    /* animation-duration: .75s;
+    animation-name: slideDown; */
   }
   .menu-wrapper.menu--hidden {
     transform: translate3d(0, -100%, 0);

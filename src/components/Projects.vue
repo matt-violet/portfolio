@@ -170,7 +170,7 @@ export default {
     text-align: center;
     margin: 0 auto 40px auto;
     width: 400px;
-    border-bottom: solid 1px;
+    /* border-bottom: solid 1px; */
   }
   .projects-header {
     margin: 0 auto;
@@ -190,7 +190,7 @@ export default {
   }
   .other-projects-header {
     width: 330px;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
     margin: 80px auto;
     padding: 0 auto 5px auto;
   }

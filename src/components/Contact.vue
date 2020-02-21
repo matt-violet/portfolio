@@ -58,7 +58,8 @@ export default {
     vertical-align: middle;
   }
   .contact-component {
-    background: rgb(53, 53, 53);
+    background: hsl(256, 59%, 26%);
+    color: white;
     padding: 80px 20%;
     height: 300px;
   }
@@ -66,7 +67,7 @@ export default {
     height: 100%;
     padding: 20px 40px;
     text-align: center;
-    background: white;
+    /* background: white; */
   }
   .textarea {
     color: black;

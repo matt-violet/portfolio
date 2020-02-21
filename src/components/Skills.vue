@@ -1,6 +1,6 @@
 <template>
   <div class='skills-component'>
-    <h1 class='skills-header'>My Skills</h1>
+    <h1 class='skills-header'>What I Can Do</h1>
     <table class='table'>
       <tr>
         <td class="col">
@@ -164,20 +164,21 @@ export default {
 
 <style scoped>
   .skills-component {
-    background: rgb(53, 53, 53);
+    background: hsl(256, 59%, 26%);
     padding: 80px 0;
+    /* position: absolute; */
   }
   .skills-header {
     padding-bottom: 5px;
     text-align: center;
     margin: 0 auto;
-    width: 180px;
-    border-bottom: white solid 1px;
+    width: 250px;
+    /* border-bottom: white solid 1px; */
     color: white;
   }
   .table {
     color: gray;
-    background: rgb(53, 53, 53);
+    /* background: hsl(250, 48%, 24%); */
     margin: 80px auto;
   }
   .col {
@@ -186,6 +187,7 @@ export default {
     font-size: 14px;
     margin-top: 30px;
     vertical-align: top;
+    color: hsl(248, 77%, 68%);
   }
   .software-col {
     width: 500px;
@@ -269,6 +271,6 @@ export default {
     color: white;
   }
   a:visited {
-    color: gray;
+    color: hsl(248, 77%, 68%);
   }
 </style>

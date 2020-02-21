@@ -3,7 +3,7 @@
     <MenuBar class="menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <div class="components">
       <Home class='home'/>
-      <Blurb class='blurb'/>
+      <!-- <Blurb class='blurb'/> -->
       <About/>
       <Skills/>
       <Projects/>
@@ -15,7 +15,7 @@
 <script>
 import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
-import Blurb from './components/Blurb.vue'
+// import Blurb from './components/Blurb.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
@@ -26,7 +26,7 @@ export default {
   components: {
     MenuBar,
     Home,
-    Blurb,
+    // Blurb,
     About,
     Skills,
     Projects,
@@ -65,6 +65,7 @@ export default {
 
 <style>
   body, html {
+    background: rgb(236, 236, 236);
     height: 100%;
     margin: 0;
     font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;
