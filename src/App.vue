@@ -65,7 +65,7 @@ export default {
 
 <style>
   body, html {
-    background: rgb(236, 236, 236);
+    background: rgb(240, 240, 240);
     height: 100%;
     margin: 0;
     font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;

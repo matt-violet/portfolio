@@ -2,6 +2,17 @@
   <div class='skills-component'>
     <h1 class='skills-header'>What I Can Do</h1>
     <table class='table'>
+      <tr class='icon-row'>
+        <td>
+          <img class='skill-icon' src='../images/icon-design-white.png'>
+        </td>
+        <td>
+          <img class='skill-icon' src='../images/icon-software-white.png'>
+        </td>
+        <td>
+          <img class='skill-icon' src='../images/icon-video-white.png'>
+        </td>
+      </tr>
       <tr>
         <td class="col">
           <h2 class="col-header">Graphic Design</h2>
@@ -164,7 +175,7 @@ export default {
 
 <style scoped>
   .skills-component {
-    background: hsl(256, 59%, 26%);
+    background: linear-gradient(180deg, hsl(256, 59%, 26%), hsl(248, 55%, 56%));
     padding: 80px 0;
     /* position: absolute; */
   }
@@ -176,18 +187,26 @@ export default {
     /* border-bottom: white solid 1px; */
     color: white;
   }
+  .icon-row {
+    text-align: center;
+  }
+  .skill-icon {
+    margin: 20px auto 40px auto;
+    /* margin: auto; */
+    width: 50px;
+  }
   .table {
     color: gray;
     /* background: hsl(250, 48%, 24%); */
-    margin: 80px auto;
+    margin: 40px auto 80px auto;
   }
   .col {
     width: 250px;
     padding: 0 40px;
     font-size: 14px;
-    margin-top: 30px;
+    /* margin-top: 50px; */
     vertical-align: top;
-    color: hsl(248, 77%, 68%);
+    color: white;
   }
   .software-col {
     width: 500px;
@@ -271,6 +290,6 @@ export default {
     color: white;
   }
   a:visited {
-    color: hsl(248, 77%, 68%);
+    color: black;
   }
 </style>

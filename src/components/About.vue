@@ -29,10 +29,11 @@ export default {
   .about-me {
     height: 100%;
     padding: 20px 40px;
+    color: rgb(85, 85, 85);
     background: white;
   }
   .about-header {
-    color: black;
+    color: rgb(85, 85, 85);
     margin: 0 auto 20px auto;
     padding: 0 0 5px 0;
     text-align: center;
