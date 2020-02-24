@@ -30,7 +30,7 @@ export default {
     height: 100%;
     padding: 20px 40px;
     color: rgb(85, 85, 85);
-    background: white;
+    /* background: white; */
   }
   .about-header {
     color: rgb(85, 85, 85);

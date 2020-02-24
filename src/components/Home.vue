@@ -55,7 +55,7 @@ export default {
     overflow: hidden;
   }
   .left-side-img {
-    height: 90%;
+    height: 85%;
     margin: auto;
     position: absolute;
     bottom: 0;

@@ -191,8 +191,7 @@ export default {
     text-align: center;
   }
   .skill-icon {
-    margin: 20px auto 40px auto;
-    /* margin: auto; */
+    margin: 20px auto 10px auto;
     width: 50px;
   }
   .table {
@@ -203,22 +202,25 @@ export default {
   .col {
     width: 250px;
     padding: 0 40px;
-    font-size: 14px;
-    /* margin-top: 50px; */
+    /* font-size: 14px; */
     vertical-align: top;
     color: white;
+  }
+  .col-header {
+    margin: 0 auto 50px auto;
+    text-align: center;
+  }
+  .software-header {
+    text-align: center;
+    /* font-size: 28px; */
+    margin: 0 auto 50px auto; 
   }
   .software-col {
     width: 500px;
     color: white;
   }
-  .software-header {
-    text-align: center;
-    font-size: 28px;
-    margin: 0 auto; 
-  }
   .software-bullets {
-    font-size: 18px;
+    /* font-size: 18px; */
     padding: 0;
   }
   .bullets {
@@ -251,13 +253,13 @@ export default {
     color: white;
   }
   .front-end {
-    background: rgb(255, 255, 255);
+    background: hsl(0, 0%, 100%);
   }
   .back-end {
-    background: rgb(172, 172, 172);
+    background: hsl(248, 100%, 89%);
   }
   .other {
-    background: rgb(119, 119, 119);
+    background: hsl(247, 100%, 79%);
   }
   .row-name {
     width: 100px;
