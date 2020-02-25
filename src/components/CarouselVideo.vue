@@ -101,6 +101,7 @@ export default {
   .video-text-div {
     padding: 15px;
     height: 30%;
+    text-align: left;
   }
   .arrow {
     position: absolute;
@@ -119,7 +120,7 @@ export default {
   .carousel-nav {
     height: 40px;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     position : absolute;
     bottom: 0;
   }

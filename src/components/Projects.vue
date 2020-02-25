@@ -173,20 +173,15 @@ export default {
     /* border-bottom: solid 1px; */
   }
   .projects-header {
-    margin: 0 auto;
+    margin: auto;
   }
   .projects-wrapper {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     left: 0;
     right: 0;
-  }
-  .projects-wrapper {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     display: inline-block;
-  }
-  .projects-header {
-    margin: auto;
   }
   .other-projects-header {
     width: 330px;

@@ -37,7 +37,7 @@ export default {
     height: 450px;
     background: linear-gradient(180deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%));
     position: relative;
-    border-bottom-right-radius: 30%;
+    /* border-bottom-right-radius: 30%; */
   }
   .left {
     width: 50%;
@@ -75,11 +75,11 @@ export default {
     margin: auto;
   }
   .name {
-    font-size: 50px;
+    font-size: 35px;
     margin: 0;
   }
   .title {
-    font-size: 20px;
+    font-size: 14px;
     margin: 0;
   }
 

@@ -57,6 +57,8 @@ export default {
     margin: 20px;
     padding: 10px;
     display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     animation-duration: .75s;
     animation-name: slideLeft;
   }
