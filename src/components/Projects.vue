@@ -64,7 +64,8 @@ export default {
           description: 'Single Page Connect Four Game',
           details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
           stack: 'HTML, CSS, Javascript, React',
-          image: require('../images/connect-four.png')
+          image: require('../images/connect-four.png'),
+          video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
         },
         {
           id: 2,
@@ -72,7 +73,8 @@ export default {
           description: 'Insulin dose calculator for diabetics',
           details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          image: require('../images/vial.jpg')
+          image: require('../images/vial.jpg'),
+          video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
         },
         {
           id: 3,
@@ -80,7 +82,8 @@ export default {
           description: 'Photos module for restaurant app',
           details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
           stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
-          image: require('../images/restaurant.jpg')
+          image: require('../images/restaurant.jpg'),
+          video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
         },
         {
           id: 4,
@@ -112,11 +115,11 @@ export default {
           description: 'Ad in UU World Magazine, 2016',
           design: true
         },
-        {
-          image: require('../images/GA2017-flyer.png'),
-          description: 'Ad in UU World Magazine, 2017',
-          design: true
-        },
+        // {
+        //   image: require('../images/GA2017-flyer.png'),
+        //   description: 'Ad in UU World Magazine, 2017',
+        //   design: true
+        // },
         {
           image: require('../images/GA2018-flyer.png'),
           description: 'Ad in UU World Magazine, 2018',
@@ -129,6 +132,11 @@ export default {
         {
           image: require('../images/SEAsia.png'),
           description: 'Graphic for Personal Project, 2015',
+          design: true
+        },
+        {
+          image: require('../images/matt-oak.png'),
+          description: 'Graphic for Personal Project, 2019',
           design: true
         },
       ],

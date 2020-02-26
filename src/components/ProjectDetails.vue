@@ -7,7 +7,15 @@
             &times;
           </a>
           <div class="img-div">
-            <img :src="project.image" class='img'/>
+            <iframe
+              :src="project.video"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+            <!-- <img :src="project.image" class='img'/> -->
           </div>
           <div class="modal-header">
             <h1>{{ project.title }}</h1>
@@ -92,6 +100,7 @@ export default {
     background-color: rgba(0, 0, 0, .7);
     display: table;
     transition: opacity .3s ease;
+    text-align: left;
   }
   .modal-wrapper {
     display: table-cell;
