@@ -1,16 +1,20 @@
 <template>
   <div class="outer-wrapper">
     <div
-      v-for="project of projects" 
-      v-on:click="$emit('viewProjectDetails', project)"
+      v-for="project of projects"
       v-bind:key="project.id"
       class="project"
     >
       <div class="img-div">
         <img :src="project.image" class='img'/>
       </div>
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
+      <div class="project-description">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <button class='details-btn' v-on:click="$emit('viewProjectDetails', project)">
+          View Details
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -35,7 +39,7 @@ export default {
 
 <style scoped>
   h2 {
-    margin: 5px 0px 5px 0px;
+    margin: 0;
     color: black;
   }
   p {
@@ -47,26 +51,26 @@ export default {
   .header {
     margin-left: 20px;
   }
-  .projects-header {
-    animation-duration: .75s;
-    animation-name: slideDown;
-  }
   .project {
     width: 300px;
     background-color: white;
     margin: 20px;
-    padding: 10px;
     display: inline-block;
-    border-radius: 10px;
+    text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-    animation-duration: .75s;
-    animation-name: slideLeft;
   }
-  .project:hover {
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+  .project-description {
+    padding: 10px;
+  }
+  .details-btn {
+    margin: 15px 0 0 0;
+    padding: 5px;
+    font-size: 12px;
+    border: 2px solid;
+  }
+  .details-btn:hover {
     cursor: pointer;
+    transform: scale(1.1);
   }
   .img-div {
     width: 100%;
@@ -76,13 +80,5 @@ export default {
   .img {
     width: 100%;
     height: auto;
-  }
-  @keyframes slideDown {
-    from { transform: translateY(-500px); }
-    to { transform: translateY(0px); }
-  }
-  @keyframes slideLeft {
-    from { transform: translateX(1000px); }
-    to { transform: translateX(0px); }
   }
 </style>

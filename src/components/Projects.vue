@@ -62,8 +62,9 @@ export default {
           id: 1,
           title: 'Connect Four',
           description: 'Single Page Connect Four Game',
-          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, head-to-head score, and rematch button',
+          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button',
           stack: 'HTML, CSS, Javascript, React',
+          github: 'https://github.com/matt-violet/connect4',
           image: require('../images/connect-four.png'),
           video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
         },
@@ -73,6 +74,7 @@ export default {
           description: 'Insulin dose calculator for diabetics',
           details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
+          github: 'https://github.com/matt-violet/My-Bolus',
           image: require('../images/vial.jpg'),
           video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
         },
@@ -81,7 +83,8 @@ export default {
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
           details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
-          stack: ' HTML, CSS, Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
+          stack: ' HTML, CSS (grid, media query), Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
+          github: 'https://github.com/krummurk/photos-module',
           image: require('../images/restaurant.jpg'),
           video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
         },
@@ -91,6 +94,7 @@ export default {
           description: 'Scaled back end of housing app',
           details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
+          github: 'https://github.com/social-inn/Reviews',
           image: require('../images/bed.jpg')
         }
       ],
@@ -185,7 +189,7 @@ export default {
   }
   .projects-wrapper {
     width: 100%;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
     left: 0;
     right: 0;
     /* margin-bottom: 50px; */
@@ -193,13 +197,12 @@ export default {
   }
   .other-projects-header {
     width: 330px;
-    /* border-bottom: 1px solid; */
-    margin: 80px auto;
-    padding: 0 auto 5px auto;
+    margin: 40px auto;
+    /* padding: 40px auto 5px auto; */
   }
-  .projects-header:hover {
+  /* .projects-header:hover {
     cursor: pointer;
-  }
+  } */
   .design-header {
     text-align: left;
     font-size: 50px;
@@ -213,9 +216,9 @@ export default {
     padding: 7px;
     display: inline-block;
   }
-  .project-div:hover {
+  /* .project-div:hover {
     cursor: pointer;
-  }
+  } */
   .img-div {
     height: 110px;
     overflow: hidden;
@@ -242,9 +245,9 @@ export default {
     border-radius: 5px;
     vertical-align: top;
   }
-  .design-project-div:hover {
+  /* .design-project-div:hover {
     cursor: pointer;
-  }
+  } */
   .design-imgs {
     border: 1px solid gray;
     border-radius: 5px;
@@ -254,15 +257,16 @@ export default {
     margin: 40px auto;
   }
   .software-projects {
-    width: 800px;
-    height: 500px;
+    width: 680px;
+    height: 600px;
     margin: 40px auto;
   }
   .inline-carousel {
     margin: 0 auto 80px auto;
   }
   .other-div {
-    margin: 0 auto;
+    padding: 40px;
     text-align: center;
+    background: white;
   }
 </style>

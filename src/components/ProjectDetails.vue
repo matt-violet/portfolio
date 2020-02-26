@@ -1,35 +1,22 @@
 <template type="text/x-template" id="modal-template">
   <transition name="modal">
     <div class="modal-mask">
+      <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">
+        &times;
+      </a>
       <div class="modal-wrapper">
         <div v-if="!project.design" class="modal-container">
-          <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">
-            &times;
-          </a>
-          <div class="img-div">
-            <iframe
-              :src="project.video"
-              width="100%"
-              height="100%"
-              frameborder="0"
-              allow="autoplay; fullscreen"
-              allowfullscreen
-            ></iframe>
-            <!-- <img :src="project.image" class='img'/> -->
+          <div class="video-div">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/OsGm4uK7SEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="modal-header">
+          <div class="description-div">
             <h1>{{ project.title }}</h1>
-          </div>
-          <div class="modal-body">
-            <p>{{ project.details }}</p>
-          </div>
-          <div class="modal-footer">
-            <p>{{ project.stack }}</p>
-          </div>
-          <div v-if="!project.design" class="github-link-div">
-            <a :href="project.github" target="_blank">GitHub Repository</a>
+            <p class='details'>{{ project.details }}</p>
+            <p class='stack'>{{ project.stack }}</p>
+            <a class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
           </div>
         </div>
+
         <div v-if="project.design" class="modal-container-design">
           <a class="modal-close-button-design" @click="$emit('viewProjectDetails')">
             &times;
@@ -38,6 +25,7 @@
             <img :src="project.image" class='img-design'/>
           </div>
         </div>
+
       </div>
     </div>
   </transition>
@@ -65,18 +53,21 @@ export default {
 <style scoped>
   h1 {
     text-align: left;
+    margin: 0;
   }
-  p {
-    font-size: 14px;
+  .details, .stack, .github-link {
+    font-size: 16px;
     line-height: normal;
   }
-  a:hover {
+  .github-link:hover {
     cursor: pointer;
-  } 
-  .img-div {
-    height: 380px;
-    margin: 20px;
+  }
+  .video-div {
+    height: 50%;
     overflow: hidden;
+  }
+  .description-div {
+    padding: 20px 30px;
   }
   .img-div-design {
     max-height: 600px;
@@ -107,14 +98,13 @@ export default {
     vertical-align: middle;
   }
   .modal-container {
-    width: 800px;
+    width: 660px;
     margin: 0px auto;
-    padding: 20px 20px;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0 20px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
   }
   .modal-container-design {
     width: 800px;
@@ -126,32 +116,14 @@ export default {
     transition: all .3s ease;
     border: 1px solid gray;
   }
-  .modal-header, .modal-body, .modal-footer, .github-link-div {
-    margin-left: 20px;
-  }
   .modal-close-button {
     float: left;
-    margin: 0px;
+    position: absolute;
+    font-size: 50px;
+    margin: 20px 40px;
+    color: white;
   }
-
-  /*
-  * The following styles are auto-applied to elements with
-  * transition="modal" when their visibility is toggled
-  * by Vue.js.
-  *
-  * You can easily play with the modal transition by editing
-  * these styles.
-  */
-
-  .modal-enter {
-    opacity: 0;
-  }
-  .modal-leave-active {
-    opacity: 0;
-  }
-  .modal-enter .modal-container,
-  .modal-leave-active .modal-container {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+  .modal-close-button:hover {
+    cursor: pointer;
   }
 </style>

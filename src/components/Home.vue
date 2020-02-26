@@ -45,7 +45,6 @@ export default {
     display: inline-block;
     position: relative;
     text-align: center;
-    ;
   }
   .right {
     width: 50%;
