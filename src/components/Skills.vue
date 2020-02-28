@@ -182,20 +182,19 @@ export default {
   .skills-header {
     text-align: center;
     margin: 0 auto;
-    font-size: 40px;
+    font-size: 25px;
   }
   .icon-row {
     text-align: center;
   }
   .skill-icon {
     margin: 20px auto 10px auto;
-    width: 50px;
+    width: 30px;
   }
   .table {
     margin: 80px auto;
   }
   .col {
-    /* background: linear-gradient(90deg, rgb(255, 174, 69), rgb(255, 255, 0), rgb(255, 174, 69)); */
     width: 250px;
     padding: 0 40px;
     vertical-align: top;
@@ -203,14 +202,15 @@ export default {
   .col-header {
     margin: 0 auto 50px auto;
     text-align: center;
+    font-size: 20px;
   }
   .software-header {
     text-align: center;
-    margin: 0 auto 50px auto; 
+    margin: 0 auto 50px auto;
+    font-size: 20px;
   }
   .software-col {
     width: 500px;
-    /* background: linear-gradient(90deg, rgb(255, 174, 69), rgb(255, 255, 0), rgb(255, 174, 69)); */
   }
   .software-bullets {
     padding: 0;
@@ -243,13 +243,13 @@ export default {
     vertical-align: middle;
   }
   .front-end {
-    background: hsl(248, 100%, 95%);
+    background: hsl(16, 100%, 88%);
   }
   .back-end {
-    background: hsl(248, 100%, 90%);
+    background: hsl(16, 100%, 77%);
   }
   .other {
-    background: hsl(248, 100%, 80%);
+    background: hsl(16, 100%, 66%);
   }
   .row-name {
     width: 100px;

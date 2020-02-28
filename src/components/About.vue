@@ -54,10 +54,10 @@ export default {
     padding-bottom: 40px;
     text-align: center;
     color: rgb(43, 43, 43);
-    font-size: 40px;
+    font-size: 25px;
   }
   .bio-text {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-size: 14px;
     display: inline-block;
   }

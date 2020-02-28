@@ -176,16 +176,11 @@ export default {
   }
   .projects-component {
     width: 100%;
-    /* margin-top: 40px; */
-    /* background: rgb(24, 24, 24); */
-    /* color: rgb(163, 163, 163); */
   }
   .software-projects-header {
-    /* padding: 40px 0; */
     text-align: center;
     margin: 0 auto;
-    font-size: 40px;
-    /* background: linear-gradient(135deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%)); */
+    font-size: 25px;
   }
   .projects-header {
     margin: auto;
@@ -201,10 +196,8 @@ export default {
     padding: 80px 0;
   }
   .other-projects-header {
-    /* background: linear-gradient(135deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%)); */
-    /* padding: 40px 0; */
     margin: 0px auto 80px auto;
-    font-size: 40px;
+    font-size: 25px;
   }
   .design-header {
     text-align: left;
@@ -263,6 +256,5 @@ export default {
   }
   .other-div {
     text-align: center;
-    /* background: white; */
   }
 </style>

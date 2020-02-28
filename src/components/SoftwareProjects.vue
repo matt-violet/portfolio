@@ -1,15 +1,12 @@
 <template>
   <div class="outer-wrapper">
-    <div
-      v-for="project of projects"
-      v-bind:key="project.id"
-      class="project"
-    >
+    <div v-for="project of projects" v-bind:key="project.id" class="project">
+      <div class='dimmer'/>
       <div class="img-div">
         <img :src="project.image" class='img'/>
       </div>
       <div class="project-description">
-        <h2>{{ project.title }}</h2>
+        <h3 class="project-title">{{ project.title }}</h3>
         <p>{{ project.description }}</p>
         <button class='details-btn' v-on:click="$emit('viewProjectDetails', project)">
           View Details
@@ -59,6 +56,24 @@ export default {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
+  .project-title {
+    margin: 0 0 5px 0;
+  }
+  /* ------------------------------ DIMMER EFFECT ------------------------------- */
+  .dimmer {
+    background: rgba(255, 255, 255, 0.7); 
+    height: 261px;
+    width: 300px;
+    position: absolute;
+    display: none;
+  }
+  div.outer-wrapper div.project:hover div.dimmer {
+    display: none;
+  }
+  div.outer-wrapper:hover div.dimmer {
+    display: block;
+  }
+  /* ---------------------------------------------------------------------------- */
   .project-description {
     padding: 10px;
   }
@@ -66,7 +81,7 @@ export default {
     margin: 15px 0 0 0;
     padding: 5px;
     font-size: 12px;
-    border: 2px solid;
+    border: 1.5px solid;
   }
   .details-btn:hover {
     cursor: pointer;
