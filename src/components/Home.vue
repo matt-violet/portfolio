@@ -6,11 +6,14 @@
     <div class="right animatedParent">
       <div class="right-side-text animated bounceInDown">
         <h1 class='name'>
-          Matt Violet
+          Hi, I'm Matt.
         </h1>
-        <h3 class='title'>
+        <!-- <h3 class='title'>
           Software Engineer
-        </h3>  
+        </h3>   -->
+        <p class='home-blurb'>
+          I'm a multitalented human with a passion for designing and building digital products that help others.
+        </p>
       </div>
     </div>
 
@@ -34,21 +37,24 @@ export default {
   .home-component {
     padding-top: 52px;
     width: 100%;
-    height: 450px;
-    background: linear-gradient(180deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%));
+    height: 400px;
     position: relative;
-    /* border-bottom-right-radius: 30%; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-45deg, rgb(255, 255, 0), rgb(252, 106, 90), rgb(37, 176, 240), rgb(15, 243, 15));
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    animation: gradient 10s ease infinite;
   }
   .left {
-    width: 50%;
-    height: 450px;
+    width: 45%;
+    height: 400px;
     display: inline-block;
     position: relative;
     text-align: center;
   }
   .right {
-    width: 50%;
-    height: 450px;
+    width: 55%;
+    height: 400px;
     display: inline-block;
     z-index: 2;
     overflow: hidden;
@@ -65,23 +71,37 @@ export default {
     filter: drop-shadow(-8px -4px 8px #222); */
   }
   .right-side-text {
-    width: 300px;
+    width: 400px;
     height: 100px;
     position: absolute;
     top: 0;
     bottom: 0;
-    color: white;
+    color: rgb(43, 43, 43);
     margin: auto;
   }
   .name {
-    font-size: 35px;
+    font-size: 50px;
     margin: 0;
   }
   .title {
-    font-size: 14px;
+    font-size: 26px;
     margin: 0;
   }
-
+  .home-blurb {
+    /* margin-top: 40px; */
+    font-size: 16px;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   /* .header {
     margin: 70px 30px;
     color: black;

@@ -75,16 +75,16 @@ export default {
     height: 422px;
     position: relative;
     margin: 0 auto;
-    background: white;
-    border-radius: 10px;
+    /* background: white; */
+    /* border-radius: 10px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
    }
   .track-container {
     height: 100%;
   }
   .img-div {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px; */
+    /* border-top-right-radius: 10px; */
     height: 64%;
     width: 100%;
     overflow: hidden;
@@ -102,6 +102,9 @@ export default {
     padding: 15px;
     height: 30%;
     text-align: left;
+    /* border: 1px solid gray; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
+
   }
   .arrow {
     position: absolute;

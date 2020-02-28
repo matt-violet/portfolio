@@ -1,18 +1,20 @@
 <template>
   <div class="projects-component" id="portfolio">
-    <h1 class='software-projects-header'>
-      SOFTWARE PROJECTS
-    </h1>
     <div class="projects-wrapper">
+      <h1 class='software-projects-header'>
+        SOFTWARE PROJECTS
+      </h1>
       <div class="software-projects">
         <SoftwareProjects
           :softwareProjects="softwareProjects"
           @viewProjectDetails="showProjectDetails"
         />
       </div>
+    </div>
+    <div class='other-wrapper'>
       <div class='other-div'>
         <h1 class="other-projects-header">
-          OTHER PROJECTS
+          DESIGN & VIDEO PROJECTS
         </h1>
         <CarouselDesign
           class='inline-carousel'
@@ -174,15 +176,16 @@ export default {
   }
   .projects-component {
     width: 100%;
-    padding-top: 40px;
-    background: rgb(236, 236, 236);
+    /* margin-top: 40px; */
+    /* background: rgb(24, 24, 24); */
+    /* color: rgb(163, 163, 163); */
   }
   .software-projects-header {
-    padding: 40px 0 5px 0;
+    /* padding: 40px 0; */
     text-align: center;
-    margin: 0 auto 40px auto;
-    width: 400px;
-    /* border-bottom: solid 1px; */
+    margin: 0 auto;
+    font-size: 40px;
+    /* background: linear-gradient(135deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%)); */
   }
   .projects-header {
     margin: auto;
@@ -192,17 +195,17 @@ export default {
     margin: 0 auto;
     left: 0;
     right: 0;
-    /* margin-bottom: 50px; */
     display: inline-block;
   }
-  .other-projects-header {
-    width: 330px;
-    margin: 40px auto;
-    /* padding: 40px auto 5px auto; */
+  .other-wrapper {
+    padding: 80px 0;
   }
-  /* .projects-header:hover {
-    cursor: pointer;
-  } */
+  .other-projects-header {
+    /* background: linear-gradient(135deg, hsl(248, 55%, 56%), hsl(256, 59%, 26%)); */
+    /* padding: 40px 0; */
+    margin: 0px auto 80px auto;
+    font-size: 40px;
+  }
   .design-header {
     text-align: left;
     font-size: 50px;
@@ -216,9 +219,6 @@ export default {
     padding: 7px;
     display: inline-block;
   }
-  /* .project-div:hover {
-    cursor: pointer;
-  } */
   .img-div {
     height: 110px;
     overflow: hidden;
@@ -245,9 +245,6 @@ export default {
     border-radius: 5px;
     vertical-align: top;
   }
-  /* .design-project-div:hover {
-    cursor: pointer;
-  } */
   .design-imgs {
     border: 1px solid gray;
     border-radius: 5px;
@@ -265,8 +262,7 @@ export default {
     margin: 0 auto 80px auto;
   }
   .other-div {
-    padding: 40px;
     text-align: center;
-    background: white;
+    /* background: white; */
   }
 </style>

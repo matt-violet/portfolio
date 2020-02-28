@@ -40,12 +40,12 @@ export default {
 <style scoped>
   h2 {
     margin: 0;
-    color: black;
+    color: rgb(43, 43, 43);
   }
   p {
     font-size: 14px;
     line-height: normal;
-    color: black;
+    color: rgb(43, 43, 43);
     margin: 0;
   }
   .header {

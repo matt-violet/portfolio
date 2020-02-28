@@ -69,8 +69,8 @@ export default {
     position: fixed;
     z-index: 3;
     text-align: center;
-    color: hsl(248, 77%, 68%);
-    background: hsl(256, 59%, 26%);
+    color: rgb(43, 43, 43);
+    background: white; opacity: .95;
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   }
@@ -93,10 +93,10 @@ export default {
   }
   .menu-text:hover {
     cursor: pointer;
-    color: white;
+    color: coral;
   }
   .currentPg {
-    color: white;
+    color: coral;
   }
   @keyframes slideDown {
     from { transform: translateY(-90px); }

@@ -1,7 +1,7 @@
 <template>
   <div class="about-component" id="about">
+    <h1 class='about-header'>About Me</h1>
     <div class="about-me">
-      <h1 class='about-header'>About Me</h1>
       <p class='bio-text'>
         Native of Oakland, CA, I have a big heart and I bring passion to everything I do. I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.
       </p>
@@ -11,6 +11,12 @@
       <p class='bio-text'>
         Understanding what technological innovation has done for me, and can do for others, is what motivates me to dream big, learn new things, and tackle complex problems. 
       </p>
+      <div class='about-imgs'>
+        <img src='../images/matt-guitar.jpg' class='about-img'>
+        <img src='../images/maesot.jpg' class='about-img'>
+        <img src='../images/matt-cgm.jpg' class='about-img'>
+        <img src='../images/matt-dubs.jpg' class='about-img'>
+      </div>
     </div>
   </div>
 </template>
@@ -23,27 +29,36 @@ export default {
 
 <style>
   .about-component {
-    padding: 80px 20%;
-    /* background: rgb(236, 236, 236); */
+    background: white;
+    width: 60%;
+    margin: 80px auto;
+    color: rgb(43, 43, 43);
+    border-bottom: 1px solid gray;
+  }
+  .about-imgs {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .about-img {
+    width: 25%;
+    display: inline-block;
   }
   .about-me {
+    padding: 0px 15%;
+    margin-bottom: 80px;
     height: 100%;
-    padding: 20px 40px;
-    color: rgb(85, 85, 85);
-    /* background: white; */
   }
   .about-header {
-    color: rgb(85, 85, 85);
-    margin: 0 auto 20px auto;
-    padding: 0 0 5px 0;
+    margin: 0 auto;
+    padding-bottom: 40px;
     text-align: center;
-    width: 200px;
-    /* border-bottom: 1px solid; */
+    color: rgb(43, 43, 43);
+    font-size: 40px;
   }
   .bio-text {
     margin-bottom: 10px;
     font-size: 14px;
     display: inline-block;
-    /* color: rgb(143, 143, 143); */
   }
 </style>

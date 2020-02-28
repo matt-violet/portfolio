@@ -7,7 +7,7 @@
       <div class="modal-wrapper">
         <div v-if="!project.design" class="modal-container">
           <div class="video-div">
-            <iframe width="660" height="415" src="https://www.youtube.com/embed/OsGm4uK7SEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="660" height="415" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="description-div">
             <h1>{{ project.title }}</h1>

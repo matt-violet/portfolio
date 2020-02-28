@@ -47,8 +47,10 @@ export default {
     vertical-align: middle;
   }
   .contact-component {
-    background: linear-gradient(180deg, hsl(256, 59%, 26%), hsl(248, 55%, 56%));
-    color: white;
+    background: linear-gradient(-45deg, rgb(255, 255, 0), rgb(252, 106, 90), rgb(37, 176, 240), rgb(15, 243, 15));
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    animation: gradient 10s ease infinite;
     padding: 80px 20%;
     height: 200px;
     text-align: center;
@@ -74,22 +76,15 @@ export default {
   .link-text:visited {
     color: black;
   }
-  /* .icon-div {
-    width: 30px;
-    height: 30px;
-    margin: 150px 10px 0 10px;
-    vertical-align: middle;
-    display: inline-block;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-  .icon-div :hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-  .icon {
-    width: 100%;
-  }
-  .email {
-    width: 35px;
-    height: 30px;
-  } */
 </style>

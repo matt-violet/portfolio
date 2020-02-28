@@ -1,16 +1,16 @@
 <template>
   <div class='skills-component'>
     <h1 class='skills-header'>What I Can Do</h1>
-    <table class='table'>
+    <table class='table' cellpadding="0" cellspacing="0" border="0">
       <tr class='icon-row'>
-        <td>
-          <img class='skill-icon' src='../images/icon-design-white.png'>
+        <td class='col'>
+          <img class='skill-icon' src='../images/icon-design.png'>
         </td>
-        <td>
-          <img class='skill-icon' src='../images/icon-software-white.png'>
+        <td class='software-col'>
+          <img class='skill-icon' src='../images/icon-software.png'>
         </td>
-        <td>
-          <img class='skill-icon' src='../images/icon-video-white.png'>
+        <td class='col'>
+          <img class='skill-icon' src='../images/icon-video.png'>
         </td>
       </tr>
       <tr>
@@ -175,17 +175,14 @@ export default {
 
 <style scoped>
   .skills-component {
-    background: linear-gradient(180deg, hsl(256, 59%, 26%), hsl(248, 55%, 56%));
-    padding: 80px 0;
-    /* position: absolute; */
+    background: white;
+    margin: 80px 0;
+    color: rgb(43, 43, 43);
   }
   .skills-header {
-    padding-bottom: 5px;
     text-align: center;
     margin: 0 auto;
-    width: 250px;
-    /* border-bottom: white solid 1px; */
-    color: white;
+    font-size: 40px;
   }
   .icon-row {
     text-align: center;
@@ -195,16 +192,13 @@ export default {
     width: 50px;
   }
   .table {
-    color: gray;
-    /* background: hsl(250, 48%, 24%); */
-    margin: 40px auto 80px auto;
+    margin: 80px auto;
   }
   .col {
+    /* background: linear-gradient(90deg, rgb(255, 174, 69), rgb(255, 255, 0), rgb(255, 174, 69)); */
     width: 250px;
     padding: 0 40px;
-    /* font-size: 14px; */
     vertical-align: top;
-    color: white;
   }
   .col-header {
     margin: 0 auto 50px auto;
@@ -212,15 +206,13 @@ export default {
   }
   .software-header {
     text-align: center;
-    /* font-size: 28px; */
     margin: 0 auto 50px auto; 
   }
   .software-col {
     width: 500px;
-    color: white;
+    /* background: linear-gradient(90deg, rgb(255, 174, 69), rgb(255, 255, 0), rgb(255, 174, 69)); */
   }
   .software-bullets {
-    /* font-size: 18px; */
     padding: 0;
   }
   .bullets {
@@ -239,7 +231,6 @@ export default {
     width: 50px;
     height: 50px;
     display: inline-block;
-    /* border-radius: 5%; */
     text-align: center;
     margin: 3px;
     background-color: white;
@@ -250,16 +241,15 @@ export default {
   }
   .row {
     vertical-align: middle;
-    color: white;
   }
   .front-end {
-    background: hsl(0, 0%, 100%);
+    background: hsl(248, 100%, 95%);
   }
   .back-end {
-    background: hsl(248, 100%, 89%);
+    background: hsl(248, 100%, 90%);
   }
   .other {
-    background: hsl(247, 100%, 79%);
+    background: hsl(248, 100%, 80%);
   }
   .row-name {
     width: 100px;
@@ -282,11 +272,12 @@ export default {
     visibility: visible;
     color: white;
   }
-  .icon:hover {
-    /* background-color: gray; */
-  }
   .resume-link {
     text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 80px;
+    border-bottom: 1px solid gray;
   }
   a {
     color: white;
