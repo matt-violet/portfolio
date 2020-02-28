@@ -1,20 +1,36 @@
 <template>
   <div class="projects-component" id="portfolio">
-    <div class="projects-wrapper">
-      <h1 class='software-projects-header'>
-        SOFTWARE PROJECTS
-      </h1>
-      <div class="software-projects">
-        <SoftwareProjects
-          :softwareProjects="softwareProjects"
-          @viewProjectDetails="showProjectDetails"
-        />
+    <div class="projects-banner">
+
+      <div class="left animatedParent">
+        <div class="left-side-text animated slideInDown">
+          <h1 class='projects-banner-text'>
+            Here's what I've been up to.
+          </h1>
+          <p class='projects-banner-text-2'>
+            Check out my latest projects in software, design, and video.
+          </p>
+        </div>
       </div>
+      
+      <div class="right animatedParent">
+        <img src="../images/matt-oak-blank.png" class="right-side-img animated slideInRight">
+      </div>
+
+    </div>
+    <h1 class='software-projects-header'>
+      Software Projects
+    </h1>
+    <div class="software-projects">
+      <SoftwareProjects
+        :softwareProjects="softwareProjects"
+        @viewProjectDetails="showProjectDetails"
+      />
     </div>
     <div class='other-wrapper'>
       <div class='other-div'>
         <h1 class="other-projects-header">
-          DESIGN & VIDEO PROJECTS
+          Design & Video Projects
         </h1>
         <CarouselDesign
           class='inline-carousel'
@@ -176,10 +192,72 @@ export default {
   }
   .projects-component {
     width: 100%;
+    /* margin: 120px auto 0 auto; */
+    position: absolute;
+    padding-top: 52px;
   }
+  .projects-banner {
+    /* padding-top: 52px; */
+    width: 100%;
+    height: 400px;
+    position: relative;
+    /* background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); */
+        background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);    
+
+  }
+  .left {
+    width: 55%;
+    height: 400px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+  }
+  .right {
+    width: 45%;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .right-side-img {
+    height: 95%;
+    margin: 0 auto 0 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* right: 0; */
+    /* z-index: 1; */
+    /* -webkit-filter: drop-shadow(-8px -4px 8px #222);
+    filter: drop-shadow(-8px -4px 8px #222); */
+  }
+  .left-side-text {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* left: 0; */
+    color: rgb(43, 43, 43);
+    margin: auto 20px auto 0;
+  }
+  .projects-banner-text {
+    font-size: 50px;
+    margin: 0;
+  }
+  .title {
+    font-size: 26px;
+    margin: 0;
+  }
+  .projects-banner-text-2 {
+    font-size: 16px;
+  }
+
+
   .software-projects-header {
     text-align: center;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     font-size: 25px;
   }
   .projects-header {
@@ -249,7 +327,7 @@ export default {
   .software-projects {
     width: 680px;
     height: 600px;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
   }
   .inline-carousel {
     margin: 0 auto 80px auto;

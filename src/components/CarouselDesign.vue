@@ -74,7 +74,8 @@ export default {
     height: 380px;
     position: relative;
     margin: 0 auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border: 1px solid gray;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
   }
   .track-container {
     margin: 0 auto;
@@ -108,6 +109,7 @@ export default {
   }
   .arrow:hover {
     cursor: pointer;
+    transform: scale(1.1);
   }
   .back {
     left: -40px;

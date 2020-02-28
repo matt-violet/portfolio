@@ -2,12 +2,11 @@
   <div id="app">
     <MenuBar class="menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <div class="components">
-      <Home class='home'/>
-      <!-- <Blurb class='blurb'/> -->
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
+      <Home v-if="about"/>
+      <About v-if="about"/>
+      <Skills v-if="about"/>
+      <Projects v-if="projects"/>
+      <Contact v-if="contact"/>
     </div> 
   </div>
 </template>
@@ -15,7 +14,6 @@
 <script>
 import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
-// import Blurb from './components/Blurb.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
@@ -26,7 +24,6 @@ export default {
   components: {
     MenuBar,
     Home,
-    // Blurb,
     About,
     Skills,
     Projects,
@@ -35,8 +32,8 @@ export default {
   data() {
     return {
       currentPg: '',
-      home: true,
-      about: false,
+      // home: true,
+      about: true,
       projects: false,
       contact: false,
     }
@@ -65,10 +62,15 @@ export default {
 
 <style>
   body, html {
-    background: white;
-    color: rgb(43, 43, 43);
     height: 100%;
     margin: 0;
     font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;
+  }
+  a {
+    color: rgb(43, 43, 43);
+  }
+  .menu {
+    background: rgb(43, 43, 43);;
+    color: white;
   }
 </style>

@@ -49,11 +49,14 @@ export default {
     margin-left: 20px;
   }
   .project {
-    width: 300px;
+    width: 298px;
     background-color: white;
     margin: 20px;
     display: inline-block;
     text-align: center;
+    border: 1px solid rgb(158, 158, 158);
+  }
+  .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .project-title {
@@ -61,8 +64,8 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(255, 255, 255, 0.7); 
-    height: 261px;
+    background: rgba(255, 255, 255, 0.5);
+    height: 262px;
     width: 300px;
     position: absolute;
     display: none;
@@ -81,7 +84,7 @@ export default {
     margin: 15px 0 0 0;
     padding: 5px;
     font-size: 12px;
-    border: 1.5px solid;
+    border: 1.5px solid rgb(158, 158, 158);
   }
   .details-btn:hover {
     cursor: pointer;

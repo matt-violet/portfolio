@@ -175,9 +175,9 @@ export default {
 
 <style scoped>
   .skills-component {
-    background: white;
-    margin: 80px 0;
-    color: rgb(43, 43, 43);
+    /* background: white; */
+    padding: 80px 0;
+    /* color: rgb(43, 43, 43); */
   }
   .skills-header {
     text-align: center;
@@ -192,7 +192,7 @@ export default {
     width: 30px;
   }
   .table {
-    margin: 80px auto;
+    margin: 40px auto 80px auto;
   }
   .col {
     width: 250px;
@@ -276,13 +276,7 @@ export default {
     text-align: center;
     width: 60%;
     margin: auto;
-    padding-bottom: 80px;
-    border-bottom: 1px solid gray;
-  }
-  a {
-    color: white;
-  }
-  a:visited {
-    color: black;
+    /* padding-bottom: 80px; */
+    /* border-bottom: 1px solid gray; */
   }
 </style>

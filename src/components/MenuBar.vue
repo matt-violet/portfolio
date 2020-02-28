@@ -1,18 +1,18 @@
 <template>
   <div class="menu-wrapper" id="menu" :class="{ 'menu--hidden': !showMenu }">
     <div class="centered-menu-div">
-      <div class="menu-option">
+      <!-- <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'home')" class='menu-text' :class="currentPage === 'home' ? 'currentPg' : ''">
           HOME
         </p>
-      </div>
+      </div> -->
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
           ABOUT
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'portfolio')" class='menu-text' :class="currentPage === 'projects' ? 'currentPg' : ''">
+        <p v-on:click="$emit('onMenuClick', 'projects')" class='menu-text' :class="currentPage === 'projects' ? 'currentPg' : ''">
           PROJECTS
         </p>
       </div>
@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      currentPage: 'home',
+      currentPage: 'about',
       showMenu: true,
       lastScrollPosition: 0
     }
@@ -69,8 +69,6 @@ export default {
     position: fixed;
     z-index: 3;
     text-align: center;
-    color: rgb(43, 43, 43);
-    background: white; opacity: .95;
     transition: 0.3s all ease-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   }
@@ -93,7 +91,7 @@ export default {
   }
   .menu-text:hover {
     cursor: pointer;
-    color: coral;
+    /* color: coral; */
   }
   .currentPg {
     color: coral;

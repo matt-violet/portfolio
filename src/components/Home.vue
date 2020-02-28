@@ -1,12 +1,12 @@
 <template>
   <div class="home-component" id="home">
     <div class="left animatedParent">
-      <img src="../images/matt-violet.png" class="left-side-img animated bounceInLeft">
+      <img src="../images/matt-violet.png" class="left-side-img animated slideInLeft">
     </div>
     <div class="right animatedParent">
-      <div class="right-side-text animated bounceInDown">
+      <div class="right-side-text animated slideInDown">
         <h1 class='name'>
-          Hi, I'm Matt.
+          Hi, I'm Matt. &#x1F44B;
         </h1>
         <!-- <h3 class='title'>
           Software Engineer
@@ -39,21 +39,20 @@ export default {
     width: 100%;
     height: 400px;
     position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    background: linear-gradient(-45deg, rgb(255, 255, 0), rgb(252, 106, 90), rgb(37, 176, 240), rgb(15, 243, 15));
-    background-size: 400% 400%;
-    background-repeat: no-repeat;
-    animation: gradient 10s ease infinite;
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+/* background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); */
+background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+/* background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%); */
   }
-  .left {
-    width: 45%;
+.left {
+    width: 50%;
     height: 400px;
     display: inline-block;
     position: relative;
     text-align: center;
   }
   .right {
-    width: 55%;
+    width: 50%;
     height: 400px;
     display: inline-block;
     z-index: 2;
@@ -64,7 +63,7 @@ export default {
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 0;
+    /* left: 0; */
     right: 0;
     z-index: 1;
     /* -webkit-filter: drop-shadow(-8px -4px 8px #222);
