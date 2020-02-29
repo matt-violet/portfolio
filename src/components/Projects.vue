@@ -1,7 +1,6 @@
 <template>
-  <div class="projects-component" id="portfolio">
+  <div class="projects-wrapper">
     <div class="projects-banner">
-
       <div class="left animatedParent">
         <div class="left-side-text animated slideInDown">
           <h1 class='projects-banner-text'>
@@ -12,40 +11,40 @@
           </p>
         </div>
       </div>
-      
       <div class="right animatedParent">
-        <img src="../images/matt-oak-blank.png" class="right-side-img animated slideInRight">
+        <img src="../images/matt-oak-blank.png" class="right-side-img animated slideInUp">
       </div>
-
     </div>
-    <h1 class='software-projects-header'>
-      Software Projects
-    </h1>
-    <div class="software-projects">
-      <SoftwareProjects
-        :softwareProjects="softwareProjects"
-        @viewProjectDetails="showProjectDetails"
-      />
-    </div>
-    <div class='other-wrapper'>
-      <div class='other-div'>
-        <h1 class="other-projects-header">
-          Design & Video Projects
-        </h1>
-        <CarouselDesign
-          class='inline-carousel'
-          :designProjects="designProjects"
+    <div class="projects-component">
+      <h1 class='software-projects-header'>
+        Software Projects
+      </h1>
+      <div class="software-projects">
+        <SoftwareProjects
+          :softwareProjects="softwareProjects"
           @viewProjectDetails="showProjectDetails"
         />
-        <CarouselVideo
-          class='inline-carousel'
-          :videoProjects="videoProjects"
-        />
-        <ProjectDetails
-          v-if="projectDetails"
-          :project="featuredProject"
-          @viewProjectDetails="showProjectDetails"
-        />
+      </div>
+      <div class='other-wrapper'>
+        <div class='other-div'>
+          <h1 class="other-projects-header">
+            Design & Video Projects
+          </h1>
+          <CarouselDesign
+            class='inline-carousel'
+            :designProjects="designProjects"
+            @viewProjectDetails="showProjectDetails"
+          />
+          <CarouselVideo
+            class='inline-carousel'
+            :videoProjects="videoProjects"
+          />
+          <ProjectDetails
+            v-if="projectDetails"
+            :project="featuredProject"
+            @viewProjectDetails="showProjectDetails"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -190,20 +189,27 @@ export default {
     color: black;
     font-size: 18px;
   }
+  .projects-wrapper {
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+  }
   .projects-component {
-    width: 100%;
-    /* margin: 120px auto 0 auto; */
-    position: absolute;
-    padding-top: 52px;
+    padding-top: 40px;
+    width: 1000px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
   }
   .projects-banner {
-    /* padding-top: 52px; */
+    padding-top: 52px;
     width: 100%;
     height: 400px;
     position: relative;
-    /* background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); */
-        background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);    
-
+    /* z-index: 2; */
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
   }
   .left {
     width: 55%;
@@ -217,7 +223,7 @@ export default {
     height: 400px;
     position: relative;
     display: inline-block;
-    z-index: 2;
+    /* z-index: 2; */
     overflow: hidden;
   }
   .right-side-img {
@@ -226,10 +232,6 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    /* right: 0; */
-    /* z-index: 1; */
-    /* -webkit-filter: drop-shadow(-8px -4px 8px #222);
-    filter: drop-shadow(-8px -4px 8px #222); */
   }
   .left-side-text {
     width: 400px;
@@ -238,7 +240,6 @@ export default {
     top: 0;
     bottom: 0;
     right: 0;
-    /* left: 0; */
     color: rgb(43, 43, 43);
     margin: auto 20px auto 0;
   }
@@ -253,11 +254,9 @@ export default {
   .projects-banner-text-2 {
     font-size: 16px;
   }
-
-
   .software-projects-header {
     text-align: center;
-    margin: 80px auto 0 auto;
+    margin: 20px auto 0 auto;
     font-size: 25px;
   }
   .projects-header {
@@ -265,13 +264,14 @@ export default {
   }
   .projects-wrapper {
     width: 100%;
+    padding-bottom: 100px;
     margin: 0 auto;
     left: 0;
     right: 0;
     display: inline-block;
   }
   .other-wrapper {
-    padding: 80px 0;
+    padding: 80px 0 20px 0;
   }
   .other-projects-header {
     margin: 0px auto 80px auto;

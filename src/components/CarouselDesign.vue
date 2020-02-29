@@ -74,8 +74,7 @@ export default {
     height: 380px;
     position: relative;
     margin: 0 auto;
-    border: 1px solid gray;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
+    /* border: 1px solid gray; */
   }
   .track-container {
     margin: 0 auto;
@@ -126,7 +125,6 @@ export default {
   }
   .carousel-indicator {
     background: lightgray;
-    width: 15px;
     height: 15px;
     border-radius: 50%;
     margin: 5px;

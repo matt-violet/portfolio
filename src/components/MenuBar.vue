@@ -1,11 +1,6 @@
 <template>
-  <div class="menu-wrapper" id="menu" :class="{ 'menu--hidden': !showMenu }">
+  <div class="menu-wrapper" :class="{ 'menu--hidden': !showMenu }">
     <div class="centered-menu-div">
-      <!-- <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'home')" class='menu-text' :class="currentPage === 'home' ? 'currentPg' : ''">
-          HOME
-        </p>
-      </div> -->
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
           ABOUT
@@ -36,7 +31,7 @@ export default {
     return {
       currentPage: 'about',
       showMenu: true,
-      lastScrollPosition: 0
+      lastScrollPosition: 0,
     }
   },
   watch: {
@@ -70,7 +65,7 @@ export default {
     z-index: 3;
     text-align: center;
     transition: 0.3s all ease-out;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); */
   }
   .menu-wrapper.menu--hidden {
     transform: translate3d(0, -100%, 0);
@@ -91,10 +86,9 @@ export default {
   }
   .menu-text:hover {
     cursor: pointer;
-    /* color: coral; */
   }
   .currentPg {
-    color: coral;
+    border-bottom: 1px solid;
   }
   @keyframes slideDown {
     from { transform: translateY(-90px); }

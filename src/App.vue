@@ -2,9 +2,7 @@
   <div id="app">
     <MenuBar class="menu" @onMenuClick="onMenuClick" :currentPg="currentPg"/>
     <div class="components">
-      <Home v-if="about"/>
       <About v-if="about"/>
-      <Skills v-if="about"/>
       <Projects v-if="projects"/>
       <Contact v-if="contact"/>
     </div> 
@@ -12,10 +10,8 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
 import MenuBar from './components/MenuBar.vue'
 import About from './components/About.vue'
-import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 
@@ -23,16 +19,13 @@ export default {
   name: 'app',
   components: {
     MenuBar,
-    Home,
     About,
-    Skills,
     Projects,
     Contact,
   },
   data() {
     return {
       currentPg: '',
-      // home: true,
       about: true,
       projects: false,
       contact: false,
@@ -68,9 +61,5 @@ export default {
   }
   a {
     color: rgb(43, 43, 43);
-  }
-  .menu {
-    background: rgb(43, 43, 43);;
-    color: white;
   }
 </style>

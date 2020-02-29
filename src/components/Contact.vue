@@ -1,8 +1,9 @@
 <template>
-  <div class="contact-component" id="contact">
+  <div class="contact-wrapper">
+
     <div class="contact-banner">
       <div class="left animatedParent">
-        <img src="../images/matt-violet.png" class="left-side-img animated slideInLeft">
+        <img src="../images/matt-look.png" class="left-side-img animated slideInUp">
       </div>
       <div class="right animatedParent">
         <div class="right-side-text animated slideInDown">
@@ -14,6 +15,9 @@
           </p>
         </div>
       </div>
+    </div>
+
+    <div class="contact-component">
       <div class=contact-links>
         <a class='link-text' href=''>Email</a>
         <a class='link-text' href='githubLink'>GitHub</a>
@@ -39,33 +43,46 @@ export default {
 </script>
 
 <style scoped>
+  .contact-wrapper {
+    background: linear-gradient(to left, #b3ffab 0%, #12fff7 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+    padding-bottom: 100px;
+  }
   .contact-component {
-    position: absolute;
-    padding-top: 52px;
-    width: 100%;
-    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    padding-top: 40px;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    background: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .contact-banner {
+    padding-top: 52px;
     height: 400px;
+    width: 100%;
     text-align: center;
+    background-image: linear-gradient(to left, #b3ffab 0%, #12fff7 100%);
   }
   .left {
-    width: 50%;
+    width: 45%;
     height: 400px;
     display: inline-block;
     position: relative;
     text-align: center;
   }
   .right {
-    width: 50%;
+    width: 55%;
     height: 400px;
+    position: relative;
     display: inline-block;
-    z-index: 2;
     overflow: hidden;
   }
   .left-side-img {
-    height: 85%;
-    margin: auto;
+    height: 75%;
+    margin-right: 80px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -88,7 +105,9 @@ export default {
     font-size: 26px;
   }
   .contact-links {
-    margin-top: 250px;
+    /* margin-top: 250px; */
+    text-align: center;
+    vertical-align: bottom;
   }
   .link-text {
     margin: 0 20px;

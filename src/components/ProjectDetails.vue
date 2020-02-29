@@ -1,4 +1,4 @@
-<template type="text/x-template" id="modal-template">
+<template type="text/x-template">
   <transition name="modal">
     <div class="modal-mask">
       <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">

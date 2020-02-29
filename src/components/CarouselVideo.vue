@@ -57,7 +57,6 @@ export default {
       this.currentSlide = index;
     }
   },
-  
 }
 </script>
 
@@ -76,16 +75,11 @@ export default {
     position: relative;
     margin: 0 auto;
     border: 1px solid gray;
-    /* background: white; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
    }
   .track-container {
     height: 100%;
   }
   .img-div {
-    /* border-top-left-radius: 10px; */
-    /* border-top-right-radius: 10px; */
     height: 64%;
     width: 100%;
     overflow: hidden;
@@ -101,11 +95,9 @@ export default {
   }
   .video-text-div {
     padding: 15px;
-    height: 30%;
     text-align: left;
-    /* border: 1px solid gray; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
-
+    background: white;
+    color: black;
   }
   .arrow {
     position: absolute;
@@ -125,7 +117,6 @@ export default {
   .carousel-nav {
     height: 40px;
     width: 100%;
-    /* text-align: center; */
     position : absolute;
     bottom: 0;
   }

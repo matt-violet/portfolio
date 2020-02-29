@@ -50,7 +50,6 @@ export default {
   }
   .project {
     width: 298px;
-    background-color: white;
     margin: 20px;
     display: inline-block;
     text-align: center;
@@ -79,6 +78,7 @@ export default {
   /* ---------------------------------------------------------------------------- */
   .project-description {
     padding: 10px;
+    background: white;
   }
   .details-btn {
     margin: 15px 0 0 0;
