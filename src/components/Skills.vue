@@ -1,6 +1,7 @@
 <template>
   <div class="skills-wrapper">
     <div class='skills-component'>
+      <!-- <img class="bg" src='../images/paper.jpg'/> -->
       <h1 class='skills-header'>What I Can Do</h1>
       <table class='table' cellpadding="0" cellspacing="0" border="0">
         <tr class='icon-row'>
@@ -120,7 +121,7 @@
           </div>
         </div>
         <div class='row row3'>
-          <p class='row-name'>OTHER:</p>
+          <p class='row-name'>MORE:</p>
           <div class="icon other">
             <span class="tool-tip">Webpack</span>
             <svg viewBox="0 0 128 128">
@@ -178,14 +179,27 @@ export default {
     background-repeat: no-repeat;
     height: 100%;
   }
+  /* .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: .6;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  } */
   .skills-component {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     width: 1000px;
     margin: auto;
     background: white;
-    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   .skills-header {
+    padding: 80px 0 40px 0;
     text-align: center;
     margin: 0 auto;
     font-size: 25px;
@@ -196,9 +210,11 @@ export default {
   .skill-icon {
     margin: 20px auto 10px auto;
     width: 30px;
+    vertical-align: bottom;
   }
   .table {
-    margin: 40px auto 80px auto;
+    margin: 0px 20px 80px 20px;
+    font-size: 14px;
   }
   .col {
     width: 250px;
@@ -206,14 +222,14 @@ export default {
     vertical-align: top;
   }
   .col-header {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 40px auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
   .software-header {
     text-align: center;
-    margin: 0 auto 50px auto;
-    font-size: 20px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
   }
   .software-col {
     width: 500px;
@@ -230,15 +246,14 @@ export default {
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skill-icons-container {
-    width: 600px;
-    margin: 40px auto;
+    width: 516px;
+    margin: 40px auto 0 auto;
   }
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
     display: inline-block;
     text-align: center;
-    margin: 3px;
+    margin: 1px;
     background-color: white;
     padding: 10px;
   }
@@ -282,5 +297,6 @@ export default {
     text-align: center;
     width: 60%;
     margin: auto;
+    padding: 80px 0;
   }
 </style>

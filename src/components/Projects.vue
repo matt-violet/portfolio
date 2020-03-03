@@ -16,27 +16,47 @@
       </div>
     </div>
     <div class="projects-component">
-      <h1 class='software-projects-header'>
-        Software Projects
-      </h1>
-      <div class="software-projects">
-        <SoftwareProjects
-          :softwareProjects="softwareProjects"
-          @viewProjectDetails="showProjectDetails"
-        />
-      </div>
-      <div class='other-wrapper'>
-        <div class='other-div'>
-          <h1 class="other-projects-header">
-            Design & Video Projects
+      <div class="header-container">
+        <div class='expand' v-on:click='onShowSoftware'>
+          <img src='../images/icon-software.png' class='project-icon'>
+          <h1 class='project-header'>
+            Software Projects
           </h1>
+          <img src='../images/up-arrow.png' class='project-arrow' v-if='!showSoftware'>
+          <img src='../images/down-arrow.png' class='project-arrow' v-if='showSoftware'>
+        </div>
+        <div class="software-projects" v-show='showSoftware'>
+          <SoftwareProjects
+            :softwareProjects="softwareProjects"
+            @viewProjectDetails="showProjectDetails"
+          />
+        </div>
+        <div class='other-projects-div'>
+          <div class='expand' v-on:click='onShowDesign'>
+            <img src='../images/icon-design.png' class='project-icon'>
+            <h1 class="project-header">
+              Design Projects
+            </h1>
+            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showDesign'>
+            <img src='../images/down-arrow.png' class='project-arrow' v-if='showDesign'>
+          </div>
           <CarouselDesign
-            class='inline-carousel'
+            v-show='showDesign'
+            class='design-carousel'
             :designProjects="designProjects"
             @viewProjectDetails="showProjectDetails"
           />
+          <div class='expand' v-on:click='onShowVideo'>
+            <img src='../images/icon-video.png' class='project-icon'>
+            <h1 class="project-header">
+              Video Projects
+            </h1>
+            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showVideo'>
+            <img src='../images/down-arrow.png' class='project-arrow' v-if='showVideo'>
+          </div>
           <CarouselVideo
-            class='inline-carousel'
+            v-show='showVideo'
+            class='video-carousel'
             :videoProjects="videoProjects"
           />
           <ProjectDetails
@@ -65,6 +85,15 @@ export default {
     ProjectDetails,
   },
   methods: {
+    onShowVideo() {
+      this.showVideo = !this.showVideo
+    },
+    onShowDesign() {
+      this.showDesign = !this.showDesign
+    },
+    onShowSoftware() {
+      this.showSoftware = !this.showSoftware
+    },
     showProjectDetails(project) {
       this.featuredProject = project;
       this.projectDetails = !this.projectDetails;
@@ -74,6 +103,9 @@ export default {
     return {
       featuredProject: {},
       projectDetails: false,
+      showDesign: false,
+      showVideo: false,
+      showSoftware: false,
       softwareProjects: [
         {
           id: 1,
@@ -148,7 +180,8 @@ export default {
         },
         {
           image: require('../images/HLTW.png'),
-          description: 'Designed layout of book "Hunter Leads the Way", 2017'
+          description: 'Designed layout of book "Hunter Leads the Way", 2017',
+          design: true
         },
         {
           image: require('../images/SEAsia.png'),
@@ -163,11 +196,6 @@ export default {
       ],
       videoProjects: [
         {
-          title: 'Soaring Sunday, 2015',
-          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
-          url: "https://player.vimeo.com/video/118749275"
-        },
-        {
           title: 'Starr King Threshold Ceremony, 2017',
           description: 'The Starr King community gathers to welcome new students to the school.',
           url: 'https://www.youtube.com/embed/Boi3G8wiEAY'
@@ -176,6 +204,11 @@ export default {
           title: 'A Mindful Walk: Immersion Course, 2018',
           description: 'Experience Transylvania\'s hills and river valleys, cultural sites, and more in this unforgettable immersion couse.',
           url: 'https://www.youtube.com/embed/6eKqxxVSlKQ'
+        },
+        {
+          title: 'Soaring Sunday, 2015',
+          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
+          url: "https://player.vimeo.com/video/118749275"
         }
       ],
     }
@@ -195,9 +228,10 @@ export default {
     height: 100%;
   }
   .projects-component {
-    padding-top: 40px;
     width: 1000px;
     margin: auto;
+    border: 1px solid;
+    border-radius: 20px;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: relative;
@@ -208,7 +242,6 @@ export default {
     width: 100%;
     height: 400px;
     position: relative;
-    /* z-index: 2; */
     background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
   }
   .left {
@@ -252,15 +285,7 @@ export default {
     margin: 0;
   }
   .projects-banner-text-2 {
-    font-size: 16px;
-  }
-  .software-projects-header {
-    text-align: center;
-    margin: 20px auto 0 auto;
-    font-size: 25px;
-  }
-  .projects-header {
-    margin: auto;
+    font-size: 20px;
   }
   .projects-wrapper {
     width: 100%;
@@ -270,16 +295,19 @@ export default {
     right: 0;
     display: inline-block;
   }
-  .other-wrapper {
-    padding: 80px 0 20px 0;
+  .other-projects-div {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
-  .other-projects-header {
-    margin: 0px auto 80px auto;
+  .project-header {
+    width: 400px;
+    margin: 20px;
     font-size: 25px;
+    display: inline-block;
   }
-  .design-header {
-    text-align: left;
-    font-size: 50px;
+  .header-container {
+    width: 500px;
+    padding: 80px;
   }
   .project-div {
     border: 1px solid gray;
@@ -290,36 +318,10 @@ export default {
     padding: 7px;
     display: inline-block;
   }
-  .img-div {
-    height: 110px;
-    overflow: hidden;
-    border: 1px solid gray;
-    border-radius: 5px;
-  }
-  .img {
-    width: 100%;
-    height: auto;
-  }
   .design-wrapper {
     width: 850px;
     margin-left: auto;
     margin-right: auto;
-  }
-  .design-project-div {
-    margin: 15px;
-    width: 235px;
-    display: inline-block;
-    overflow: hidden;
-    padding: 7px;
-    background-color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
-    vertical-align: top;
-  }
-  .design-imgs {
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 100%;
   }
   .software-carousel {
     margin: 40px auto;
@@ -327,12 +329,27 @@ export default {
   .software-projects {
     width: 680px;
     height: 600px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 80px auto;
   }
-  .inline-carousel {
-    margin: 0 auto 80px auto;
+  .design-carousel {
+    transition: max-height 0.2s ease-out;
+    margin: 80px auto;
+    background: white;
   }
-  .other-div {
-    text-align: center;
+  .project-arrow {
+    width: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+    margin: auto;
+    vertical-align: middle;
+  }
+  .project-icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+  .expand:hover {
+    cursor: pointer;
   }
 </style>

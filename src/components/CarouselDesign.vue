@@ -5,7 +5,7 @@
       <div class="track-inner">
         <img
           :src="projects[currentSlide].image"
-          class='img'
+          class='img animated pulse'
           v-on:click="$emit('viewProjectDetails', projects[currentSlide])"
         />
       </div>
@@ -108,13 +108,15 @@ export default {
   }
   .arrow:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   .back {
-    left: -40px;
+    left: -30px;
+    top: 140px;
   }
   .next {
-    right: -40px;
+    right: -30px;
+    top: 140px;
   }
   .carousel-nav {
     height: 40px;

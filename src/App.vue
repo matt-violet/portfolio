@@ -39,15 +39,15 @@ export default {
       this.contact = false;
       this[option] = true;
       this.currentPg = option;
-      if (option === 'home') {
-        window.scroll({
-          top: 0, 
-          left: 0, 
-          behavior: 'smooth'
-        });
-      } else {
-      document.getElementById(option).scrollIntoView({ behavior: 'smooth' })
-      }
+      // if (option === 'home') {
+      //   window.scroll({
+      //     top: 0, 
+      //     left: 0, 
+      //     behavior: 'smooth'
+      //   });
+      // } else {
+      // document.getElementById(option).scrollIntoView({ behavior: 'smooth' })
+      // }
     },
   }
 }
@@ -55,9 +55,10 @@ export default {
 
 <style>
   body, html {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
     font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;
+    background: black;
   }
   a {
     color: rgb(43, 43, 43);

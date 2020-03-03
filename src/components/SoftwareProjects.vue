@@ -1,7 +1,7 @@
 <template>
-  <div class="outer-wrapper">
-    <div v-for="project of projects" v-bind:key="project.id" class="project">
-      <div class='dimmer'/>
+  <div class="outer-wrapper animatedParent">
+    <div v-for="project of projects" v-bind:key="project.id" class="project animated pulse">
+      <div class='dimmer animated fadeIn'/>
       <div class="img-div">
         <img :src="project.image" class='img'/>
       </div>
@@ -53,7 +53,7 @@ export default {
     margin: 20px;
     display: inline-block;
     text-align: center;
-    border: 1px solid rgb(158, 158, 158);
+    border: 1px solid black;
   }
   .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -63,7 +63,7 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(61, 61, 61, 0.6);
     height: 262px;
     width: 300px;
     position: absolute;
@@ -84,7 +84,7 @@ export default {
     margin: 15px 0 0 0;
     padding: 5px;
     font-size: 12px;
-    border: 1.5px solid rgb(158, 158, 158);
+    border: 1.5px solid;
   }
   .details-btn:hover {
     cursor: pointer;

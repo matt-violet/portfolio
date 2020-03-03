@@ -9,7 +9,7 @@
           Hi, I'm Matt. &#x1F44B;
         </h1>
         <p class='home-blurb'>
-          I'm a multitalented human with a passion for designing and building digital products that help others.
+          I'm a multitalented human with a passion for building digital products that help others.
         </p>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
     margin: 0;
   }
   .home-blurb {
-    font-size: 16px;
+    font-size: 20px;
   }
   @keyframes gradient {
     0% {

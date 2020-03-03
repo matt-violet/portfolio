@@ -17,11 +17,12 @@
       </div>
     </div>
 
-    <div class="contact-component">
-      <div class=contact-links>
-        <a class='link-text' href=''>Email</a>
-        <a class='link-text' href='githubLink'>GitHub</a>
-        <a class='link-text' href='linkedinLink'>LinkedIn</a>
+    <div class="contact-component animatedParent">
+      <h2 class='contact-header'>Contact</h2>
+      <div class='contact-links animated pulse'>
+        <a class='link-text' href="mailto:mattviolet@gmail.com" target="_top">Email</a>
+        <a class='link-text' href='https://github.com/matt-violet' target="blank">GitHub</a>
+        <a class='link-text' href='https://linkedin.com/in/mattviolet/' target="blank">LinkedIn</a>
       </div>
     </div>
   </div>
@@ -54,9 +55,12 @@ export default {
     width: 1000px;
     height: 500px;
     margin: auto;
+    border-radius: 20px;
     background: white;
+    border: 1px solid;
     position: relative;
     z-index: 2;
+    vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .contact-banner {
@@ -95,6 +99,10 @@ export default {
     color: rgb(43, 43, 43);
     text-align: left;
   }
+  .contact-header {
+    margin: 20px auto 40px auto;
+    text-align: center;
+  }
   .contact-text {
     font-size: 50px;
     margin: 0;
@@ -105,9 +113,7 @@ export default {
     font-size: 26px;
   }
   .contact-links {
-    /* margin-top: 250px; */
-    text-align: center;
-    vertical-align: bottom;
+    text-align: center; 
   }
   .link-text {
     margin: 0 20px;

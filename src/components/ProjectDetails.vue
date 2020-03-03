@@ -18,9 +18,6 @@
         </div>
 
         <div v-if="project.design" class="modal-container-design">
-          <a class="modal-close-button-design" @click="$emit('viewProjectDetails')">
-            &times;
-          </a>
           <div class="img-div-design">
             <img :src="project.image" class='img-design'/>
           </div>
@@ -71,14 +68,13 @@ export default {
   }
   .img-div-design {
     max-height: 600px;
-    margin: 20px;
-    margin-top: 10px;
     overflow: auto;
   }
   .img {
     width: 100%;
   }
   .img-design {
+    vertical-align: bottom;
     width: 100%;
   }
   .modal-mask {
@@ -88,7 +84,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .8);
     display: table;
     transition: opacity .3s ease;
     text-align: left;
@@ -104,13 +100,12 @@ export default {
     border-radius: 2px;
     box-shadow: 0 20px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    /* border: 1px solid gray; */
   }
   .modal-container-design {
     width: 800px;
     margin: 0px auto;
-    padding: 20px 20px;
-    background-color: white;
+    padding: 10px;
+    background: white;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
@@ -119,8 +114,8 @@ export default {
   .modal-close-button {
     float: left;
     position: absolute;
-    font-size: 50px;
-    margin: 20px 40px;
+    font-size: 80px;
+    margin: 40px 80px;
     color: white;
   }
   .modal-close-button:hover {

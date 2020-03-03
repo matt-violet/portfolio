@@ -3,9 +3,9 @@
     <AboutBanner class="about-banner"/>
     <div class="about-component">
       <div class="about-me">
-        <h1 class='about-header'>About Me</h1>
+        <h1 class='about-header'>My Story</h1>
         <p class='bio-text'>
-          Native of Oakland, CA, I have a big heart and I bring passion to everything I do. I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.
+          A native of Oakland, CA, I have a big heart and I bring passion to everything I do. I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.
         </p>
         <p class='bio-text'>
           My interest in software came in 2015, at a time of major change in my life. Shortly after I was diagnosed with type one diabetes, I started wearing two electronic medical devices that worked together to create a hybrid closed-loop system to help manage my blood sugar levels. As someone whose health is now literally tied to automated algorithms, my appreciation for the power of code has changed forever.
@@ -35,6 +35,11 @@ export default {
   components: {
     AboutBanner,
     Skills,
+  },
+  data() {
+    return {
+      paper: require('../images/paper.jpg')
+    }
   }
 }
 </script>
@@ -44,9 +49,6 @@ export default {
     background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     background-repeat: no-repeat;
     height: 100%;
-  }
-  .skills {
-    margin-top: -5px;
     padding-bottom: 100px;
   }
   .about-banner {
@@ -54,11 +56,14 @@ export default {
     position: relative;
   }
   .about-component {
+    background: white;
     position: relative;
     z-index: 2;
     width: 1000px;
     margin: 0 auto;
-    background: white;
+    border: 1px solid;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .about-imgs {
@@ -66,11 +71,15 @@ export default {
     position: relative;
     z-index: 2;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgb(43, 43, 43);
+    border-bottom: 1px solid rgb(43, 43, 43);
   }
   .about-img {
     width: 20%;
     height: 100%;
     display: inline-block;
+    vertical-align: bottom;
   }
   .about-me {
     width: 600px;
@@ -78,7 +87,7 @@ export default {
     padding: 40px;
   }
   .about-header {
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     padding-bottom: 40px;
     text-align: center;
     font-size: 25px;

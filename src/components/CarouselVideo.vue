@@ -1,27 +1,29 @@
 <template>
-  <div class="carousel">
-    <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
-    <div class="track-container">
-      <div class='img-div'>
-        <iframe
-          :src="projects[currentSlide].url"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-        ></iframe>
+  <div class="animatedParent">
+    <div class="carousel animated pulse">
+      <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
+      <div class="track-container">
+        <div class='img-div'>
+          <iframe
+            :src="projects[currentSlide].url"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class='video-text-div'>
+          <h2>{{ projects[currentSlide].title }}</h2>
+          <p>{{ projects[currentSlide].description }}</p>
+        </div>
       </div>
-      <div class='video-text-div'>
-        <h2>{{ projects[currentSlide].title }}</h2>
-        <p>{{ projects[currentSlide].description }}</p>
+      <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
+      <div class="carousel-nav">
+        <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
+        <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
+        <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
       </div>
-    </div>
-    <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
-    <div class="carousel-nav">
-      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
-      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
-      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
     </div>
   </div>
 </template>
@@ -31,7 +33,7 @@ export default {
   name: 'CarouselVideo',
   props: {
     viewProjectDetails: { type: Function },
-    videoProjects: { type: Object },
+    videoProjects: { type: Array },
   },
   data() {
     return {
@@ -74,7 +76,8 @@ export default {
     height: 422px;
     position: relative;
     margin: 0 auto;
-    border: 1px solid gray;
+    border: 1px solid black;
+    background: white;
    }
   .track-container {
     height: 100%;
@@ -84,6 +87,7 @@ export default {
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid gray;
+    animation: fadeIn 1s;
   }
   .img {
     min-width: 100%;
@@ -96,7 +100,6 @@ export default {
   .video-text-div {
     padding: 15px;
     text-align: left;
-    background: white;
     color: black;
   }
   .arrow {
@@ -106,7 +109,7 @@ export default {
   }
   .arrow:hover {
     cursor: pointer;
-    transform: scale(1.1)
+    transform: scale(1.2)
   }
   .back {
     left: -40px;
@@ -117,6 +120,7 @@ export default {
   .carousel-nav {
     height: 40px;
     width: 100%;
+    text-align: center;
     position : absolute;
     bottom: 0;
   }
