@@ -1,6 +1,5 @@
 <template>
   <div class="contact-wrapper">
-
     <div class="contact-banner">
       <div class="left animatedParent">
         <img src="../images/matt-look.png" class="left-side-img animated slideInUp">
@@ -16,13 +15,21 @@
         </div>
       </div>
     </div>
-
     <div class="contact-component animatedParent">
       <h2 class='contact-header'>Contact</h2>
-      <div class='contact-links animated pulse'>
-        <a class='link-text' href="mailto:mattviolet@gmail.com" target="_top">Email</a>
-        <a class='link-text' href='https://github.com/matt-violet' target="blank">GitHub</a>
-        <a class='link-text' href='https://linkedin.com/in/mattviolet/' target="blank">LinkedIn</a>
+      <div class='contact-btns animated pulse'>
+        <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
+          <span class='helper'></span>
+          <img src='../images/mail-icon.png' class='contact-icon'>
+        </div>
+        <div class="contact-btn" v-on:click='onLinkClick(github)'>
+          <span class='helper'></span>
+          <img src='../images/github-icon.png' class='contact-icon'>
+        </div>
+        <div class="contact-btn" v-on:click='onLinkClick(linkedin)'>
+          <span class='helper'></span>
+          <img src='../images/linkedin-icon.png' class='contact-icon'>
+        </div>
       </div>
     </div>
   </div>
@@ -33,11 +40,17 @@ export default {
   name: 'Contact',
   data() {
     return {
-      emailIcon: require('../images/mail-icon.png'),
-      emailAddress: 'mattviolet@gmail.com',
-      githubLink: 'https://github.com/matt-violet',
-      linkedinLink: 'https://linkedin.com/in/mattviolet/',
-      linkedinIcon: require('../images/linkedin-icon.png'),
+      github: 'https://github.com/matt-violet',
+      linkedin: 'https://www.linkedin.com/in/mattviolet/',
+    }
+  },
+  methods: {
+    onLinkClick(url) {
+      if (url === 'mattviolet@gmail.com') {
+        window.location.href = "mailto:" + url;
+      } else {
+        window.open(url, '_blank');
+      }
     }
   }
 }
@@ -53,7 +66,7 @@ export default {
   .contact-component {
     padding-top: 40px;
     width: 1000px;
-    height: 500px;
+    height: 300px;
     margin: auto;
     border-radius: 20px;
     background: white;
@@ -85,14 +98,12 @@ export default {
     overflow: hidden;
   }
   .left-side-img {
-    height: 75%;
+    height: 85%;
     margin-right: 80px;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
-    /* -webkit-filter: drop-shadow(-8px -4px 8px #222);
-    filter: drop-shadow(-8px -4px 8px #222); */
   }
   .right-side-text {
     width: 400px;
@@ -102,6 +113,7 @@ export default {
   .contact-header {
     margin: 20px auto 40px auto;
     text-align: center;
+    font-size: 25px;
   }
   .contact-text {
     font-size: 50px;
@@ -112,11 +124,53 @@ export default {
     margin: 0;
     font-size: 26px;
   }
-  .contact-links {
-    text-align: center; 
+  .contact-btns {
+    width: 400px;
+    height: 75px;
+    text-align: center;
+    margin: 40px auto;
   }
-  .link-text {
+  .contact-btn {
+    background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%);
+    display: inline-block;
     margin: 0 20px;
+    text-align: center;
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid gray;
+  }
+  .contact-btn:hover {
+    background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+    cursor: pointer;
+  }
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .link {
+    background: red;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+  }
+  .email-link .email-tool-tip {
+    visibility: hidden;
+    background-color: black; opacity: .8;
+    border-radius: 10%;
+    border: 1px solid white;
+    color: white;
+    position: absolute;
+  }
+  .email-link:hover .email-tool-tip {
+    visibility: visible;
   }
   @keyframes gradient {
     0% {

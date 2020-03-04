@@ -128,6 +128,7 @@ export default {
     background: lightgray;
     width: 15px;
     height: 15px;
+    border: 1px solid;
     border-radius: 50%;
     margin: 5px;
   }

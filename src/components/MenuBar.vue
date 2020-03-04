@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-wrapper" :class="{ 'menu--hidden': !showMenu }">
+  <div class="menu-wrapper">
     <div class="centered-menu-div">
       <div class="menu-option">
         <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
@@ -61,7 +61,8 @@ export default {
 <style>
   .menu-wrapper {
     width: 100%;
-    position: fixed;
+    background: hsl(0, 0%, 100%, 0);
+    position: absolute;
     z-index: 3;
     text-align: center;
     transition: 0.3s all ease-out;

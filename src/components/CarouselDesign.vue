@@ -73,8 +73,8 @@ export default {
     width: 480px;
     height: 380px;
     position: relative;
-    margin: 0 auto;
-    /* border: 1px solid gray; */
+    margin: auto;
+    /* padding: 40px 0; */
   }
   .track-container {
     margin: 0 auto;
@@ -128,6 +128,7 @@ export default {
   .carousel-indicator {
     background: lightgray;
     height: 15px;
+    border: 1px solid;
     border-radius: 50%;
     margin: 5px;
   }

@@ -45,6 +45,10 @@ export default {
     color: rgb(43, 43, 43);
     margin: 0;
   }
+  .outer-wrapper {
+    width: 680px;
+    margin: 0 auto;
+  }
   .header {
     margin-left: 20px;
   }

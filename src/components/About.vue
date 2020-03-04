@@ -36,17 +36,12 @@ export default {
     AboutBanner,
     Skills,
   },
-  data() {
-    return {
-      paper: require('../images/paper.jpg')
-    }
-  }
 }
 </script>
 
 <style>
   .about-wrapper {
-    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     background-repeat: no-repeat;
     height: 100%;
     padding-bottom: 100px;
@@ -82,9 +77,9 @@ export default {
     vertical-align: bottom;
   }
   .about-me {
-    width: 600px;
+    /* width: 600px; */
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 80px;
   }
   .about-header {
     margin: 20px auto 0 auto;

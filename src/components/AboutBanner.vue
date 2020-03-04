@@ -29,7 +29,7 @@ export default {
     height: 400px;
     position: relative;
     /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
-    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     /* background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%); */
     /* background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
     /* background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); */

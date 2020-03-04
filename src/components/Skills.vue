@@ -1,7 +1,6 @@
 <template>
   <div class="skills-wrapper">
     <div class='skills-component'>
-      <!-- <img class="bg" src='../images/paper.jpg'/> -->
       <h1 class='skills-header'>What I Can Do</h1>
       <table class='table' cellpadding="0" cellspacing="0" border="0">
         <tr class='icon-row'>
@@ -16,7 +15,7 @@
           </td>
         </tr>
         <tr>
-          <td class="col">
+          <td class="design-col">
             <h2 class="col-header">Graphic Design</h2>
             <ul class="bullets">
               <li>4+ years hands on experience in non-profit communication, freelance, and personal projects</li>
@@ -34,7 +33,7 @@
               </ul>
             </div>
           </td>
-          <td class="col">
+          <td class="video-col">
             <h2 class="col-header">Video Production</h2>
             <ul class="bullets">
               <li>3+ years hands on experience in non-profit communication roles</li>
@@ -175,19 +174,10 @@ export default {
 
 <style scoped>
   .skills-wrapper {
-    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     background-repeat: no-repeat;
     height: 100%;
   }
-  /* .bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    opacity: .6;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-  } */
   .skills-component {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     width: 1000px;
@@ -213,12 +203,17 @@ export default {
     vertical-align: bottom;
   }
   .table {
-    margin: 0px 20px 80px 20px;
+    margin: 0px 60px 80px 60px;
     font-size: 14px;
   }
-  .col {
+  .design-col {
     width: 250px;
-    padding: 0 40px;
+    padding: 0 20px;
+    vertical-align: top;
+  }
+  .video-col {
+    width: 250px;
+    padding-left: 20px;
     vertical-align: top;
   }
   .col-header {
@@ -233,6 +228,8 @@ export default {
   }
   .software-col {
     width: 500px;
+    padding: 0 20px;
+    padding-left: 0;
   }
   .software-bullets {
     padding: 0;
@@ -240,6 +237,9 @@ export default {
   .bullets {
     padding: 0;
     text-align: left;
+  }
+  ul {
+    padding-left: 20px;
   }
   li {
     padding: 5px;
