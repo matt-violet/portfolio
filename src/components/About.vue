@@ -2,7 +2,7 @@
   <div class="about-wrapper">
     <AboutBanner class="about-banner"/>
     <div class="about-component">
-      <div class="about-me">
+      <div class="about-me" data-aos="zoom-in" data-aos-delay="500">
         <h1 class='about-header'>My Story</h1>
         <p class='bio-text'>
           A native of Oakland, CA, I have a big heart and I bring passion to everything I do. I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.

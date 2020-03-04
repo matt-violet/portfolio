@@ -125,7 +125,7 @@ export default {
     bottom: 0;
   }
   .carousel-indicator {
-    background: lightgray;
+    background: white;
     width: 15px;
     height: 15px;
     border: 1px solid;
@@ -136,6 +136,6 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: gray;
+    background: black;
   }
 </style>

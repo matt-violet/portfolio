@@ -68,7 +68,7 @@ export default {
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
     background: rgba(61, 61, 61, 0.6);
-    height: 262px;
+    height: 265px;
     width: 300px;
     position: absolute;
     display: none;
@@ -86,13 +86,15 @@ export default {
   }
   .details-btn {
     margin: 15px 0 0 0;
-    padding: 5px;
+    padding: 8px;
     font-size: 12px;
-    border: 1.5px solid;
+    border: 1px solid;
+    border-radius: 25px;
   }
   .details-btn:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    background: black;
+    color: white;
   }
   .img-div {
     width: 100%;

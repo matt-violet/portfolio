@@ -15,9 +15,9 @@
         </div>
       </div>
     </div>
-    <div class="contact-component animatedParent">
-      <h2 class='contact-header'>Contact</h2>
-      <div class='contact-btns animated pulse'>
+    <div class="contact-component">
+      <h2 class='contact-header' data-aos="zoom-in" data-aos-delay='500'>Contact</h2>
+      <div class='contact-btns' data-aos="zoom-in" data-aos-delay='600'>
         <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
           <span class='helper'></span>
           <img src='../images/mail-icon.png' class='contact-icon'>
