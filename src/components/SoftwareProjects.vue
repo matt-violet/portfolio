@@ -57,7 +57,6 @@ export default {
     margin: 20px;
     display: inline-block;
     text-align: center;
-    border: 1px solid black;
   }
   .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -67,7 +66,7 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(61, 61, 61, 0.6);
+    background: rgba(214, 214, 214, 0.6);
     height: 265px;
     width: 300px;
     position: absolute;
@@ -86,15 +85,15 @@ export default {
   }
   .details-btn {
     margin: 15px 0 0 0;
-    padding: 8px;
+    padding: 7px;
     font-size: 12px;
     border: 1px solid;
-    border-radius: 25px;
+    /* border-radius: 25px; */
+    /* background: rgb(226, 226, 226); */
   }
   .details-btn:hover {
     cursor: pointer;
-    background: black;
-    color: white;
+    background: hsl(39, 77%, 83%, .5);
   }
   .img-div {
     width: 100%;

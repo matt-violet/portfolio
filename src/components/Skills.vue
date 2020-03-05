@@ -174,19 +174,19 @@ export default {
 
 <style scoped>
   .skills-wrapper {
-    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-image: linear-gradient(to right,  rgba(138,118,249,1), rgba(75,252,235,1));
     background-repeat: no-repeat;
     height: 100%;
   }
   .skills-component {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-    width: 1000px;
+    width: 70%;
     margin: auto;
     background: white;
     position: relative;
     z-index: 1;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    /* border-bottom-right-radius: 10px; */
+    /* border-bottom-left-radius: 10px; */
   }
   .skills-header {
     padding: 80px 0 40px 0;
@@ -207,12 +207,12 @@ export default {
     font-size: 14px;
   }
   .design-col {
-    width: 250px;
+    width: 25%;
     padding: 0 20px;
     vertical-align: top;
   }
   .video-col {
-    width: 250px;
+    width: 25%;
     padding-left: 20px;
     vertical-align: top;
   }
@@ -227,7 +227,7 @@ export default {
     font-size: 18px;
   }
   .software-col {
-    width: 500px;
+    width: 50%;
     padding: 0 20px;
     padding-left: 0;
   }

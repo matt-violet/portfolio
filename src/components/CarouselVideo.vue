@@ -76,7 +76,6 @@ export default {
     height: 422px;
     position: relative;
     margin: 0 auto;
-    border: 1px solid black;
     background: white;
    }
   .track-container {

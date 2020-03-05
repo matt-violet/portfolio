@@ -1,8 +1,8 @@
 <template>
   <div class="projects-wrapper">
     <div class="projects-banner">
-      <div class="left animatedParent">
-        <div class="left-side-text animated slideInDown">
+      <div class="left">
+        <div class="left-side-text" data-aos="fade-right" data-aos-delay='1000'>
           <h1 class='projects-banner-text'>
             Here's what I've been up to.
           </h1>
@@ -11,28 +11,31 @@
           </p>
         </div>
       </div>
-      <div class="right animatedParent">
-        <img src="../images/matt-oak-blank.png" class="right-side-img animated slideInUp">
+      <div class="right">
+        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='1000'>
       </div>
     </div>
-    <div class="projects-component">
-      <h1 class='project-page-header'>Projects</h1>
-      <div class="header-container">
-        <div class='expand software-expand' v-on:click='onShowSoftware'>
-          <img src='../images/icon-software.png' class='project-icon'>
-          <h1 class='project-section-header'>
-            Software
-          </h1>
-          <img src='../images/up-arrow.png' class='project-arrow' v-if='!showSoftware'>
-          <img src='../images/down-arrow.png' class='project-arrow' v-if='showSoftware'>
-        </div>
-        <div class="software-projects" v-show='showSoftware'>
-          <SoftwareProjects
-            :softwareProjects="softwareProjects"
-            @viewProjectDetails="showProjectDetails"
-          />
-        </div>
-          <div class='expand design-expand' v-on:click='onShowDesign'>
+    <div class="projects-component" data-aos="flip-up" data-aos-duration='500'>
+      <div data-aos="zoom-in" data-aos-delay='300'>
+        <h1 class='project-page-header'>Projects</h1>
+        <div class="header-container">
+          
+          <div :class="showSoftware ? 'expand software-expanded' : 'expand software-expand'" v-on:click='onShowSoftware'>
+            <img src='../images/icon-software.png' class='project-icon'>
+            <h1 class='project-section-header'>
+              Software
+            </h1>
+            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showSoftware'>
+            <img src='../images/down-arrow.png' class='project-arrow' v-if='showSoftware'>
+          </div>
+          <div class="software-projects" v-show='showSoftware'>
+            <SoftwareProjects
+              :softwareProjects="softwareProjects"
+              @viewProjectDetails="showProjectDetails"
+            />
+          </div>
+          
+          <div :class="showDesign ? 'expand design-expanded' : 'expand design-expand'" v-on:click='onShowDesign'>
             <img src='../images/icon-design.png' class='project-icon'>
             <h1 class="project-section-header">
               Design
@@ -47,7 +50,8 @@
               @viewProjectDetails="showProjectDetails"
             />
           </div>
-          <div :class="showVideo ? 'expand video-expand' : 'expand video-expanded'" v-on:click='onShowVideo'>
+          
+          <div :class="showVideo ? 'expand video-expanded' : 'expand video-expand'" v-on:click='onShowVideo'>
             <img src='../images/icon-video.png' class='project-icon'>
             <h1 class="project-section-header">
               Video
@@ -60,14 +64,14 @@
             class='video-carousel'
             :videoProjects="videoProjects"
           />
-          <ProjectDetails
-            v-if="projectDetails"
-            :project="featuredProject"
-            @viewProjectDetails="showProjectDetails"
-          />
-
+        </div>
       </div>
     </div>
+    <ProjectDetails
+      v-if="projectDetails"
+      :project="featuredProject"
+      @viewProjectDetails="showProjectDetails"
+    />
   </div>
 </template>
 
@@ -145,7 +149,8 @@ export default {
           details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
           stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
           github: 'https://github.com/social-inn/Reviews',
-          image: require('../images/bed.jpg')
+          image: require('../images/bed.jpg'),
+          video: require('../images/social-in-test.png')
         }
       ],
       designProjects: [
@@ -224,16 +229,16 @@ export default {
     font-size: 18px;
   }
   .projects-wrapper {
-    background-image: linear-gradient(to right, rgba(253,193,104), rgba(251,128,128));
+    background-image: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
     height: 100%;
     margin-bottom: 100px;
   }
   .projects-component {
-    width: 1000px;
+    width: 70%;
     padding: 60px 0;
     margin: auto;
     border: 1px solid;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: relative;
@@ -244,7 +249,7 @@ export default {
     width: 100%;
     height: 400px;
     position: relative;
-    background-image: linear-gradient(to right, rgba(253,193,104), rgba(251,128,128));
+    background-image: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
   }
   .left {
     width: 55%;
@@ -308,9 +313,10 @@ export default {
     display: inline-block;
   }
   .header-container {
-    padding: 0 80px;
-    width: 700px;
-    margin: auto;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
+    padding: 0;
+    border-radius: 10px;
+    margin: auto 80px;
   }
   .project-div {
     border: 1px solid gray;
@@ -327,12 +333,16 @@ export default {
   .video-carousel {
     background: hsl(16, 100%, 66%, .5);
     padding: 40px 0;
+    border: 1px solid gray;
+    border-top: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
   .software-projects {
     height: 600px;
     padding: 40px 0;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
     background: hsl(39, 77%, 83%, .5);
   }
   .design-carousel-div {
@@ -340,6 +350,8 @@ export default {
     margin: auto;
     background: hsl(28, 87%, 67%, .5);
     padding: 40px 0;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
   }
   .project-arrow {
     width: 15px;
@@ -356,6 +368,7 @@ export default {
   }
   .expand {
     padding: 0 20px;
+    border: 1px solid gray;
   }
   .expand:hover {
     cursor: pointer;
@@ -364,16 +377,29 @@ export default {
     background: hsl(39, 77%, 83%, .5);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom: 0px;
+  }
+  .software-expanded {
+    background: hsl(39, 77%, 83%, .5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 0px;
   }
   .design-expand {
     background: hsl(28, 87%, 67%, .5);
+    border-bottom: 0px;
+  }
+  .design-expanded {
+    background: hsl(28, 87%, 67%, .5);
+    border-bottom: 0px;
   }
   .video-expand {
     background: hsl(16, 100%, 66%, .5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .video-expanded {
     background: hsl(16, 100%, 66%, .5);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom: 0px;
   }
 </style>

@@ -74,7 +74,6 @@ export default {
     height: 380px;
     position: relative;
     margin: auto;
-    /* padding: 40px 0; */
   }
   .track-container {
     margin: 0 auto;

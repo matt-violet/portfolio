@@ -1,11 +1,11 @@
 <template>
   <div class="contact-wrapper">
     <div class="contact-banner">
-      <div class="left animatedParent">
-        <img src="../images/matt-look.png" class="left-side-img animated slideInUp">
+      <div class="left">
+        <img src="../images/matt-look.png" class="left-side-img" data-aos="fade-up" data-aos-delay='1000'>
       </div>
-      <div class="right animatedParent">
-        <div class="right-side-text animated slideInDown">
+      <div class="right">
+        <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
           <h1 class="contact-text">
             Need a developer?
           </h1>
@@ -15,20 +15,22 @@
         </div>
       </div>
     </div>
-    <div class="contact-component">
-      <h2 class='contact-header' data-aos="zoom-in" data-aos-delay='500'>Contact</h2>
-      <div class='contact-btns' data-aos="zoom-in" data-aos-delay='600'>
-        <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
-          <span class='helper'></span>
-          <img src='../images/mail-icon.png' class='contact-icon'>
-        </div>
-        <div class="contact-btn" v-on:click='onLinkClick(github)'>
-          <span class='helper'></span>
-          <img src='../images/github-icon.png' class='contact-icon'>
-        </div>
-        <div class="contact-btn" v-on:click='onLinkClick(linkedin)'>
-          <span class='helper'></span>
-          <img src='../images/linkedin-icon.png' class='contact-icon'>
+    <div class="contact-component" data-aos="flip-up" data-aos-duration='500'>
+      <div data-aos="zoom-in" data-aos-delay='300'>
+        <h2 class='contact-header' data-aos="zoom-in">Contact</h2>
+        <div class='contact-btns' data-aos="zoom-in">
+          <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
+            <span class='helper'></span>
+            <img src='../images/mail-icon.png' class='contact-icon'>
+          </div>
+          <div class="contact-btn" v-on:click='onLinkClick(github)'>
+            <span class='helper'></span>
+            <img src='../images/github-icon.png' class='contact-icon'>
+          </div>
+          <div class="contact-btn" v-on:click='onLinkClick(linkedin)'>
+            <span class='helper'></span>
+            <img src='../images/linkedin-icon.png' class='contact-icon'>
+          </div>
         </div>
       </div>
     </div>
@@ -65,10 +67,10 @@ export default {
   }
   .contact-component {
     padding-top: 40px;
-    width: 1000px;
+    width: 70%;
     height: 300px;
     margin: auto;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background: white;
     border: 1px solid;
     position: relative;

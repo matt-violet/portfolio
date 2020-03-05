@@ -1,15 +1,15 @@
 <template>
   <div class="home-component" id="home">
-    <div class="left animatedParent">
-      <img src="../images/matt-violet.png" class="left-side-img animated slideInUp">
+    <div class="left">
+      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='1000'>
     </div>
-    <div class="right animatedParent">
-      <div class="right-side-text animated slideInDown">
+    <div class="right">
+      <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
         <h1 class='name'>
-          Hi, I'm Matt. &#x1F44B;
+          Hi, I'm Matt.
         </h1>
         <p class='home-blurb'>
-          I'm a multitalented human with a passion for building digital products that help others.
+          &#x1F44B; I'm a multitalented human with a passion for building digital products that help others.
         </p>
       </div>
     </div>
@@ -28,12 +28,7 @@ export default {
     width: 100%;
     height: 400px;
     position: relative;
-    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
-    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-    /* background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%); */
-    /* background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
-    /* background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); */
-    /* background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%); */
+    background-image: linear-gradient(to right,  rgba(138,118,249,1), rgba(75,252,235,1));
   }
 .left {
     width: 50%;
@@ -67,7 +62,7 @@ export default {
     margin: auto;
   }
   .name {
-    font-size: 50px;
+    font-size: 70px;
     margin: 0;
   }
   .title {
