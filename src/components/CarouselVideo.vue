@@ -3,9 +3,10 @@
     <div class="carousel animated pulse">
       <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
       <div class="track-container">
-        <div class='img-div'>
+        <div class='video-div'>
           <iframe
             :src="projects[currentSlide].url"
+            class="video"
             width="100%"
             height="100%"
             frameborder="0"
@@ -17,12 +18,12 @@
           <h2>{{ projects[currentSlide].title }}</h2>
           <p>{{ projects[currentSlide].description }}</p>
         </div>
-      </div>
-      <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
-      <div class="carousel-nav">
-        <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
-        <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
-        <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
+        <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
+        <div class="carousel-nav">
+          <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
+          <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
+          <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +33,6 @@
 export default {
   name: 'CarouselVideo',
   props: {
-    viewProjectDetails: { type: Function },
     videoProjects: { type: Array },
   },
   data() {
@@ -68,12 +68,10 @@ export default {
     padding-bottom: 3px;
   }
   p {
-    line-height: 1.2;
-    margin: 5px 0px;
+    margin: 10px 0px;
   }
   .carousel {
-    width: 480px;
-    height: 422px;
+    width: 600px;
     position: relative;
     margin: 0 auto;
     background: white;
@@ -81,34 +79,32 @@ export default {
   .track-container {
     height: 100%;
   }
-  .img-div {
-    height: 64%;
-    width: 100%;
+  .video-div {
     overflow: hidden;
     border-bottom: 1px solid gray;
     animation: fadeIn 1s;
+    vertical-align: bottom;
+    height: 335px;
   }
-  .img {
-    min-width: 100%;
+  .video {
     height: 100%;
-    object-fit: fill;
-  }
-  .img:hover {
-    cursor: pointer;
   }
   .video-text-div {
-    padding: 15px;
+    padding: 30px;
+    padding-bottom: 5px;
     text-align: left;
+    height: 80px;
     color: black;
+    background: white;
   }
   .arrow {
     position: absolute;
-    top: 50%;
-    width: 15px;
+    top: 45%;
+    width: 20px;
   }
   .arrow:hover {
     cursor: pointer;
-    transform: scale(1.2)
+    transform: scale(1.4)
   }
   .back {
     left: -40px;
@@ -117,11 +113,9 @@ export default {
     right: -40px;
   }
   .carousel-nav {
-    height: 40px;
-    width: 100%;
+    padding: 10px 0;
     text-align: center;
-    position : absolute;
-    bottom: 0;
+    position : relative;
   }
   .carousel-indicator {
     background: white;
@@ -136,5 +130,24 @@ export default {
   }
   .carousel-indicator.current-slide {
     background: black;
+  }
+  @media (max-width: 1220px) {
+    .carousel {
+      width: 400px;
+    }
+    .video-div {
+      height: 225px;
+    }
+    .video-text-div {
+      height: 40px;
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 </style>

@@ -70,15 +70,12 @@ export default {
     line-height: 1.5;
   }
   .carousel {
-    width: 480px;
-    height: 380px;
     position: relative;
     margin: auto;
   }
   .track-container {
     margin: 0 auto;
     padding: 10px;
-    height: 75%;
     display: flex;
     align-items: center;
   }
@@ -91,38 +88,35 @@ export default {
   }
   .img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 450px;
     object-fit: fill;
   }
   .img:hover {
     cursor: pointer;
   }
   .design-text-div {
+    margin: 10px 0;
     text-align: center;
   }
   .arrow {
     position: absolute;
-    top: 50%;
-    width: 15px;
+    width: 20px;
   }
   .arrow:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
   .back {
-    left: -30px;
-    top: 140px;
+    left: -20px;
+    top: 40%;
   }
   .next {
-    right: -30px;
-    top: 140px;
+    right: -20px;
+    top: 40%;
   }
   .carousel-nav {
-    height: 40px;
     width: 100%;
     text-align: center;
-    position : absolute;
-    bottom: 0;
   }
   .carousel-indicator {
     background: white;

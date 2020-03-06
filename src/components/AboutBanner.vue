@@ -1,7 +1,7 @@
 <template>
   <div class="home-component" id="home">
     <div class="left">
-      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='1000'>
+      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='800'>
     </div>
     <div class="right">
       <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
@@ -44,7 +44,7 @@ export default {
     overflow: hidden;
   }
   .left-side-img {
-    height: 85%;
+    height: 90%;
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -81,6 +81,21 @@ export default {
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .name {
+      margin-top: 10px;
+      font-size: 50px;
+    }
+    .home-blurb {
+      font-size: 16px;
+    }
+    .home-component, .left, .right {
+      height: 300px;
+    }
+    .left-side-img {
+      /* height: 85%; */
     }
   }
 </style>

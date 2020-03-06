@@ -1,6 +1,6 @@
 <template>
   <div class="outer-wrapper animatedParent">
-    <div v-for="project of projects" v-bind:key="project.id" class="project animated pulse">
+    <div v-for="project of projects" v-bind:key="project.id" :class="project.id === 2 ? 'project animated pulse project2' : 'project animated pulse'">
       <div class='dimmer animated fadeIn'/>
       <div class="img-div">
         <img :src="project.image" class='img'/>
@@ -46,7 +46,7 @@ export default {
     margin: 0;
   }
   .outer-wrapper {
-    width: 680px;
+    width: 676px;
     margin: 0 auto;
   }
   .header {
@@ -103,5 +103,14 @@ export default {
   .img {
     width: 100%;
     height: auto;
+  }
+  @media (max-width: 1220px) {
+    .project {
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+    .outer-wrapper {
+      width: 100%;
+    }
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="about-wrapper">
     <AboutBanner class="about-banner"/>
-    <div class="about-component" data-aos="flip-up" data-aos-duration='500'>
+    <div class="about-component" data-aos="flip-up">
       <div class="about-me" data-aos="zoom-in" data-aos-delay='300'>
         <h1 class='about-header'>My Story</h1>
         <!-- <div data-aos="zoom-in" data-aos-delay='400'> -->

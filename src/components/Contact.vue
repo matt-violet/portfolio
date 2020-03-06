@@ -2,15 +2,15 @@
   <div class="contact-wrapper">
     <div class="contact-banner">
       <div class="left">
-        <img src="../images/matt-look.png" class="left-side-img" data-aos="fade-up" data-aos-delay='1000'>
+        <img src="../images/matt-look.png" class="left-side-img" data-aos="fade-up" data-aos-delay='800'>
       </div>
       <div class="right">
         <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
           <h1 class="contact-text">
-            Need a developer?
+            Looking for help?
           </h1>
           <p class="contact-text-2">
-            I can help.
+            Let's connect.
           </p>
         </div>
       </div>
@@ -18,7 +18,10 @@
     <div class="contact-component" data-aos="flip-up" data-aos-duration='500'>
       <div data-aos="zoom-in" data-aos-delay='300'>
         <h2 class='contact-header' data-aos="zoom-in">Contact</h2>
-        <div class='contact-btns' data-aos="zoom-in">
+        <div class="contact-blurb">
+          <p>If you have a project you want to get started, need my help with something, or just want to say hi, let's get in touch!</p>
+        </div>
+        <div class='contact-btns'>
           <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
             <span class='helper'></span>
             <img src='../images/mail-icon.png' class='contact-icon'>
@@ -117,14 +120,20 @@ export default {
     text-align: center;
     font-size: 25px;
   }
+  .contact-blurb {
+    font-size: 14px;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+  }
   .contact-text {
-    font-size: 50px;
+    font-size: 60px;
     margin: 0;
     width: 500px;
   }
   .contact-text-2 {
     margin: 0;
-    font-size: 26px;
+    font-size: 30px;
   }
   .contact-btns {
     width: 400px;
@@ -183,6 +192,18 @@ export default {
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .contact-text {
+      margin-top: 20px;
+      font-size: 42px;
+    }
+    .contact-text-2 {
+      font-size: 20px;
+    }
+    .contact-banner, .left, .right {
+      height: 300px;
     }
   }
 </style>

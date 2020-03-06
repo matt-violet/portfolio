@@ -12,14 +12,13 @@
         </div>
       </div>
       <div class="right">
-        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='1000'>
+        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='800'>
       </div>
     </div>
     <div class="projects-component" data-aos="flip-up" data-aos-duration='500'>
       <div data-aos="zoom-in" data-aos-delay='300'>
         <h1 class='project-page-header'>Projects</h1>
         <div class="header-container">
-          
           <div :class="showSoftware ? 'expand software-expanded' : 'expand software-expand'" v-on:click='onShowSoftware'>
             <img src='../images/icon-software.png' class='project-icon'>
             <h1 class='project-section-header'>
@@ -28,13 +27,19 @@
             <img src='../images/up-arrow.png' class='project-arrow' v-if='!showSoftware'>
             <img src='../images/down-arrow.png' class='project-arrow' v-if='showSoftware'>
           </div>
-          <div class="software-projects" v-show='showSoftware'>
-            <SoftwareProjects
-              :softwareProjects="softwareProjects"
-              @viewProjectDetails="showProjectDetails"
-            />
-          </div>
-          
+          <transition
+            name="expand"
+            @enter="enter"
+            @after-enter="afterEnter"
+            @leave="leave"
+          >
+            <div class="software-projects" v-show='showSoftware'>
+              <SoftwareProjects
+                :softwareProjects="softwareProjects"
+                @viewProjectDetails="viewProjDetails"
+              />
+            </div>
+          </transition>
           <div :class="showDesign ? 'expand design-expanded' : 'expand design-expand'" v-on:click='onShowDesign'>
             <img src='../images/icon-design.png' class='project-icon'>
             <h1 class="project-section-header">
@@ -43,14 +48,20 @@
             <img src='../images/up-arrow.png' class='project-arrow' v-if='!showDesign'>
             <img src='../images/down-arrow.png' class='project-arrow' v-if='showDesign'>
           </div>
-          <div v-show='showDesign' class='design-carousel-div'>
-            <CarouselDesign
-              class='design-carousel'
-              :designProjects="designProjects"
-              @viewProjectDetails="showProjectDetails"
-            />
-          </div>
-          
+          <transition
+            name="expand"
+            @enter="enter"
+            @after-enter="afterEnter"
+            @leave="leave"
+          >
+            <div v-show='showDesign' class='design-carousel-div'>
+              <CarouselDesign
+                class='design-carousel'
+                :designProjects="designProjects"
+                @viewProjectDetails="viewProjectDetails"
+              />
+            </div>
+          </transition>
           <div :class="showVideo ? 'expand video-expanded' : 'expand video-expand'" v-on:click='onShowVideo'>
             <img src='../images/icon-video.png' class='project-icon'>
             <h1 class="project-section-header">
@@ -59,19 +70,21 @@
             <img src='../images/up-arrow.png' class='project-arrow' v-if='!showVideo'>
             <img src='../images/down-arrow.png' class='project-arrow' v-if='showVideo'>
           </div>
-          <CarouselVideo
-            v-show='showVideo'
-            class='video-carousel'
-            :videoProjects="videoProjects"
-          />
+          <transition
+            name="expand"
+            @enter="enter"
+            @after-enter="afterEnter"
+            @leave="leave"
+          >
+            <CarouselVideo
+              v-show='showVideo'
+              class='video-carousel'
+              :videoProjects="videoProjects"
+            />
+          </transition>
         </div>
       </div>
     </div>
-    <ProjectDetails
-      v-if="projectDetails"
-      :project="featuredProject"
-      @viewProjectDetails="showProjectDetails"
-    />
   </div>
 </template>
 
@@ -79,17 +92,49 @@
 import CarouselDesign from './CarouselDesign.vue'
 import CarouselVideo from './CarouselVideo.vue'
 import SoftwareProjects from './SoftwareProjects.vue'
-import ProjectDetails from './ProjectDetails.vue'
 
 export default {
   name: 'Projects',
+  props: {
+    viewProjectDetails: { type: Function},
+    softwareProjects: {type: Array},
+    designProjects: {type: Array},
+    videoProjects: {type: Array},
+    project: {type: Object},
+  },
   components: {
     CarouselDesign,
     CarouselVideo,
     SoftwareProjects,
-    ProjectDetails,
   },
   methods: {
+    enter(element) {
+      const width = getComputedStyle(element).width;
+      element.style.width = width;
+      element.style.position = 'absolute';
+      element.style.visibility = 'hidden';
+      element.style.height = 'auto';
+      const height = getComputedStyle(element).height;
+      element.style.width = null;
+      element.style.position = null;
+      element.style.visibility = null;
+      element.style.height = 0;
+      getComputedStyle(element).height;
+      setTimeout(() => {
+        element.style.height = height;
+      });
+    },
+    afterEnter(element) {
+      element.style.height = 'auto';
+    },
+    leave(element) {
+      const height = getComputedStyle(element).height;      
+      element.style.height = height;
+      getComputedStyle(element).height;
+      setTimeout(() => {
+        element.style.height = 0;
+      });
+    },
     onShowVideo() {
       this.showVideo = !this.showVideo
     },
@@ -99,130 +144,34 @@ export default {
     onShowSoftware() {
       this.showSoftware = !this.showSoftware
     },
-    showProjectDetails(project) {
-      this.featuredProject = project;
-      this.projectDetails = !this.projectDetails;
+    viewProjDetails(project) {
+      this.viewProjectDetails(project)
     }
   },
   data() {
     return {
-      featuredProject: {},
-      projectDetails: false,
       showDesign: false,
       showVideo: false,
       showSoftware: false,
-      softwareProjects: [
-        {
-          id: 1,
-          title: 'Connect Four',
-          description: 'Single Page Connect Four Game',
-          details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button',
-          stack: 'HTML, CSS, Javascript, React',
-          github: 'https://github.com/matt-violet/connect4',
-          image: require('../images/connect-four.png'),
-          video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
-        },
-        {
-          id: 2,
-          title: 'My Bolus',
-          description: 'Insulin dose calculator for diabetics',
-          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors',
-          stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
-          github: 'https://github.com/matt-violet/My-Bolus',
-          image: require('../images/vial.jpg'),
-          video: 'https://www.youtube.com/embed/OsGm4uK7SEs'
-        },
-        {
-          id: 3,
-          title: 'Open Restaurant',
-          description: 'Photos module for restaurant app',
-          details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets',
-          stack: ' HTML, CSS (grid, media query), Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
-          github: 'https://github.com/krummurk/photos-module',
-          image: require('../images/restaurant.jpg'),
-          video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
-        },
-        {
-          id: 4,
-          title: 'Social Inn',
-          description: 'Scaled back end of housing app',
-          details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks',
-          stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
-          github: 'https://github.com/social-inn/Reviews',
-          image: require('../images/bed.jpg'),
-          video: require('../images/social-in-test.png')
-        }
-      ],
-      designProjects: [
-        {
-          image: require('../images/Symposium2019.jpg'),
-          description: 'Event Flyer, 2019',
-          design: true
-        },
-        {
-          image: require('../images/GA2017.png'),
-          description: 'Recruitment Flyer, 2018',
-          design: true
-        },
-        {
-          image: require('../images/SKSM-banner.jpg'),
-          description: '8-foot Retractable Banner, 2017',
-          design: true
-        },
-        {
-          image: require('../images/GA2016-flyer.png'),
-          description: 'Ad in UU World Magazine, 2016',
-          design: true
-        },
-        // {
-        //   image: require('../images/GA2017-flyer.png'),
-        //   description: 'Ad in UU World Magazine, 2017',
-        //   design: true
-        // },
-        {
-          image: require('../images/GA2018-flyer.png'),
-          description: 'Ad in UU World Magazine, 2018',
-          design: true
-        },
-        {
-          image: require('../images/HLTW.png'),
-          description: 'Designed layout of book "Hunter Leads the Way", 2017',
-          design: true
-        },
-        {
-          image: require('../images/SEAsia.png'),
-          description: 'Graphic for Personal Project, 2015',
-          design: true
-        },
-        {
-          image: require('../images/matt-oak.png'),
-          description: 'Graphic for Personal Project, 2019',
-          design: true
-        },
-      ],
-      videoProjects: [
-        {
-          title: 'Starr King Threshold Ceremony, 2017',
-          description: 'The Starr King community gathers to welcome new students to the school.',
-          url: 'https://www.youtube.com/embed/Boi3G8wiEAY'
-        },
-        {
-          title: 'A Mindful Walk: Immersion Course, 2018',
-          description: 'Experience Transylvania\'s hills and river valleys, cultural sites, and more in this unforgettable immersion couse.',
-          url: 'https://www.youtube.com/embed/6eKqxxVSlKQ'
-        },
-        {
-          title: 'Soaring Sunday, 2015',
-          description: 'Discover the art of soaring as we take flight over Byron, CA in this meditative-like weekend recap.',
-          url: "https://player.vimeo.com/video/118749275"
-        }
-      ],
     }
   }
 }
 </script>
 
 <style scoped>
+  * {
+    will-change: height;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  .expand-enter-active, .expand-leave-active {
+    transition: height 1s ease-in-out;
+    overflow: hidden;
+  }
+  .expand-enter, .expand-leave-to {
+    height: 0;
+  }
   h2 {
     margin: 5px 0px 5px 0px;
     color: black;
@@ -238,7 +187,6 @@ export default {
     padding: 60px 0;
     margin: auto;
     border: 1px solid;
-    /* border-radius: 20px; */
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: relative;
@@ -252,14 +200,14 @@ export default {
     background-image: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
   }
   .left {
-    width: 55%;
+    width: 50%;
     height: 400px;
     display: inline-block;
     text-align: left;
     position: relative;
   }
   .right {
-    width: 45%;
+    width: 50%;
     height: 400px;
     position: relative;
     display: inline-block;
@@ -267,7 +215,7 @@ export default {
   }
   .right-side-img {
     height: 95%;
-    margin: 0 auto 0 20px;
+    margin: 0 auto 0 30px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -283,8 +231,8 @@ export default {
     margin: auto 20px auto 0;
   }
   .projects-banner-text {
-    font-size: 50px;
-    margin: 0;
+    font-size: 55px;
+    margin: 0 15px 0 0;
   }
   .title {
     font-size: 26px;
@@ -313,19 +261,8 @@ export default {
     display: inline-block;
   }
   .header-container {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
     padding: 0;
-    border-radius: 10px;
     margin: auto 80px;
-  }
-  .project-div {
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 235px;
-    background-color: white;
-    margin: 15px;
-    padding: 7px;
-    display: inline-block;
   }
   .software-carousel {
     margin: 40px auto;
@@ -333,25 +270,19 @@ export default {
   .video-carousel {
     background: hsl(16, 100%, 66%, .5);
     padding: 40px 0;
-    border: 1px solid gray;
-    border-top: 0px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
   }
   .software-projects {
     height: 600px;
     padding: 40px 0;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
     background: hsl(39, 77%, 83%, .5);
   }
   .design-carousel-div {
-    transition: max-height 0.2s ease-out;
     margin: auto;
     background: hsl(28, 87%, 67%, .5);
     padding: 40px 0;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+  }
+  .design-carousel {
+    width: 80%;
   }
   .project-arrow {
     width: 15px;
@@ -368,22 +299,16 @@ export default {
   }
   .expand {
     padding: 0 20px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
   }
   .expand:hover {
     cursor: pointer;
   }
   .software-expand {
     background: hsl(39, 77%, 83%, .5);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 0px;
   }
   .software-expanded {
     background: hsl(39, 77%, 83%, .5);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 0px;
   }
   .design-expand {
     background: hsl(28, 87%, 67%, .5);
@@ -391,15 +316,34 @@ export default {
   }
   .design-expanded {
     background: hsl(28, 87%, 67%, .5);
-    border-bottom: 0px;
   }
   .video-expand {
     background: hsl(16, 100%, 66%, .5);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
   }
   .video-expanded {
     background: hsl(16, 100%, 66%, .5);
-    border-bottom: 0px;
+  }
+  @media (max-width: 1250px) {
+    .right-side-img {
+      height: 85%;
+      margin-left: 0;
+    }
+    .projects-banner-text {
+      margin: 20px 0 0 0px;
+      font-size: 42px;
+    }
+    .projects-banner-text-2 {
+      font-size: 16px;
+      /* margin-left: 20px; */
+    }
+    .projects-banner, .left, .right {
+      height: 300px;
+    }
+    .left {
+      width: 60%;
+    }
+    .right {
+      width: 40%;
+    }
   }
 </style>

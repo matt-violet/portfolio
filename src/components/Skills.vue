@@ -18,7 +18,7 @@
           <td class="design-col">
             <h2 class="col-header">Graphic Design</h2>
             <ul class="bullets">
-              <li>4+ years hands on experience in non-profit communication, freelance, and personal projects</li>
+              <li>4+ years design experience in non-profit communications, freelance, and personal projects</li>
               <li>Proficient with Photoshop, InDesign, and Sketchable</li>
             </ul>
           </td>
@@ -26,8 +26,8 @@
             <h2 class="software-header">Software Development</h2>
             <div class="software-bullets">
               <ul>
-                <li>2 years of combined education, personal projects, and professional experience</li>
-                <li>5 months as an intern working on a team of software developers</li>
+                <li>2+ years of combined education, personal projects, and professional experience</li>
+                <li>5 months as an intern working on a team of software engineers</li>
                 <li>800+ hours of advanced Computer Science curriculum modeling today’s software engineering industry</li>
                 <li>Self taught skills such as HTML, CSS, and Vue.js (used for this website)</li>
               </ul>
@@ -36,8 +36,8 @@
           <td class="video-col">
             <h2 class="col-header">Video Production</h2>
             <ul class="bullets">
-              <li>3+ years hands on experience in non-profit communication roles</li>
-              <li>Proficient with iMovie, DSLR cameras, and external microphones / audio equipment</li>
+              <li>2+ years experience conceptualizing, directing, and editing videos in non-profit communication roles</li>
+              <li>Proficient with iMovie, DSLR cameras, and external microphones / variety of audio equipment</li>
             </ul>
           </td>
         </tr>
@@ -264,13 +264,13 @@ export default {
     vertical-align: middle;
   }
   .front-end {
-    background: hsl(16, 100%, 88%);
+    background: rgba(68, 221, 206, 0.7);
   }
   .back-end {
-    background: hsl(16, 100%, 77%);
+    background: rgb(130, 182, 224, .7);
   }
   .other {
-    background: hsl(16, 100%, 66%);
+    background: rgba(138,118,249, .7);
   }
   .row-name {
     width: 100px;
