@@ -2,10 +2,10 @@
   <div class="contact-wrapper">
     <div class="contact-banner">
       <div class="left">
-        <img src="../images/matt-look.png" class="left-side-img" data-aos="fade-up" data-aos-delay='800'>
+        <img src="../images/matt-look.png" class="left-side-img" data-aos="fade-up" data-aos-delay='300'>
       </div>
       <div class="right">
-        <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
+        <div class="right-side-text" data-aos="fade-left" data-aos-delay='300'>
           <h1 class="contact-text">
             Looking for help?
           </h1>
@@ -15,11 +15,12 @@
         </div>
       </div>
     </div>
-    <div class="contact-component" data-aos="flip-up" data-aos-duration='500'>
-      <div data-aos="zoom-in" data-aos-delay='300'>
+    <div class="contact-component" data-aos="flip-up">
+      <div data-aos="zoom-in" data-aos-delay='100'>
         <h2 class='contact-header' data-aos="zoom-in">Contact</h2>
         <div class="contact-blurb">
-          <p>If you have a project you want to get started, need my help with something, or just want to say hi, let's get in touch!</p>
+          <p>I have a proven track record of being self-motivated, a supportive team member, and producing tangible results.</p>
+          <p>Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
         </div>
         <div class='contact-btns'>
           <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
@@ -69,13 +70,10 @@ export default {
     padding-bottom: 100px;
   }
   .contact-component {
-    padding-top: 40px;
+    padding: 40px;
     width: 70%;
-    height: 300px;
     margin: auto;
-    /* border-radius: 20px; */
     background: white;
-    border: 1px solid;
     position: relative;
     z-index: 2;
     vertical-align: middle;
@@ -118,18 +116,17 @@ export default {
   .contact-header {
     margin: 20px auto 40px auto;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
   }
   .contact-blurb {
-    font-size: 14px;
+    font-size: 16px;
+    width: 80%;
     margin: auto;
-    width: 40%;
     text-align: center;
   }
   .contact-text {
     font-size: 60px;
     margin: 0;
-    width: 500px;
   }
   .contact-text-2 {
     margin: 0;
@@ -139,7 +136,7 @@ export default {
     width: 400px;
     height: 75px;
     text-align: center;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
   }
   .contact-btn {
     background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%);

@@ -2,7 +2,7 @@
   <div class="projects-wrapper">
     <div class="projects-banner">
       <div class="left">
-        <div class="left-side-text" data-aos="fade-right" data-aos-delay='1000'>
+        <div class="left-side-text" data-aos="fade-right" data-aos-delay='300'>
           <h1 class='projects-banner-text'>
             Here's what I've been up to.
           </h1>
@@ -12,11 +12,11 @@
         </div>
       </div>
       <div class="right">
-        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='800'>
+        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='300'>
       </div>
     </div>
-    <div class="projects-component" data-aos="flip-up" data-aos-duration='500'>
-      <div data-aos="zoom-in" data-aos-delay='300'>
+    <div class="projects-component" data-aos="flip-up">
+      <div data-aos="zoom-in" data-aos-delay='100'>
         <h1 class='project-page-header'>Projects</h1>
         <div class="header-container">
           <div :class="showSoftware ? 'expand software-expanded' : 'expand software-expand'" v-on:click='onShowSoftware'>
@@ -166,7 +166,7 @@ export default {
     perspective: 1000px;
   }
   .expand-enter-active, .expand-leave-active {
-    transition: height 1s ease-in-out;
+    transition: height .5s ease-in-out;
     overflow: hidden;
   }
   .expand-enter, .expand-leave-to {
@@ -186,7 +186,6 @@ export default {
     width: 70%;
     padding: 60px 0;
     margin: auto;
-    border: 1px solid;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: relative;
@@ -253,7 +252,7 @@ export default {
     margin: 0 auto 40px auto;
     width: 100px;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
   }
   .project-section-header {
     margin: 10px 20px;
@@ -268,17 +267,17 @@ export default {
     margin: 40px auto;
   }
   .video-carousel {
-    background: hsl(16, 100%, 66%, .5);
+    background: linear-gradient(to bottom, hsl(16, 100%, 66%, .5), rgba(251,128,128));
     padding: 40px 0;
   }
   .software-projects {
     height: 600px;
     padding: 40px 0;
-    background: hsl(39, 77%, 83%, .5);
+    background: linear-gradient(to bottom, hsl(39, 77%, 83%, .5), hsl(28, 87%, 67%, .5));
   }
   .design-carousel-div {
     margin: auto;
-    background: hsl(28, 87%, 67%, .5);
+    background: linear-gradient(to bottom, hsl(28, 87%, 67%, .5), hsl(16, 100%, 66%, .5));
     padding: 40px 0;
   }
   .design-carousel {
@@ -299,7 +298,6 @@ export default {
   }
   .expand {
     padding: 0 20px;
-    /* border: 1px solid gray; */
   }
   .expand:hover {
     cursor: pointer;
@@ -334,7 +332,6 @@ export default {
     }
     .projects-banner-text-2 {
       font-size: 16px;
-      /* margin-left: 20px; */
     }
     .projects-banner, .left, .right {
       height: 300px;

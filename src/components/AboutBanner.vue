@@ -1,15 +1,15 @@
 <template>
   <div class="home-component" id="home">
     <div class="left">
-      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='800'>
+      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='300'>
     </div>
     <div class="right">
-      <div class="right-side-text" data-aos="fade-left" data-aos-delay='1000'>
-        <h1 class='name'>
-          Hi, I'm Matt.
+      <div class="right-side-text" data-aos="fade-left" data-aos-delay='300'>
+        <h1 class='line-1'>
+          Hello,
         </h1>
-        <p class='home-blurb'>
-          &#x1F44B; I'm a multitalented human with a passion for building digital products that help others.
+        <p class='line-2'>
+          &#x1F44B; I'm Matt, a multi-talented human with a passion for building digital products that help others.
         </p>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
     overflow: hidden;
   }
   .left-side-img {
-    height: 90%;
+    height: 80%;
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -61,15 +61,11 @@ export default {
     color: rgb(43, 43, 43);
     margin: auto;
   }
-  .name {
-    font-size: 70px;
+  .line-1 {
+    font-size: 80px;
     margin: 0;
   }
-  .title {
-    font-size: 26px;
-    margin: 0;
-  }
-  .home-blurb {
+  .line-2 {
     font-size: 20px;
   }
   @keyframes gradient {
@@ -84,12 +80,15 @@ export default {
     }
   }
   @media (max-width: 1200px) {
-    .name {
+    .line-1 {
       margin-top: 10px;
-      font-size: 50px;
+      font-size: 70px;
     }
-    .home-blurb {
-      font-size: 16px;
+    .right-side-text {
+      width: 340px;
+    }
+    .line-2 {
+      font-size: 14px;
     }
     .home-component, .left, .right {
       height: 300px;

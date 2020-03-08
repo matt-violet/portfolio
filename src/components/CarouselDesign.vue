@@ -76,6 +76,7 @@ export default {
   .track-container {
     margin: 0 auto;
     padding: 10px;
+    height: 500px;
     display: flex;
     align-items: center;
   }
@@ -88,14 +89,14 @@ export default {
   }
   .img {
     max-width: 100%;
-    max-height: 450px;
+    max-height: 100%;
     object-fit: fill;
   }
   .img:hover {
     cursor: pointer;
   }
   .design-text-div {
-    margin: 10px 0;
+    margin: 40px 0 0 0;
     text-align: center;
   }
   .arrow {
@@ -107,15 +108,16 @@ export default {
     transform: scale(1.4);
   }
   .back {
-    left: -20px;
+    left: -30px;
     top: 40%;
   }
   .next {
-    right: -20px;
+    right: -30px;
     top: 40%;
   }
   .carousel-nav {
     width: 100%;
+    margin-top: 10px;
     text-align: center;
   }
   .carousel-indicator {
@@ -130,5 +132,15 @@ export default {
   }
   .carousel-indicator.current-slide {
     background: black;
+  }
+  @media (max-width: 1200px) {
+    .track-container {
+      height: 250px;
+    }
+  }
+  @media (max-width: 1000px) {
+    .track-container {
+      /* height: 300px; */
+    }
   }
 </style>

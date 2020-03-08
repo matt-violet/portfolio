@@ -61,12 +61,13 @@ export default {
 <style>
   .menu-wrapper {
     width: 100%;
+    margin-top: 30px;
     background: hsl(0, 0%, 100%, 0);
     /* background: white; */
     /* border: 1px solid; */
     position: absolute;
     z-index: 3;
-    text-align: center;
+    /* text-align: center; */
     transition: 0.3s all ease-out;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); */
   }
@@ -74,27 +75,30 @@ export default {
     transform: translate3d(0, -100%, 0);
   }
   .centered-menu-div {
-    display: inline-block;
-    left: 0;
-    right: 0;
-    padding: 0 5px;
+    /* display: inline-block; */
+    margin-left: 15%;
+    /* left: 0; */
+    /* right: 0; */
+    /* padding: 0 5px; */
     /* border-bottom-right-radius: 10px; */
     /* border-bottom-left-radius: 10px; */
   }
   .menu-option {
     animation-duration: 1s;
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 24px 0 0;
   }
   .menu-text {
     font-size: 16px;
     height: 100%;
+    margin: 0;
   }
   .menu-text:hover {
     cursor: pointer;
   }
   .currentPg {
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
+    color: white;
   }
   @keyframes slideDown {
     from { transform: translateY(-90px); }

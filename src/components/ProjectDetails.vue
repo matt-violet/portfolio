@@ -4,21 +4,28 @@
       <a class="modal-close-button" @click="$emit('viewProjectDetails', project)">
         &times;
       </a>
+
       <div v-if="!project.design" class="modal-wrapper">
         <div class="modal-container">
           <div class="video-div">
-            <iframe v-if='project.id!==4' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe v-if='project.id!==2' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img v-else class='socialInnPic' width="660" height="415" :src='project.video'>
-            <!-- <img v-else :src='project.video'> -->
           </div>
           <div class="description-div">
-            <h1>{{ project.title }}</h1>
+            <h1 class='project-title'>{{ project.title }}</h1>
             <p class='details'>{{ project.details }}</p>
+            <div v-if='project.image2'>
+              <img :src='project.image2' class='bolus-math'>
+              <p class='details'>
+                Check out my powerpoint presentation on Tech Innovation and Type 1 Diabetes Care <a :href='project.ppt' target='_blank'>here</a>.
+              </p>
+            </div>
             <p class='stack'>{{ project.stack }}</p>
             <a class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
           </div>
         </div>
       </div>
+
       <div v-else class="modal-wrapper-design">
         <div class="modal-container-design">
           <div class="img-div-design">
@@ -45,6 +52,9 @@ export default {
     text-align: left;
     margin: 0;
   }
+  .project-title {
+    font-size: 28px;
+  }
   .details, .stack, .github-link {
     font-size: 16px;
     line-height: normal;
@@ -69,7 +79,7 @@ export default {
     max-width: 100%;
   }
   .description-div {
-    padding: 20px 30px;
+    padding: 20px 40px 40px 40px;
   }
   .modal-mask {
     position: fixed;
@@ -92,10 +102,10 @@ export default {
   }
   .modal-container {
     width: 50%;
-    height: 80%;
+    height: 85%;
     overflow: auto;
     margin: auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     background-color: white;
     transition: all .3s ease;
   }
@@ -111,7 +121,6 @@ export default {
     overflow: auto;
     margin: auto;
     padding: 5px;
-    /* background-color: white; */
     transition: all .3s ease;
   }
   .img-div-design {
@@ -131,5 +140,19 @@ export default {
   }
   .modal-close-button:hover {
     cursor: pointer;
+  }
+   .bolus-math {
+    width: 100%;
+  }
+  @media (max-width: 1000px) {
+    .project-title {
+      font-size: 22px;
+    }
+    .details, .stack, .github-link {
+      font-size: 12px;
+    }
+    .description-div {
+      padding: 20px;
+    }
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="outer-wrapper animatedParent">
-    <div v-for="project of projects" v-bind:key="project.id" :class="project.id === 2 ? 'project animated pulse project2' : 'project animated pulse'">
+    <div v-for="project of projects" v-bind:key="project.id" class="project animated pulse">
       <div class='dimmer animated fadeIn'/>
       <div class="img-div">
         <img :src="project.image" class='img'/>
@@ -46,7 +46,7 @@ export default {
     margin: 0;
   }
   .outer-wrapper {
-    width: 676px;
+    width: 636px;
     margin: 0 auto;
   }
   .header {
@@ -54,7 +54,7 @@ export default {
   }
   .project {
     width: 298px;
-    margin: 20px;
+    margin: 10px;
     display: inline-block;
     text-align: center;
   }
@@ -66,7 +66,7 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(214, 214, 214, 0.6);
+    background: rgba(236, 236, 236, 0.75);
     height: 265px;
     width: 300px;
     position: absolute;
@@ -88,12 +88,25 @@ export default {
     padding: 7px;
     font-size: 12px;
     border: 1px solid;
-    /* border-radius: 25px; */
-    /* background: rgb(226, 226, 226); */
+    border-radius: 25px;
+    animation: shadow-pulse 1.5s infinite;
   }
   .details-btn:hover {
     cursor: pointer;
-    background: hsl(39, 77%, 83%, .5);
+    color: white;
+    background: rgb(82, 82, 82);
+  }
+  @keyframes shadow-pulse
+  {
+    0% {
+          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    }
+    50% {
+          box-shadow: 0 0 0 3px rgba(0,0,0, .4);
+    }
+    100% {
+          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    }
   }
   .img-div {
     width: 100%;
