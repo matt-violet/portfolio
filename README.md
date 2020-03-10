@@ -1,3 +1,3 @@
 # portfolio
 
-Check out my portfolio website at matt-violet.github.io/portfolio/
+Check out my portfolio website [here](matt-violet.github.io/portfolio/).
