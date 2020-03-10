@@ -7,10 +7,10 @@
       <div class="right">
         <div class="right-side-text" data-aos="fade-left" data-aos-delay='300'>
           <h1 class="contact-text">
-            Looking for help?
+            Need a developer?
           </h1>
           <p class="contact-text-2">
-            Let's connect.
+            I'm ready and available.
           </p>
         </div>
       </div>
@@ -19,8 +19,7 @@
       <div data-aos="zoom-in" data-aos-delay='100'>
         <h2 class='contact-header' data-aos="zoom-in">Contact</h2>
         <div class="contact-blurb">
-          <p>I have a proven track record of being self-motivated, a supportive team member, and producing tangible results.</p>
-          <p>Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
+          <p>I have a proven track record of being self-motivated, a supportive team member, and producing tangible results. Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
         </div>
         <div class='contact-btns'>
           <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
@@ -70,7 +69,7 @@ export default {
     padding-bottom: 100px;
   }
   .contact-component {
-    padding: 40px;
+    padding: 0 0 40px 0;
     width: 70%;
     margin: auto;
     background: white;
@@ -84,7 +83,7 @@ export default {
     height: 400px;
     width: 100%;
     text-align: center;
-    background-image: linear-gradient(to left, #b3ffab 0%, #12fff7 100%);
+    background: linear-gradient(to left, #b3ffab 0%, #12fff7 100%);
   }
   .left {
     width: 45%;
@@ -109,19 +108,21 @@ export default {
     z-index: 1;
   }
   .right-side-text {
-    width: 400px;
+    width: 520px;
     color: rgb(43, 43, 43);
     text-align: left;
   }
   .contact-header {
-    margin: 20px auto 40px auto;
+    margin: 0;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
+    padding: 50px 0;
+    background: linear-gradient(to right, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
   }
   .contact-blurb {
     font-size: 16px;
     width: 80%;
-    margin: auto;
+    margin: 40px auto 0 auto;
     text-align: center;
   }
   .contact-text {
@@ -139,7 +140,7 @@ export default {
     margin: 40px auto 0 auto;
   }
   .contact-btn {
-    background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%);
+    background: linear-gradient(to left, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
     display: inline-block;
     margin: 0 20px;
     text-align: center;
@@ -147,7 +148,6 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 1px solid gray;
   }
   .contact-btn:hover {
     background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);

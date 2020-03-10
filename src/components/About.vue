@@ -2,23 +2,24 @@
   <div class="about-wrapper">
     <AboutBanner class="about-banner"/>
     <div class="about-component" data-aos="flip-up">
+      <h1 class='about-header'>Matt Who?</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
-        <h1 class='about-header'>My Story</h1>
         <p class='bio-text'>
-          Born and raised in Oakland, CA and a UC Davis graduate, I dedicated the first chapter of my career to non-profit marketing / communications work, supporting various communities both at home and abroad.
+          Born and raised in Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit work (marketing / communications), supporting various communities from Oakland to San Francisco to Mae Sot, Thailand (pictured below).
         </p>
         <p class='bio-text'>
-          My interest in programming came in 2015, at a turning point in my life. Shortly after I was diagnosed with type one diabetes, I started wearing two electronic medical devices that worked together to create a hybrid closed-loop system to help manage my blood sugar levels. With my health now literally tied to automated algorithms, I have a new appreciation for the power of code.
+          My interest in programming came in 2015, at a turning point in my life. Shortly after I was diagnosed with type one diabetes I started wearing two electronic medical devices that worked together in a hybrid closed-loop system to manage my blood sugar levels. I was - and still am - fascinated by these devices that can effectively perform the job of a human pancreas. I'm equally fascinated by the "hacker communities" that decided <a href='https://openaps.org/' target='blank'>#WeAreNotWaiting</a> and paved the way to make this technology as safe and widely available as possible, years before the first commercial closed loops sytems. Details on all of this are included in my informal presentation on <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>Tech Innovation and T1D Care</a>.
+
         </p>
         <p class='bio-text'>
-          Understanding what technological innovation has done for me, and can do for others, is what drives me to take on complex challenges, hunt for new skills, and think big.
+          With my health now literally tied to algorithms, I'm drawn to the limitless possibilities of code. Understanding what technological innovation has done for me, and can do for others, is what drives me to be the best developer I can be.
         </p>
       </div>
     </div>
     <div class='about-imgs'>
       <img src='../images/matt-guitar.jpg' class='about-img'>
       <img src='../images/maesot.jpg' class='about-img'>
-      <img src='../images/matt-cgm.jpg' class='about-img'>
+      <img src='../images/using-pump.jpg' class='about-img'>
       <img src='../images/skate.jpg' class='about-img'>
       <img src='../images/matt-as.jpg' class='about-img'>
     </div>
@@ -41,7 +42,7 @@ export default {
 
 <style>
   .about-wrapper {
-    background-image: linear-gradient( to right, rgba(138,118,249,1), rgba(75,252,235,1));
+    background: linear-gradient( to right, rgba(138,118,249,1), rgba(75,252,235,1));
     background-repeat: no-repeat;
     height: 100%;
     padding-bottom: 100px;
@@ -57,6 +58,7 @@ export default {
     width: 70%;
     margin: 0 auto;
     border: 1px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
   .about-imgs {
     width: 100%;
@@ -75,14 +77,14 @@ export default {
   }
   .about-me {
     margin: 0 auto;
-    padding: 60px 80px;
-    max-width: 650px;
+    padding: 40px 120px;
   }
   .about-header {
-    margin: 20px auto 0 auto;
-    padding-bottom: 40px;
+    margin: 0;
+    padding: 50px 0;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
+    background: linear-gradient( to left, rgba(138,118,249,.5), rgba(75,252,235,.5));
   }
   .bio-text {
     margin: 0 0 20px 0;

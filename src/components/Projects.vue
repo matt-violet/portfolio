@@ -166,7 +166,7 @@ export default {
     perspective: 1000px;
   }
   .expand-enter-active, .expand-leave-active {
-    transition: height .5s ease-in-out;
+    transition: height 1s ease-in-out;
     overflow: hidden;
   }
   .expand-enter, .expand-leave-to {
@@ -178,13 +178,13 @@ export default {
     font-size: 18px;
   }
   .projects-wrapper {
-    background-image: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
+    background: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
     height: 100%;
     margin-bottom: 100px;
   }
   .projects-component {
     width: 70%;
-    padding: 60px 0;
+    padding: 0 0 60px 0;
     margin: auto;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -196,7 +196,7 @@ export default {
     width: 100%;
     height: 400px;
     position: relative;
-    background-image: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
+    background: linear-gradient(to left, rgba(253,193,104), rgba(251,128,128));
   }
   .left {
     width: 50%;
@@ -250,34 +250,36 @@ export default {
   }
   .project-page-header {
     margin: 0 auto 40px auto;
-    width: 100px;
+    padding: 40px 0;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
+    background: linear-gradient(to right, rgba(253,193,104,.5), rgba(251,128,128,.5));
   }
   .project-section-header {
     margin: 10px 20px;
-    font-size: 25px;
+    padding: 3px 0;
+    font-size: 22px;
     display: inline-block;
   }
   .header-container {
-    padding: 0;
+    padding: 20px 0 0 0;
     margin: auto 80px;
   }
   .software-carousel {
     margin: 40px auto;
   }
   .video-carousel {
-    background: linear-gradient(to bottom, hsl(16, 100%, 66%, .5), rgba(251,128,128));
+    background: hsl(16, 100%, 66%, .5);
     padding: 40px 0;
   }
   .software-projects {
     height: 600px;
     padding: 40px 0;
-    background: linear-gradient(to bottom, hsl(39, 77%, 83%, .5), hsl(28, 87%, 67%, .5));
+    background: hsl(39, 77%, 83%, .5);
   }
   .design-carousel-div {
     margin: auto;
-    background: linear-gradient(to bottom, hsl(28, 87%, 67%, .5), hsl(16, 100%, 66%, .5));
+    background: linear-gradient(to bottom, hsl(28, 87%, 67%, .5));
     padding: 40px 0;
   }
   .design-carousel {
@@ -301,6 +303,9 @@ export default {
   }
   .expand:hover {
     cursor: pointer;
+    /* font-size: 34px; */
+    /* color: white; */
+    /* transform: scale(1.02); */
   }
   .software-expand {
     background: hsl(39, 77%, 83%, .5);

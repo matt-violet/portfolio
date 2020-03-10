@@ -16,9 +16,6 @@
             <p class='details'>{{ project.details }}</p>
             <div v-if='project.image2'>
               <img :src='project.image2' class='bolus-math'>
-              <p class='details'>
-                Check out my powerpoint presentation on Tech Innovation and Type 1 Diabetes Care <a :href='project.ppt' target='_blank'>here</a>.
-              </p>
             </div>
             <p class='stack'>{{ project.stack }}</p>
             <a class='github-link' :href="project.github" target="_blank">GitHub Repository</a>

@@ -89,7 +89,7 @@ export default {
     margin: 0 24px 0 0;
   }
   .menu-text {
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
     margin: 0;
   }

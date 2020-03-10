@@ -9,7 +9,7 @@
           Hello,
         </h1>
         <p class='line-2'>
-          &#x1F44B; I'm Matt, a multi-talented human with a passion for building digital products that help others.
+          &#x1F44B; I'm a multi-talented human with a passion for building web applications.
         </p>
       </div>
     </div>
@@ -45,10 +45,9 @@ export default {
   }
   .left-side-img {
     height: 80%;
-    margin: auto;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 50px;
     /* -webkit-filter: drop-shadow(-4px -4px 4px #222); */
     /* filter: drop-shadow(-4px -4px 4px #222); */
   }
