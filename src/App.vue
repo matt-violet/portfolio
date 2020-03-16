@@ -175,7 +175,7 @@ export default {
 <style>
   body, html {
     min-height: 100%;
-    min-width: 1000px;
+    min-width: 600px;
     margin: 0;
     font-family: 'IBM Plex Sans', 'Montserrat', sans-serif;
   }

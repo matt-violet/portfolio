@@ -108,9 +108,10 @@ export default {
     z-index: 1;
   }
   .right-side-text {
-    width: 520px;
+    /* width: 520px; */
     color: rgb(43, 43, 43);
     text-align: left;
+    margin-top: 150px;
   }
   .contact-header {
     margin: 0;
@@ -191,16 +192,25 @@ export default {
       background-position: 0% 50%;
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .contact-text {
-      margin-top: 20px;
+      /* margin-top: 20px; */
       font-size: 42px;
     }
     .contact-text-2 {
       font-size: 20px;
     }
     .contact-banner, .left, .right {
-      height: 300px;
+      height: 250px;
+    }
+    .contact-component {
+      width: 100%;
+    }
+    .contact-wrapper {
+      padding-bottom: 0;
+    }
+    .right-side-text {
+      margin-top: 90px;
     }
   }
 </style>

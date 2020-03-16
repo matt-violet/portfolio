@@ -213,14 +213,14 @@ export default {
     overflow: hidden;
   }
   .right-side-img {
-    height: 95%;
+    height: 85%;
     margin: 0 auto 0 30px;
     position: absolute;
     bottom: 0;
     left: 0;
   }
   .left-side-text {
-    width: 400px;
+    width: 350px;
     height: 200px;
     position: absolute;
     top: 0;
@@ -230,7 +230,7 @@ export default {
     margin: auto 20px auto 0;
   }
   .projects-banner-text {
-    font-size: 55px;
+    font-size: 48px;
     margin: 0 15px 0 0;
   }
   .title {
@@ -326,20 +326,27 @@ export default {
   .video-expanded {
     background: hsl(16, 100%, 66%, .5);
   }
-  @media (max-width: 1250px) {
+  @media (max-width: 1100px) {
+    .projects-component {
+      width: 100%;
+    }
+    .projects-wrapper {
+      padding: 0;
+    }
     .right-side-img {
-      height: 85%;
+      /* height: 85%; */
       margin-left: 0;
     }
     .projects-banner-text {
       margin: 20px 0 0 0px;
-      font-size: 42px;
+      font-size: 38px;
+      width: 300px;
     }
     .projects-banner-text-2 {
-      font-size: 16px;
+      font-size: 14px;
     }
     .projects-banner, .left, .right {
-      height: 300px;
+      height: 250px;
     }
     .left {
       width: 60%;

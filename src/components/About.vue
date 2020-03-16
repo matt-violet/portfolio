@@ -2,7 +2,7 @@
   <div class="about-wrapper">
     <AboutBanner class="about-banner"/>
     <div class="about-component" data-aos="flip-up">
-      <h1 class='about-header'>Matt Who?</h1>
+      <h1 class='about-header'>About Me</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
         <p class='bio-text'>
           Born and raised in Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit work (marketing / communications), supporting various communities from Oakland to San Francisco to Mae Sot, Thailand (pictured below).
@@ -55,7 +55,7 @@ export default {
     background: hsl(0, 0%, 100%);
     position: relative;
     z-index: 2;
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     border: 1px solid gray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -90,5 +90,13 @@ export default {
     margin: 0 0 20px 0;
     font-size: 16px;
     display: inline-block;
+  }
+  @media (max-width: 1100px) {
+    .about-component {
+      width: 100%;
+    }
+    .about-wrapper {
+      padding-bottom: 0;
+    }
   }
 </style>

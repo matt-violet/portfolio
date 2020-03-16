@@ -6,10 +6,10 @@
     <div class="right">
       <div class="right-side-text" data-aos="fade-left" data-aos-delay='300'>
         <h1 class='line-1'>
-          Hello,
+          Matt Violet
         </h1>
         <p class='line-2'>
-          &#x1F44B; I'm a multi-talented human with a passion for building web applications.
+          Software Engineer
         </p>
       </div>
     </div>
@@ -26,20 +26,20 @@ export default {
   .home-component {
     padding-top: 52px;
     width: 100%;
-    height: 400px;
+    height: 350px;
     position: relative;
     background-image: linear-gradient(to right,  rgba(138,118,249,1), rgba(75,252,235,1));
   }
 .left {
     width: 50%;
-    height: 400px;
+    height: 350px;
     display: inline-block;
     position: relative;
     text-align: center;
   }
   .right {
     width: 50%;
-    height: 400px;
+    height: 350px;
     display: inline-block;
     overflow: hidden;
   }
@@ -47,25 +47,23 @@ export default {
     height: 80%;
     position: absolute;
     bottom: 0;
-    right: 50px;
+    right: 20px;
     /* -webkit-filter: drop-shadow(-4px -4px 4px #222); */
     /* filter: drop-shadow(-4px -4px 4px #222); */
   }
   .right-side-text {
-    width: 400px;
-    height: 100px;
+    height: 120px;
     position: absolute;
-    top: 0;
-    bottom: 0;
     color: rgb(43, 43, 43);
-    margin: auto;
+    margin: 140px auto 0 auto;
   }
   .line-1 {
-    font-size: 80px;
+    font-size: 70px;
     margin: 0;
   }
   .line-2 {
-    font-size: 20px;
+    margin: 0;
+    font-size: 18px;
   }
   @keyframes gradient {
     0% {
@@ -78,22 +76,21 @@ export default {
       background-position: 0% 50%;
     }
   }
-  @media (max-width: 1200px) {
-    .line-1 {
-      margin-top: 10px;
-      font-size: 70px;
-    }
+  @media (max-width: 1100px) {
     .right-side-text {
-      width: 340px;
+      margin-top: 100px;
+    }
+    .line-1 {
+      font-size: 40px;
     }
     .line-2 {
       font-size: 14px;
     }
     .home-component, .left, .right {
-      height: 300px;
+      height: 250px;
     }
     .left-side-img {
-      /* height: 85%; */
+      /* height: 300px; */
     }
   }
 </style>
