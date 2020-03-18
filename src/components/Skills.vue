@@ -339,7 +339,7 @@ export default {
     margin: auto;
     padding: 40px 0 80px 0;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .skills-component {
       width: 100%;
     }
