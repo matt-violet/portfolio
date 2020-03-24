@@ -53,8 +53,9 @@ export default {
     margin-left: 20px;
   }
   .project {
-    width: 298px;
+    width: 295px;
     margin: 10px;
+    border: 1px solid gray;
     display: inline-block;
     text-align: center;
   }
@@ -66,9 +67,9 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(236, 236, 236, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     height: 265px;
-    width: 300px;
+    width: 295px;
     position: absolute;
     display: none;
   }
@@ -88,7 +89,6 @@ export default {
     padding: 7px;
     font-size: 12px;
     border: 1px solid;
-    border-radius: 25px;
     animation: shadow-pulse 1.5s infinite;
   }
   .details-btn:hover {
@@ -117,7 +117,7 @@ export default {
     width: 100%;
     height: auto;
   }
-  @media (max-width: 1220px) {
+  @media (max-width: 700px) {
     .project {
       display: block;
       margin: 0 auto 20px auto;

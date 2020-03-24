@@ -47,7 +47,7 @@ export default {
     height: 80%;
     position: absolute;
     bottom: 0;
-    right: 20px;
+    right: 0px;
     /* -webkit-filter: drop-shadow(-4px -4px 4px #222); */
     /* filter: drop-shadow(-4px -4px 4px #222); */
   }
@@ -58,7 +58,7 @@ export default {
     margin: 140px auto 0 auto;
   }
   .line-1 {
-    font-size: 70px;
+    font-size: 60px;
     margin: 0;
   }
   .line-2 {

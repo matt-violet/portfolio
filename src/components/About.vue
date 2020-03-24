@@ -2,17 +2,16 @@
   <div class="about-wrapper">
     <AboutBanner class="about-banner"/>
     <div class="about-component" data-aos="flip-up">
-      <h1 class='about-header'>About Me</h1>
+      <h1 class='about-header'>My Story</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
         <p class='bio-text'>
-          Born and raised in Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit work (marketing / communications), supporting various communities from Oakland to San Francisco to Mae Sot, Thailand (pictured below).
+          Born and raised in Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit marketing / communications, where I gained exposure to HTML, WordPress, and SEO maintaining websites.
         </p>
         <p class='bio-text'>
-          My interest in programming came in 2015, at a turning point in my life. Shortly after I was diagnosed with type one diabetes I started wearing two electronic medical devices that worked together in a hybrid closed-loop system to manage my blood sugar levels. I was - and still am - fascinated by these devices that can effectively perform the job of a human pancreas. I'm equally fascinated by the "hacker communities" that decided <a href='https://openaps.org/' target='blank'>#WeAreNotWaiting</a> and paved the way to make this technology as safe and widely available as possible, years before the first commercial closed loops sytems. Details on all of this are included in my informal presentation on <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>Tech Innovation and T1D Care</a>.
-
+          I developed a stronger interest in programming in 2015. Shortly after my type one diabetes diagnosis I got my first "artificial pancreas", two electronic medical devices that worked together in a hybrid closed-loop system to manage my blood sugar levels. I was -- and still am -- fascinated by these devices. I'm equally fascinated by the "hacker communities" that decided <a href='https://openaps.org/' target='blank'>#WeAreNotWaiting</a> and paved the way to make this technology as safe and widely available as possible, years before the first commercial closed loops sytems. Details on the evolution of the "artificial pancreas" and my journey into coding are included in my informal presentation <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>Tech Innovation and T1D Care</a>.
         </p>
         <p class='bio-text'>
-          With my health now literally tied to algorithms, I'm drawn to the limitless possibilities of code. Understanding what technological innovation has done for me, and can do for others, is what drives me to be the best developer I can be.
+          With my health now literally tied to algorithms, I'm steadily reminded of the limitless possibilities of code and inspired to be the best developer I can be.
         </p>
       </div>
     </div>
@@ -55,7 +54,7 @@ export default {
     background: hsl(0, 0%, 100%);
     position: relative;
     z-index: 2;
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
     border: 1px solid gray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);

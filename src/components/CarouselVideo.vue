@@ -1,5 +1,5 @@
 <template>
-  <div class="animatedParent">
+  <div class="animatedParent" v-if='projects[currentSlide]'>
     <div class="carousel animated pulse">
       <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
       <div class="track-container">
@@ -78,6 +78,7 @@ export default {
    }
   .track-container {
     height: 100%;
+    border: 1px solid gray;
   }
   .video-div {
     overflow: hidden;
@@ -131,7 +132,7 @@ export default {
   .carousel-indicator.current-slide {
     background: black;
   }
-  @media (max-width: 1220px) {
+  @media (max-width: 800px) {
     .carousel {
       width: 400px;
     }

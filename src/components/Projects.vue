@@ -17,72 +17,60 @@
     </div>
     <div class="projects-component" data-aos="flip-up">
       <div data-aos="zoom-in" data-aos-delay='100'>
-        <h1 class='project-page-header'>Projects</h1>
-        <div class="header-container">
-          <div :class="showSoftware ? 'expand software-expanded' : 'expand software-expand'" v-on:click='onShowSoftware'>
+
+        <div class="section-header">
+          <div data-aos="zoom-in">
             <img src='../images/icon-software.png' class='project-icon'>
-            <h1 class='project-section-header'>
-              Software
-            </h1>
-            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showSoftware'>
-            <img src='../images/down-arrow.png' class='project-arrow' v-if='showSoftware'>
+            <h1 class='section-title'>Software Projects</h1>
           </div>
-          <transition
-            name="expand"
-            @enter="enter"
-            @after-enter="afterEnter"
-            @leave="leave"
-          >
-            <div class="software-projects" v-show='showSoftware'>
-              <SoftwareProjects
-                :softwareProjects="softwareProjects"
-                @viewProjectDetails="viewProjDetails"
-              />
-            </div>
-          </transition>
-          <div :class="showDesign ? 'expand design-expanded' : 'expand design-expand'" v-on:click='onShowDesign'>
-            <img src='../images/icon-design.png' class='project-icon'>
-            <h1 class="project-section-header">
-              Design
-            </h1>
-            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showDesign'>
-            <img src='../images/down-arrow.png' class='project-arrow' v-if='showDesign'>
-          </div>
-          <transition
-            name="expand"
-            @enter="enter"
-            @after-enter="afterEnter"
-            @leave="leave"
-          >
-            <div v-show='showDesign' class='design-carousel-div'>
-              <CarouselDesign
-                class='design-carousel'
-                :designProjects="designProjects"
-                @viewProjectDetails="viewProjectDetails"
-              />
-            </div>
-          </transition>
-          <div :class="showVideo ? 'expand video-expanded' : 'expand video-expand'" v-on:click='onShowVideo'>
-            <img src='../images/icon-video.png' class='project-icon'>
-            <h1 class="project-section-header">
-              Video
-            </h1>
-            <img src='../images/up-arrow.png' class='project-arrow' v-if='!showVideo'>
-            <img src='../images/down-arrow.png' class='project-arrow' v-if='showVideo'>
-          </div>
-          <transition
-            name="expand"
-            @enter="enter"
-            @after-enter="afterEnter"
-            @leave="leave"
-          >
-            <CarouselVideo
-              v-show='showVideo'
-              class='video-carousel'
-              :videoProjects="videoProjects"
-            />
-          </transition>
         </div>
+        <div class="software-projects" data-aos="zoom-in" data-aos-offset='300'>
+          <SoftwareProjects
+            :softwareProjects="softwareProjects"
+            @viewProjectDetails="viewProjDetails"
+          />
+        </div>
+
+        <div class='section-header'>
+          <div data-aos="zoom-in">
+            <img src='../images/icon-design.png' class='project-icon'>
+            <h1 class="section-title">Design Projects</h1>
+          </div>
+        </div>          
+        <div class='design-carousel-div' data-aos="zoom-in" data-aos-offset='300'>
+          <CarouselDesign
+            class='design-carousel'
+            :designProjects="designProjects"
+            @viewProjectDetails="viewProjectDetails"
+          />
+        </div>
+
+        <div class='section-header'>
+          <div data-aos="zoom-in">
+            <img src='../images/icon-video.png' class='project-icon'>
+            <h1 class="section-title">Video Projects</h1>
+          </div>
+        </div>
+        <CarouselVideo
+          class='video-carousel'
+          data-aos="zoom-in"
+          data-aos-offset='300'
+          :videoProjects="videoProjects"
+        />
+      </div>
+
+      <div class='divider-line' data-aos='zoom-in'/>
+
+      <div class="resume-div">
+        <a class='resume-header' v-on:click='onShowResume'> {{ showResume ? 'Hide Resume' : 'Show Resume' }} </a>
+        <transition
+          name="expand"
+          @enter="enter"
+          @after-enter="afterEnter"
+          @leave="leave"
+        >
+          <img class='resume-img' v-if='showResume' src='../images/resume.jpg'/>
+        </transition>
       </div>
     </div>
   </div>
@@ -144,6 +132,9 @@ export default {
     onShowSoftware() {
       this.showSoftware = !this.showSoftware
     },
+    onShowResume() {
+      this.showResume = !this.showResume
+    },
     viewProjDetails(project) {
       this.viewProjectDetails(project)
     }
@@ -153,6 +144,7 @@ export default {
       showDesign: false,
       showVideo: false,
       showSoftware: false,
+      showResume: false,
     }
   }
 }
@@ -248,83 +240,57 @@ export default {
     right: 0;
     display: inline-block;
   }
-  .project-page-header {
-    margin: 0 auto 40px auto;
+  .section-header {
     padding: 40px 0;
     text-align: center;
-    font-size: 32px;
+    vertical-align: middle;
     background: linear-gradient(to right, rgba(253,193,104,.5), rgba(251,128,128,.5));
   }
-  .project-section-header {
-    margin: 10px 20px;
-    padding: 3px 0;
-    font-size: 22px;
+  .section-title {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    transform: translateY(-3px);
     display: inline-block;
   }
-  .header-container {
-    padding: 20px 0 0 0;
-    margin: auto 80px;
-  }
-  .software-carousel {
-    margin: 40px auto;
+  .project-icon {
+    width: 30px;
+    display: inline-block;
+    margin-right: 16px;
   }
   .video-carousel {
-    background: hsl(16, 100%, 66%, .5);
-    padding: 40px 0;
+    padding: 60px 0;
   }
   .software-projects {
-    height: 600px;
-    padding: 40px 0;
-    background: hsl(39, 77%, 83%, .5);
+    padding: 60px 0;
   }
   .design-carousel-div {
     margin: auto;
-    background: linear-gradient(to bottom, hsl(28, 87%, 67%, .5));
-    padding: 40px 0;
+    padding: 60px;
   }
   .design-carousel {
     width: 80%;
   }
-  .project-arrow {
-    width: 15px;
-    border: 1px solid;
-    border-radius: 50%;
-    padding: 5px;
-    float: right;
-    margin: 13px 0;
+  .resume-div {
+    text-align: center;
+    margin: 40px 0;
   }
-  .project-icon {
-    width: 30px;
-    vertical-align: middle;
-    margin: 0 0 10px 10px;
+  .resume-header {
+    font-size: 16px;
   }
-  .expand {
-    padding: 0 20px;
+  .resume-img {
+    width: 80%;
+    display: block;
+    border: 1px solid lightgray;
+    margin: 0 auto;
   }
-  .expand:hover {
+  .resume-header:hover {
     cursor: pointer;
-    /* font-size: 34px; */
-    /* color: white; */
-    /* transform: scale(1.02); */
   }
-  .software-expand {
-    background: hsl(39, 77%, 83%, .5);
-  }
-  .software-expanded {
-    background: hsl(39, 77%, 83%, .5);
-  }
-  .design-expand {
-    background: hsl(28, 87%, 67%, .5);
-    border-bottom: 0px;
-  }
-  .design-expanded {
-    background: hsl(28, 87%, 67%, .5);
-  }
-  .video-expand {
-    background: hsl(16, 100%, 66%, .5);
-  }
-  .video-expanded {
-    background: hsl(16, 100%, 66%, .5);
+  .divider-line {
+    border-top: 1px solid lightgray;
+    width: 80%;
+    margin: 40px auto;
   }
   @media (max-width: 1100px) {
     .projects-component {
@@ -334,7 +300,6 @@ export default {
       padding: 0;
     }
     .right-side-img {
-      /* height: 85%; */
       margin-left: 0;
     }
     .projects-banner-text {

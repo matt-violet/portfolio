@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class="carousel" v-if='projects[currentSlide]'>
     <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
     <div class="track-container">
       <div class="track-inner">
@@ -133,14 +133,9 @@ export default {
   .carousel-indicator.current-slide {
     background: black;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     .track-container {
       height: 250px;
-    }
-  }
-  @media (max-width: 1000px) {
-    .track-container {
-      /* height: 300px; */
     }
   }
 </style>

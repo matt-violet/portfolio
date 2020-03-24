@@ -19,13 +19,10 @@
       <div data-aos="zoom-in" data-aos-delay='100'>
         <h2 class='contact-header' data-aos="zoom-in">Contact</h2>
         <div class="contact-blurb">
-          <p>I have a proven track record of being self-motivated, a supportive team member, and producing tangible results. Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
+          <p>I have a proven track record of being an active learner, productive team member, and grounded human being. Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
         </div>
+        <img src='../images/github-squares.png' class='squares'/>
         <div class='contact-btns'>
-          <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
-            <span class='helper'></span>
-            <img src='../images/mail-icon.png' class='contact-icon'>
-          </div>
           <div class="contact-btn" v-on:click='onLinkClick(github)'>
             <span class='helper'></span>
             <img src='../images/github-icon.png' class='contact-icon'>
@@ -33,6 +30,10 @@
           <div class="contact-btn" v-on:click='onLinkClick(linkedin)'>
             <span class='helper'></span>
             <img src='../images/linkedin-icon.png' class='contact-icon'>
+          </div>
+          <div class="contact-btn" v-on:click='onLinkClick("mattviolet@gmail.com")'>
+            <span class='helper'></span>
+            <img src='../images/mail-icon.png' class='contact-icon'>
           </div>
         </div>
       </div>
@@ -74,6 +75,7 @@ export default {
     margin: auto;
     background: white;
     position: relative;
+    text-align: center;
     z-index: 2;
     vertical-align: middle;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -120,9 +122,13 @@ export default {
     padding: 50px 0;
     background: linear-gradient(to right, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
   }
+  .squares {
+    width: 70%;
+    margin-top: 20px;
+  }
   .contact-blurb {
     font-size: 16px;
-    width: 80%;
+    width: 70%;
     margin: 40px auto 0 auto;
     text-align: center;
   }
@@ -141,7 +147,7 @@ export default {
     margin: 40px auto 0 auto;
   }
   .contact-btn {
-    background: linear-gradient(to left, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
+    background: linear-gradient(to left, rgb(179, 255, 171, .6) 0%, rgb(18, 255, 247, .6) 100%);
     display: inline-block;
     margin: 0 20px;
     text-align: center;
