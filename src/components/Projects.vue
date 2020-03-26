@@ -17,7 +17,6 @@
     </div>
     <div class="projects-component" data-aos="flip-up">
       <div data-aos="zoom-in" data-aos-delay='100'>
-
         <div class="section-header">
           <div data-aos="zoom-in">
             <img src='../images/icon-software.png' class='project-icon'>
@@ -30,7 +29,6 @@
             @viewProjectDetails="viewProjDetails"
           />
         </div>
-
         <div class='section-header'>
           <div data-aos="zoom-in">
             <img src='../images/icon-design.png' class='project-icon'>
@@ -44,7 +42,6 @@
             @viewProjectDetails="viewProjectDetails"
           />
         </div>
-
         <div class='section-header'>
           <div data-aos="zoom-in">
             <img src='../images/icon-video.png' class='project-icon'>
@@ -58,9 +55,7 @@
           :videoProjects="videoProjects"
         />
       </div>
-
       <div class='divider-line' data-aos='zoom-in'/>
-
       <div class="resume-div">
         <a class='resume-header' v-on:click='onShowResume'> {{ showResume ? 'Hide Resume' : 'Show Resume' }} </a>
         <transition

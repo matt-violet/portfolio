@@ -22,7 +22,14 @@
           </td>
         </tr>      
       </table>
-      
+      <div class="github" data-aos='zoom-in'>
+        <img src='../images/github-squares.png' class='squares'/>
+        <div class="github-overlay">
+          <div class="github-overlay-text">
+            My last year of activity on GitHub
+          </div>
+        </div>
+      </div>
       <div class="skill-icons-container" data-aos='zoom-in'>        
         <div class='row'>
           <p class='row-name'>FRONT END:</p>
@@ -138,9 +145,7 @@
           </div>
         </div>
       </div>
-
       <div class='divider-line' data-aos='zoom-in'/>
-
       <table class='table-2' data-aos='zoom-in' data-aos-offset='300'>
         <tr>
           <td class='col'>
@@ -167,7 +172,6 @@
           </td>
         </tr>
       </table>
-
     </div>
   </div>
 </template>
@@ -247,7 +251,6 @@ export default {
     width: 50%;
     padding: 0 20px;
     vertical-align: top;
-    /* border-right: 1px solid; */
   }
   .video-col {
     width: 50%;
@@ -274,6 +277,41 @@ export default {
     width: 80%;
     margin: auto;
   }
+  /* --------------------- Github Overlay -------------------- */
+  .github {
+    width: 600px;
+    height: 131.28px;
+    position: relative;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .squares {
+    width: 100%;
+    position: absolute;
+  }
+  .github-overlay {
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    height: 131.28px;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+  }
+  .github-overlay-text {
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    top: 45%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
+  .github-overlay:hover {
+    opacity: 0.8;
+  }
   /* ----------------------------- SKILLS --------------------------------- */
   .skill-icons-container {
     width: 528px;
@@ -287,9 +325,6 @@ export default {
     background-color: white;
     padding: 10px;
     border: 1px solid gray;
-  }
-  .icon:hover {
-    /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
   }
   .saved-icons {
     width: 100%;
@@ -331,6 +366,16 @@ export default {
   @media (max-width: 1100px) {
     .skills-component {
       width: 100%;
+    }
+  }
+  @media (max-width: 800px) {
+    .github {
+      width: 450px;
+      height: 98.45px;
+    }
+    .github-overlay {
+      width: 450px;
+      height: 98.45px;
     }
   }
 </style>

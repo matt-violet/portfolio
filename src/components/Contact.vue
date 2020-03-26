@@ -21,7 +21,6 @@
         <div class="contact-blurb">
           <p>I have a proven track record of being an active learner, productive team member, and grounded human being. Find me on <a :href='github' target='_blank'>GitHub</a>, <a :href='linkedin' target='_blank'>LinkedIn</a>, or at <a href='mailto:mattviolet@gmail.com'>mattviolet@gmail.com</a> and let's explore how I can help you meet your goals.</p>
         </div>
-        <img src='../images/github-squares.png' class='squares'/>
         <div class='contact-btns'>
           <div class="contact-btn" v-on:click='onLinkClick(github)'>
             <span class='helper'></span>
@@ -110,7 +109,6 @@ export default {
     z-index: 1;
   }
   .right-side-text {
-    /* width: 520px; */
     color: rgb(43, 43, 43);
     text-align: left;
     margin-top: 150px;
@@ -121,10 +119,6 @@ export default {
     font-size: 32px;
     padding: 50px 0;
     background: linear-gradient(to right, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
-  }
-  .squares {
-    width: 70%;
-    margin-top: 20px;
   }
   .contact-blurb {
     font-size: 16px;
@@ -200,7 +194,6 @@ export default {
   }
   @media (max-width: 1100px) {
     .contact-text {
-      /* margin-top: 20px; */
       font-size: 42px;
     }
     .contact-text-2 {

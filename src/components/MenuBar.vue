@@ -63,25 +63,15 @@ export default {
     width: 100%;
     margin-top: 30px;
     background: hsl(0, 0%, 100%, 0);
-    /* background: white; */
-    /* border: 1px solid; */
     position: absolute;
     z-index: 3;
-    /* text-align: center; */
     transition: 0.3s all ease-out;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); */
   }
   .menu-wrapper.menu--hidden {
     transform: translate3d(0, -100%, 0);
   }
   .centered-menu-div {
-    /* display: inline-block; */
     margin-left: 15%;
-    /* left: 0; */
-    /* right: 0; */
-    /* padding: 0 5px; */
-    /* border-bottom-right-radius: 10px; */
-    /* border-bottom-left-radius: 10px; */
   }
   .menu-option {
     animation-duration: 1s;
@@ -97,7 +87,6 @@ export default {
     cursor: pointer;
   }
   .currentPg {
-    /* border-bottom: 1px solid; */
     color: white;
   }
   @keyframes slideDown {

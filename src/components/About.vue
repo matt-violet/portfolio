@@ -17,10 +17,35 @@
     </div>
     <div class='about-imgs'>
       <img src='../images/matt-guitar.jpg' class='about-img'>
+      <div class="overlay">
+        <div class="overlay-text">
+          On a solo gap year in Southeast Asia 🌏
+        </div>
+      </div>
       <img src='../images/maesot.jpg' class='about-img'>
+      <div class="overlay">
+        <div class="overlay-text">
+          Working with Burmese migrant communities in Thailand 💪
+        </div>
+      </div>
       <img src='../images/using-pump.jpg' class='about-img'>
+      <div class="overlay">
+        <div class="overlay-text">
+          Texting my artificial pancreas 📲
+        </div>
+      </div>
       <img src='../images/skate.jpg' class='about-img'>
+      <div class="overlay">
+        <div class="overlay-text">
+          Keep pushing, it will all be worth it 🏆
+        </div>
+      </div>
       <img src='../images/matt-as.jpg' class='about-img'>
+      <div class="overlay">
+        <div class="overlay-text">
+          Rooted in Oakland 🌳
+        </div>
+      </div>
     </div>
     <Skills class="skills"/>
   </div>
@@ -59,21 +84,6 @@ export default {
     border: 1px solid gray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   }
-  .about-imgs {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgb(43, 43, 43);
-    border-bottom: 1px solid rgb(43, 43, 43);
-  }
-  .about-img {
-    width: 20%;
-    height: 100%;
-    display: inline-block;
-    vertical-align: bottom;
-  }
   .about-me {
     margin: 0 auto;
     padding: 40px 120px;
@@ -90,12 +100,49 @@ export default {
     font-size: 16px;
     display: inline-block;
   }
+  .about-imgs {
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgb(43, 43, 43);
+    border-bottom: 1px solid rgb(43, 43, 43);
+  }
+  .about-img {
+    width: 20%;
+    position: absolute;
+  }
+  /* ----------------------- OVERLAY ----------------------- */
+  .overlay-text {
+    color: white;
+    font-size: 12px;
+    width: 20vw;
+    top: 50%;
+    position: absolute;
+  }
+  .overlay {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20vw;
+    width: 20vw;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+  }
+  .overlay:hover {
+    opacity: 0.8;
+  }
   @media (max-width: 1100px) {
     .about-component {
       width: 100%;
     }
     .about-wrapper {
       padding-bottom: 0;
+    }
+    .overlay-text {
+      font-size: 10px;
     }
   }
 </style>

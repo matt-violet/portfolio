@@ -72,6 +72,7 @@ export default {
     width: 295px;
     position: absolute;
     display: none;
+    z-index: 1;
   }
   div.outer-wrapper div.project:hover div.dimmer {
     display: none;
@@ -89,23 +90,17 @@ export default {
     padding: 7px;
     font-size: 12px;
     border: 1px solid;
-    animation: shadow-pulse 1.5s infinite;
+    animation: pulse 1.5s infinite;
   }
   .details-btn:hover {
     cursor: pointer;
     color: white;
     background: rgb(82, 82, 82);
   }
-  @keyframes shadow-pulse
+  @keyframes pulse
   {
-    0% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
-    }
     50% {
-          box-shadow: 0 0 0 3px rgba(0,0,0, .4);
-    }
-    100% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+      transform: scale(1.1);
     }
   }
   .img-div {

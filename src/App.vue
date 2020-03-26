@@ -80,7 +80,7 @@ export default {
           id: 4,
           title: 'My Bolus',
           description: 'Insulin dose calculator for diabetics',
-          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is an example of the kind of mental calculations insulin users must perform ahead of every meal.',
+          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
           stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
           github: 'https://github.com/matt-violet/My-Bolus',
           image: require('./images/vial.jpg'),

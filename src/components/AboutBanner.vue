@@ -48,8 +48,6 @@ export default {
     position: absolute;
     bottom: 0;
     right: 0px;
-    /* -webkit-filter: drop-shadow(-4px -4px 4px #222); */
-    /* filter: drop-shadow(-4px -4px 4px #222); */
   }
   .right-side-text {
     height: 120px;
@@ -58,7 +56,7 @@ export default {
     margin: 140px auto 0 auto;
   }
   .line-1 {
-    font-size: 60px;
+    font-size: 55px;
     margin: 0;
   }
   .line-2 {
@@ -88,9 +86,6 @@ export default {
     }
     .home-component, .left, .right {
       height: 250px;
-    }
-    .left-side-img {
-      /* height: 300px; */
     }
   }
 </style>
