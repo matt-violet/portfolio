@@ -56,6 +56,9 @@ export default {
     font-size: 16px;
     line-height: normal;
   }
+  .details, .stack {
+    color: darkslategrey;
+  }
   .github-link:hover {
     cursor: pointer;
   }

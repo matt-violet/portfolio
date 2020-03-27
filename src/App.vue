@@ -12,6 +12,7 @@
         :videoProjects="videoProjects"
       />
       <ProjectDetails
+        data-aos="zoom-in"
         v-if="projectDetails"
         :project="featuredProject"
         @viewProjectDetails="showProjectDetails"

@@ -98,6 +98,7 @@ export default {
   .design-text-div {
     margin: 40px 0 0 0;
     text-align: center;
+    color: darkslategray;
   }
   .arrow {
     position: absolute;
@@ -131,7 +132,7 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: black;
+    background: darkslategrey;
   }
   @media (max-width: 800px) {
     .track-container {

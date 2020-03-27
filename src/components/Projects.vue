@@ -174,6 +174,8 @@ export default {
     padding: 0 0 60px 0;
     margin: auto;
     background: white;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
@@ -290,6 +292,7 @@ export default {
   @media (max-width: 1100px) {
     .projects-component {
       width: 100%;
+      border-radius: 0;
     }
     .projects-wrapper {
       padding: 0;

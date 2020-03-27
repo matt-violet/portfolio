@@ -77,6 +77,9 @@ export default {
   }
   .about-component {
     background: hsl(0, 0%, 100%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
     position: relative;
     z-index: 2;
     width: 70%;
@@ -87,6 +90,7 @@ export default {
   .about-me {
     margin: 0 auto;
     padding: 40px 120px;
+    color: darkslategrey;
   }
   .about-header {
     margin: 0;
@@ -137,6 +141,7 @@ export default {
   @media (max-width: 1100px) {
     .about-component {
       width: 100%;
+      border-radius: 0;
     }
     .about-wrapper {
       padding-bottom: 0;

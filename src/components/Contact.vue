@@ -73,6 +73,8 @@ export default {
     width: 70%;
     margin: auto;
     background: white;
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
     text-align: center;
     z-index: 2;
@@ -125,6 +127,7 @@ export default {
     width: 70%;
     margin: 40px auto 0 auto;
     text-align: center;
+    color: darkslategrey;
   }
   .contact-text {
     font-size: 60px;
@@ -204,6 +207,7 @@ export default {
     }
     .contact-component {
       width: 100%;
+      border-radius: 0;
     }
     .contact-wrapper {
       padding-bottom: 0;

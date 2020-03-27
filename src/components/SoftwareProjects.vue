@@ -37,12 +37,12 @@ export default {
 <style scoped>
   h2 {
     margin: 0;
-    color: rgb(43, 43, 43);
+    color: black;
   }
   p {
     font-size: 14px;
     line-height: normal;
-    color: rgb(43, 43, 43);
+    color: darkslategrey;
     margin: 0;
   }
   .outer-wrapper {
@@ -58,6 +58,8 @@ export default {
     border: 1px solid gray;
     display: inline-block;
     text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -67,7 +69,7 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.6);
     height: 265px;
     width: 295px;
     position: absolute;
@@ -83,24 +85,24 @@ export default {
   /* ---------------------------------------------------------------------------- */
   .project-description {
     padding: 10px;
-    background: white;
   }
   .details-btn {
     margin: 15px 0 0 0;
     padding: 7px;
     font-size: 12px;
-    border: 1px solid;
+    background: linear-gradient(to top, white, white, rgb(225, 225, 225));
+    border-radius: 5px;
+    /* border: .5px solid gray; */
     animation: pulse 1.5s infinite;
   }
   .details-btn:hover {
     cursor: pointer;
-    color: white;
-    background: rgb(82, 82, 82);
+    background: linear-gradient(to bottom, white, white, rgb(225, 225, 225));
   }
   @keyframes pulse
   {
     50% {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
   }
   .img-div {

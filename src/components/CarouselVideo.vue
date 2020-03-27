@@ -69,6 +69,7 @@ export default {
   }
   p {
     margin: 10px 0px;
+    color: darkslategray;
   }
   .carousel {
     width: 600px;
@@ -79,6 +80,8 @@ export default {
   .track-container {
     height: 100%;
     border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .video-div {
     overflow: hidden;
@@ -130,7 +133,7 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: black;
+    background: darkslategrey;
   }
   @media (max-width: 800px) {
     .carousel {

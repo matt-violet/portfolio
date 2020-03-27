@@ -194,6 +194,8 @@ export default {
     width: 70%;
     margin: auto;
     background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     position: relative;
     z-index: 1;
   }
@@ -241,6 +243,7 @@ export default {
   }
   .software-bullets {
     padding: 0;
+    color: darkslategray;
   }
   .table-2 {
     padding: 40px;
@@ -265,6 +268,7 @@ export default {
   .bullets {
     padding: 0;
     text-align: left;
+    color: darkslategray;
   }
   ul {
     padding-left: 20px;
@@ -348,6 +352,7 @@ export default {
     margin-right: 20px;
     display: inline-block;
     font-size: 14px;
+    color: darkslategrey;
   }
   /* ------------------ TOOL TIP ------------------ */
   .icon .tool-tip {
@@ -366,6 +371,7 @@ export default {
   @media (max-width: 1100px) {
     .skills-component {
       width: 100%;
+      border-radius: 0;
     }
   }
   @media (max-width: 800px) {
