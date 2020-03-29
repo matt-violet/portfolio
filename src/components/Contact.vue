@@ -119,15 +119,16 @@ export default {
     margin: 0;
     text-align: center;
     font-size: 32px;
-    padding: 50px 0;
+    padding: 80px 0;
     background: linear-gradient(to right, rgb(179, 255, 171, .5) 0%, rgb(18, 255, 247, .5) 100%);
   }
   .contact-blurb {
     font-size: 16px;
+    font-weight: 400;
     width: 70%;
     margin: 40px auto 0 auto;
     text-align: center;
-    color: darkslategrey;
+    color: grey;
   }
   .contact-text {
     font-size: 60px;
@@ -152,21 +153,17 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    transition: all .2s ease-in-out;
   }
   .contact-btn:hover {
     background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
     cursor: pointer;
+    transform: scale(1.1);
   }
   .helper {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-  }
-  .link {
-    background: red;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
   }
   .contact-icon {
     width: 35px;

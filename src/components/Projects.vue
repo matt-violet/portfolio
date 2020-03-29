@@ -209,7 +209,7 @@ export default {
     left: 0;
   }
   .left-side-text {
-    width: 350px;
+    width: 370px;
     height: 200px;
     position: absolute;
     top: 0;
@@ -220,6 +220,7 @@ export default {
   }
   .projects-banner-text {
     font-size: 48px;
+    font-weight: 700;
     margin: 0 15px 0 0;
   }
   .title {
@@ -228,6 +229,7 @@ export default {
   }
   .projects-banner-text-2 {
     font-size: 20px;
+    font-weight: 300;
   }
   .projects-wrapper {
     width: 100%;
@@ -238,13 +240,14 @@ export default {
     display: inline-block;
   }
   .section-header {
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
     vertical-align: middle;
     background: linear-gradient(to right, rgba(253,193,104,.5), rgba(251,128,128,.5));
   }
   .section-title {
     font-size: 32px;
+    font-weight: 700;
     text-align: center;
     margin: 0;
     transform: translateY(-3px);
@@ -278,8 +281,8 @@ export default {
   .resume-img {
     width: 80%;
     display: block;
-    border: 1px solid lightgray;
     margin: 0 auto;
+    border-radius: 10px;
   }
   .resume-header:hover {
     cursor: pointer;
@@ -316,6 +319,11 @@ export default {
     }
     .right {
       width: 40%;
+    }
+  }
+  @media (max-width: 750px) {
+    .left-side-text {
+      width: 300px;
     }
   }
 </style>

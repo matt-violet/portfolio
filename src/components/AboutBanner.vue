@@ -52,16 +52,18 @@ export default {
   .right-side-text {
     height: 120px;
     position: absolute;
-    color: rgb(43, 43, 43);
+    /* color: darkslategrey; */
     margin: 140px auto 0 auto;
   }
   .line-1 {
-    font-size: 55px;
+    font-size: 48px;
+    font-weight: 600;
     margin: 0;
   }
   .line-2 {
+    font-size: 20px;
+    font-weight: 300;
     margin: 0;
-    font-size: 18px;
   }
   @keyframes gradient {
     0% {

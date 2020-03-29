@@ -5,7 +5,7 @@
       <h1 class='about-header'>My Story</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
         <p class='bio-text'>
-          Born and raised in Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit marketing / communications, where I gained exposure to HTML, WordPress, and SEO maintaining websites.
+          From Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit marketing / communications, where I gained exposure to HTML, WordPress, and SEO maintaining websites.
         </p>
         <p class='bio-text'>
           I developed a stronger interest in programming in 2015. Shortly after my type one diabetes diagnosis I got my first "artificial pancreas", two electronic medical devices that worked together in a hybrid closed-loop system to manage my blood sugar levels. I was -- and still am -- fascinated by these devices. I'm equally fascinated by the "hacker communities" that decided <a href='https://openaps.org/' target='blank'>#WeAreNotWaiting</a> and paved the way to make this technology as safe and widely available as possible, years before the first commercial closed loops sytems. Details on the evolution of the "artificial pancreas" and my journey into coding are included in my informal presentation <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>Tech Innovation and T1D Care</a>.
@@ -89,15 +89,17 @@ export default {
   }
   .about-me {
     margin: 0 auto;
-    padding: 40px 120px;
-    color: darkslategrey;
+    padding: 50px 120px;
+    font-weight: 400;
+    color: grey;
   }
   .about-header {
     margin: 0;
-    padding: 50px 0;
+    padding: 80px 0;
     text-align: center;
     font-size: 32px;
-    background: linear-gradient( to left, rgba(138,118,249,.5), rgba(75,252,235,.5));
+    font-weight: 700;
+    background: linear-gradient(to left, rgba(138,118,249,.5), rgba(75,252,235,.5));
   }
   .bio-text {
     margin: 0 0 20px 0;

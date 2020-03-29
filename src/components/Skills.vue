@@ -1,7 +1,7 @@
 <template>
   <div class="skills-wrapper">
     <div class='skills-component'>
-      <h1 class='skills-header'>What I Know</h1>
+      <h1 class='skills-section-header'>What I Know</h1>
       <table class='table-1' data-aos="zoom-in" cellpadding="0" cellspacing="0" border="0">
         <tr class='icon-row'>
           <td class='software-col'>
@@ -13,10 +13,11 @@
             <h2 class="software-header">Software Development</h2>
             <div class="software-bullets">
               <ul>
-                <li>2+ years of combined education, personal projects, and professional experience</li>
-                <li>5 months as a start-up intern working on a team of software engineers</li>
-                <li>800+ hours of advanced Computer Science curriculum modeling today’s software engineering industry</li>
+                <li>2+ years of combined coursework / personal projects / professional experience</li>
+                <li>5 months working as an intern on a team of software engineers</li>
+                <li>Completed 800+ hours of advanced Computer Science curriculum modeling today’s software engineering industry</li>
                 <li>Self taught skills such as HTML, CSS, and Vue.js</li>
+                <li>Active contributer on GitHub:</li>
               </ul>
             </div>
           </td>
@@ -30,7 +31,10 @@
           </div>
         </div>
       </div>
-      <div class="skill-icons-container" data-aos='zoom-in'>        
+      <div class="skill-icons-container" data-aos='zoom-in'>
+        <div class="skill-icons-header">
+          My Key Skills:
+        </div>
         <div class='row'>
           <p class='row-name'>FRONT END:</p>
           <div data-aos-delay='100' data-aos='zoom-out' class="icon front-end" alt="html">
@@ -199,12 +203,19 @@ export default {
     position: relative;
     z-index: 1;
   }
-  .skills-header {
-    padding: 60px 0;
+  .skills-section-header {
+    padding: 80px 0;
     text-align: center;
     background: linear-gradient( to left, rgba(138,118,249,.5), rgba(75,252,235,.5));
     margin: 0 auto 20px 0;
     font-size: 32px;
+    font-weight: 700;
+  }
+  .skill-icons-header {
+    padding: 60px;
+    margin-left: 30%;
+    font-size: 18px;
+    font-weight: 700;
   }
   .icon-row {
     text-align: center;
@@ -226,6 +237,7 @@ export default {
     padding: 10px;
   }
   .table-1 {
+    max-width: 800px;
     margin: 0px auto;
     font-size: 16px;
     padding: 0 80px;
@@ -234,6 +246,7 @@ export default {
     text-align: center;
     margin: 0 auto 40px auto;
     font-size: 18px;
+    font-weight: 700;
   }
   .software-col {
     width: 100%;
@@ -243,10 +256,10 @@ export default {
   }
   .software-bullets {
     padding: 0;
-    color: darkslategray;
+    color: grey;
   }
   .table-2 {
-    padding: 40px;
+    padding: 0 0 40px 0;
     width: 80%;
     margin: 0 auto 40px auto;
   }
@@ -261,23 +274,25 @@ export default {
     vertical-align: top;
   }
   .col-header {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     text-align: center;
     font-size: 18px;
+    font-weight: 700;
   }
   .bullets {
     padding: 0;
     text-align: left;
-    color: darkslategray;
+    color: grey;
   }
   ul {
     padding-left: 20px;
+    margin: 0;
   }
   li {
     padding: 5px;
   }
   .divider-line {
-    border-top: 1px solid gray;
+    border-top: 1px solid grey;
     width: 80%;
     margin: auto;
   }
@@ -287,7 +302,7 @@ export default {
     height: 131.28px;
     position: relative;
     text-align: center;
-    margin: 40px auto;
+    margin: 60px auto 0px auto;
   }
   .squares {
     width: 100%;
@@ -314,18 +329,18 @@ export default {
     position: absolute;
   }
   .github-overlay:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   /* ----------------------------- SKILLS --------------------------------- */
   .skill-icons-container {
     width: 528px;
-    margin: 60px auto 80px auto;
+    margin: 0px auto 80px auto;
   }
   .icon {
     width: 30px;
     display: inline-block;
     text-align: center;
-    margin: 3px;
+    margin: 2px;
     background-color: white;
     padding: 10px;
     border: 1px solid gray;
@@ -351,8 +366,8 @@ export default {
     text-align: right;
     margin-right: 20px;
     display: inline-block;
-    font-size: 14px;
-    color: darkslategrey;
+    font-size: 12px;
+    color: grey;
   }
   /* ------------------ TOOL TIP ------------------ */
   .icon .tool-tip {

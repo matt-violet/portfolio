@@ -75,7 +75,6 @@ export default {
   }
   .track-container {
     margin: 0 auto;
-    padding: 10px;
     height: 500px;
     display: flex;
     align-items: center;
@@ -91,18 +90,22 @@ export default {
     max-width: 100%;
     max-height: 100%;
     object-fit: fill;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
   }
   .img:hover {
     cursor: pointer;
+    transform: scale(1.4);
   }
   .design-text-div {
-    margin: 40px 0 0 0;
+    padding-top: 20px;
     text-align: center;
-    color: darkslategray;
   }
   .arrow {
     position: absolute;
     width: 20px;
+    transition: all .2s ease-in-out;
   }
   .arrow:hover {
     cursor: pointer;
@@ -132,7 +135,7 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: darkslategrey;
+    background: grey;
   }
   @media (max-width: 800px) {
     .track-container {

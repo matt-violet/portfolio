@@ -182,5 +182,6 @@ export default {
   }
   a {
     color: blue;
+    font-weight: 400;
   }
 </style>

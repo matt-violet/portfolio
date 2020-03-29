@@ -42,7 +42,7 @@ export default {
   p {
     font-size: 14px;
     line-height: normal;
-    color: darkslategrey;
+    color: grey;
     margin: 0;
   }
   .outer-wrapper {
@@ -55,11 +55,13 @@ export default {
   .project {
     width: 295px;
     margin: 10px;
-    border: 1px solid gray;
+    border: 1px solid grey;
     display: inline-block;
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
+        transition: all .2s ease-in-out;
+
   }
   .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
@@ -69,7 +71,7 @@ export default {
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.9);
     height: 265px;
     width: 295px;
     position: absolute;

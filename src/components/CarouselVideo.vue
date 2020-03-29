@@ -1,7 +1,7 @@
 <template>
   <div class="animatedParent" v-if='projects[currentSlide]'>
-    <div class="carousel animated pulse">
       <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
+    <div class="carousel animated pulse">
       <div class="track-container">
         <div class='video-div'>
           <iframe
@@ -18,7 +18,6 @@
           <h2>{{ projects[currentSlide].title }}</h2>
           <p>{{ projects[currentSlide].description }}</p>
         </div>
-        <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
         <div class="carousel-nav">
           <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
           <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
@@ -26,6 +25,7 @@
         </div>
       </div>
     </div>
+        <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
   </div>
 </template>
 
@@ -69,23 +69,25 @@ export default {
   }
   p {
     margin: 10px 0px;
-    color: darkslategray;
+    color: grey;
   }
   .carousel {
     width: 600px;
     position: relative;
     margin: 0 auto;
-    background: white;
-   }
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
   .track-container {
     height: 100%;
-    border: 1px solid gray;
-    border-radius: 10px;
     overflow: hidden;
   }
   .video-div {
     overflow: hidden;
-    border-bottom: 1px solid gray;
     animation: fadeIn 1s;
     vertical-align: bottom;
     height: 335px;
@@ -99,22 +101,22 @@ export default {
     text-align: left;
     height: 80px;
     color: black;
-    background: white;
   }
   .arrow {
     position: absolute;
     top: 45%;
     width: 20px;
+    transition: all .2s ease-in-out;
   }
   .arrow:hover {
     cursor: pointer;
     transform: scale(1.4)
   }
   .back {
-    left: -40px;
+    left: 8%;
   }
   .next {
-    right: -40px;
+    right: 7%;
   }
   .carousel-nav {
     padding: 10px 0;

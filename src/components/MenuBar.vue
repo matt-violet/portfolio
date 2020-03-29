@@ -80,11 +80,14 @@ export default {
   }
   .menu-text {
     font-size: 14px;
+    font-weight: 500;
     height: 100%;
     margin: 0;
+    transition: all .2s ease-in-out;
   }
   .menu-text:hover {
     cursor: pointer;
+    transform: scale(1.1);
   }
   .currentPg {
     color: white;
