@@ -91,7 +91,7 @@ export default {
     margin: 0 auto;
     padding: 50px 120px;
     font-weight: 400;
-    color: grey;
+    /* color: grey; */
   }
   .about-header {
     margin: 0;

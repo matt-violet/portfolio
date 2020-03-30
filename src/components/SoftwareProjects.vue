@@ -60,8 +60,7 @@ export default {
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
-        transition: all .2s ease-in-out;
-
+    transition: all .2s ease-in-out;
   }
   .project:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);

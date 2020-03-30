@@ -261,7 +261,7 @@ export default {
   .table-2 {
     padding: 0 0 40px 0;
     width: 80%;
-    margin: 0 auto 40px auto;
+    margin: 20px auto 40px auto;
   }
   .design-col {
     width: 50%;

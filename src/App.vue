@@ -12,7 +12,7 @@
         :videoProjects="videoProjects"
       />
       <ProjectDetails
-        data-aos="zoom-in"
+        data-aos="fade-in"
         v-if="projectDetails"
         :project="featuredProject"
         @viewProjectDetails="showProjectDetails"
@@ -49,40 +49,50 @@ export default {
       softwareProjects: [
         {
           id: 1,
+          title: 'Segment Events',
+          description: 'Implemented tracking of user event data',
+          details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding to drive analytics, A/B testing, and automated marketing campaigns.',
+          stack: ['Javavscript', 'React', 'Segment Library'],
+          github: '',
+          image: require('./images/segment.png'),
+          video:require('./images/segment.png')
+        },
+        {
+          id: 2,
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
           details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
-          stack: ' HTML, CSS (grid, media query), Javascript, React, Styled-Components, Express, MongoDB, Faker, Jest, Enzyme',
+          stack: ['HTML', 'CSS (grid, media query)', 'Javascript', 'React', 'Styled-Components', 'Express', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
           github: 'https://github.com/krummurk/photos-module',
           image: require('./images/restaurant.jpg'),
           video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
         },
         {
-          id: 2,
+          id: 3,
           title: 'Social Inn',
           description: 'Scaled back end of housing app',
           details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
-          stack: 'PostgreSQL, Cassandra, Express, Amazon Web Services, k6, New Relic',
+          stack: ['PostgreSQL', 'Cassandra', 'Express', 'Amazon Web Services', 'k6', 'New Relic'],
           github: 'https://github.com/social-inn/Reviews',
           image: require('./images/bed.jpg'),
           video: require('./images/social-in-test.png')
         },
         {
-          id: 3,
+          id: 4,
           title: 'Connect Four',
           description: 'Single Page Connect Four Game',
           details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
-          stack: 'HTML, CSS, Javascript, React',
+          stack: ['HTML', 'CSS', 'Javascript', 'React'],
           github: 'https://github.com/matt-violet/connect4',
           image: require('./images/connect-four.png'),
           video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
         },
         {
-          id: 4,
+          id: 5,
           title: 'My Bolus',
           description: 'Insulin dose calculator for diabetics',
           details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
-          stack: 'HTML, CSS, Javascript, React, Express, MongoDB',
+          stack: ['HTML', 'CSS', 'Javascript', 'React', 'Express', 'MongoDB'],
           github: 'https://github.com/matt-violet/My-Bolus',
           image: require('./images/vial.jpg'),
           image2: require('./images/bolus-math.png'),

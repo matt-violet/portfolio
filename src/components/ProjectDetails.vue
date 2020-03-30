@@ -8,7 +8,7 @@
       <div v-if="!project.design" class="modal-wrapper">
         <div class="modal-container">
           <div class="video-div">
-            <iframe v-if='project.id!==2' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe v-if='project.title!=="Social Inn" && project.title!=="Segment Events"' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img v-else class='socialInnPic' width="660" height="415" :src='project.video'>
           </div>
           <div class="description-div">
@@ -17,8 +17,10 @@
             <div v-if='project.image2'>
               <img :src='project.image2' class='bolus-math'>
             </div>
-            <p class='stack'>{{ project.stack }}</p>
-            <a class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
+            <div  v-if='project.stack' class='stack-div'>
+              <p v-for='stack in project.stack' v-bind:key="stack" class='stack'>{{ stack }}</p>
+            </div>
+            <a v-if='project.github' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
           </div>
         </div>
       </div>
@@ -51,6 +53,16 @@ export default {
   }
   .project-title {
     font-size: 28px;
+  }
+  .stack-div {
+    margin-bottom: 10px;
+  }
+  .stack {
+    display: inline-block;
+    background: lightgrey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
   }
   .details, .stack, .github-link {
     font-size: 16px;

@@ -80,7 +80,7 @@ export default {
   }
   .menu-text {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     height: 100%;
     margin: 0;
     transition: all .2s ease-in-out;
