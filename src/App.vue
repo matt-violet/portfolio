@@ -50,8 +50,8 @@ export default {
         {
           id: 1,
           title: 'Segment Events',
-          description: 'Implemented tracking of user event data',
-          details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding to drive analytics, A/B testing, and automated marketing campaigns.',
+          description: 'Implemented collection of user event data',
+          details: 'As an intern at Seasoned I integrated Segment events (from Segment\'s Customer Data Platform) to collect data about admin onboarding events. This information is now used by the Data and Marketing teams to drive analytics, A/B testing, and automated marketing campaigns.',
           stack: ['Javavscript', 'React', 'Segment Library'],
           github: '',
           image: require('./images/segment.png'),
@@ -59,6 +59,16 @@ export default {
         },
         {
           id: 2,
+          title: 'Internal Tool',
+          description: 'Built components for Customer Service tool',
+          details: 'As an intern at Seasoned I developed reusable components for an internal tool for the Customer Service team. In addition to building stylized menus and cards for admins, job seekers, and stores, I implemented GraphQL queries to fetch relevant data from a Postgres database.',
+          stack: ['Javavscript', 'Vue', 'Vuetify', 'GraphQL', 'PostgreSQL'],
+          github: '',
+          image: require('./images/vuetify.png'),
+          video:require('./images/vuetify.png')
+        },
+        {
+          id: 3,
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
           details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
@@ -68,7 +78,7 @@ export default {
           video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
         },
         {
-          id: 3,
+          id: 4,
           title: 'Social Inn',
           description: 'Scaled back end of housing app',
           details: 'Scaled the back end of a room reviews app to handle 10 million records and 100 requests per second. Benchmarked performance of a SQL vs. NoSQL database with 10M records to determine optimal database. Deployed app on AWS and stress tested server to identify performance bottlenecks.',
@@ -78,7 +88,7 @@ export default {
           video: require('./images/social-in-test.png')
         },
         {
-          id: 4,
+          id: 5,
           title: 'Connect Four',
           description: 'Single Page Connect Four Game',
           details: 'Developed game in which two players alternately place pieces into a 7x7 board trying to place 4 adjacent pieces. Implemented animations and dynamically rendering board, game status, and rematch button.',
@@ -88,7 +98,7 @@ export default {
           video: 'https://www.youtube.com/embed/AM0sI6ZqEQw'
         },
         {
-          id: 5,
+          id: 6,
           title: 'My Bolus',
           description: 'Insulin dose calculator for diabetics',
           details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',

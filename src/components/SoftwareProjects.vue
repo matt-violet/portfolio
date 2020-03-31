@@ -9,7 +9,7 @@
         <h3 class="project-title">{{ project.title }}</h3>
         <p>{{ project.description }}</p>
         <button class='details-btn' v-on:click="$emit('viewProjectDetails', project)">
-          View Details
+          DETAILS
         </button>
       </div>
     </div>
@@ -86,19 +86,23 @@ export default {
   /* ---------------------------------------------------------------------------- */
   .project-description {
     padding: 10px;
+    border-top: 1px solid grey;
   }
   .details-btn {
-    margin: 15px 0 0 0;
-    padding: 7px;
+    margin: 15px 0 5px 0;
+    padding: 7px 10px;
     font-size: 12px;
-    background: linear-gradient(to top, white, white, rgb(225, 225, 225));
+    font-weight: 600;
+    color: darkslategrey;
+    background: rgb(225, 225, 225);
     border-radius: 5px;
-    /* border: .5px solid gray; */
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.7s infinite;
+    transition: all .3s;
   }
   .details-btn:hover {
     cursor: pointer;
-    background: linear-gradient(to bottom, white, white, rgb(225, 225, 225));
+    background: darkslategrey;
+    color: lightgrey;
   }
   @keyframes pulse
   {

@@ -8,8 +8,8 @@
       <div v-if="!project.design" class="modal-wrapper">
         <div class="modal-container">
           <div class="video-div">
-            <iframe v-if='project.title!=="Social Inn" && project.title!=="Segment Events"' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <img v-else class='socialInnPic' width="660" height="415" :src='project.video'>
+            <iframe v-if='project.title!=="Social Inn" && project.title!=="Segment Events" && project.title!=="Internal Tool"' class="video" max-width="100%" height="100%" :src="project.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img v-else class='project-img' width="660" height="415" :src='project.video'>
           </div>
           <div class="description-div">
             <h1 class='project-title'>{{ project.title }}</h1>
@@ -78,6 +78,7 @@ export default {
   .video-div {
     height: 60%;
     text-align: center;
+    vertical-align: middle;
     overflow: hidden;
   }
   .video {
@@ -87,12 +88,13 @@ export default {
   .img {
     width: 100%;
   }
-  .socialInnPic {
+  .project-img {
     max-height: 100%;
-    max-width: 100%;
+    width: 100%;
   }
   .description-div {
     padding: 20px 40px 40px 40px;
+    border-top: 1px solid;
   }
   .modal-mask {
     position: fixed;
