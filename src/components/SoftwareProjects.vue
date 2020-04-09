@@ -54,6 +54,7 @@ export default {
   .project {
     width: 295px;
     margin: 10px;
+    border: 1px solid grey;
     color: rgb(160, 160, 160);
     display: inline-block;
     text-align: center;
