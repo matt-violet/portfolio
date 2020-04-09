@@ -37,12 +37,11 @@ export default {
 <style scoped>
   h2 {
     margin: 0;
-    color: black;
+    /* color: black; */
   }
   p {
     font-size: 14px;
     line-height: normal;
-    color: grey;
     margin: 0;
   }
   .outer-wrapper {
@@ -55,7 +54,7 @@ export default {
   .project {
     width: 295px;
     margin: 10px;
-    border: 1px solid grey;
+    color: rgb(160, 160, 160);
     display: inline-block;
     text-align: center;
     border-radius: 10px;
@@ -67,11 +66,12 @@ export default {
   }
   .project-title {
     margin: 0 0 5px 0;
+    color: white;
   }
   /* ------------------------------ DIMMER EFFECT ------------------------------- */
   .dimmer {
     background: rgba(255, 255, 255, 0.9);
-    height: 265px;
+    height: 297px;
     width: 295px;
     position: absolute;
     display: none;
@@ -87,6 +87,7 @@ export default {
   .project-description {
     padding: 10px;
     border-top: 1px solid grey;
+    background: rgb(54, 54, 54);
   }
   .details-btn {
     margin: 15px 0 5px 0;
@@ -94,7 +95,7 @@ export default {
     font-size: 12px;
     font-weight: 600;
     color: darkslategrey;
-    background: rgb(225, 225, 225);
+    background: white;
     border-radius: 5px;
     animation: pulse 1.7s infinite;
     transition: all .3s;
@@ -102,7 +103,7 @@ export default {
   .details-btn:hover {
     cursor: pointer;
     background: darkslategrey;
-    color: lightgrey;
+    color: white;
   }
   @keyframes pulse
   {

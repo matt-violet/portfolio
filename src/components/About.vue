@@ -138,7 +138,7 @@ export default {
     background-color: black;
   }
   .overlay:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   @media (max-width: 1100px) {
     .about-component {

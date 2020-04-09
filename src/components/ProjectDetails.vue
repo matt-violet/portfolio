@@ -20,7 +20,8 @@
             <div  v-if='project.stack' class='stack-div'>
               <p v-for='stack in project.stack' v-bind:key="stack" class='stack'>{{ stack }}</p>
             </div>
-            <a v-if='project.github' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
+            <a v-if='project.github.length !== 2' class='github-link' :href="project.github" target="_blank">GitHub Repository</a>
+            <a v-else v-for='link of project.github' v-bind:key="link" class='github-link-2' :href="link.link" target="_blank">{{link.repo}}</a>
           </div>
         </div>
       </div>
@@ -74,6 +75,10 @@ export default {
   }
   .github-link:hover {
     cursor: pointer;
+  }
+  .github-link-2 {
+    display: block;
+    margin: 0 0 10px 0;
   }
   .video-div {
     height: 60%;
@@ -149,11 +154,14 @@ export default {
   .modal-close-button {
     float: left;
     position: absolute;
-    font-size: 80px;
+    font-size: 70px;
+    font-weight: 300;
     margin: 0px 40px;
-    color: white;
+    color: rgb(139, 139, 139);
   }
   .modal-close-button:hover {
+    transition: .5s;
+    color: white;
     cursor: pointer;
   }
    .bolus-math {

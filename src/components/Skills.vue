@@ -14,9 +14,9 @@
             <div class="software-bullets">
               <ul>
                 <li>2+ years of combined coursework / personal projects / professional experience</li>
-                <li>5 months working as an intern on a team of software engineers</li>
+                <li>5 months working in a professional codebase as a Software Engineer Intern</li>
                 <li>Completed 800+ hours of advanced Computer Science curriculum modeling today’s software engineering industry</li>
-                <li>Self taught skills such as HTML, CSS, and Vue.js</li>
+                <li>Self taught skills such as HTML, CSS, and Vue</li>
                 <li>Active contributer on GitHub:</li>
               </ul>
             </div>

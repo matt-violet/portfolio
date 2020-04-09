@@ -76,18 +76,17 @@ export default {
   .menu-option {
     animation-duration: 1s;
     display: inline-block;
-    margin: 0 24px 0 0;
+    margin: 0 28px 0 0;
   }
   .menu-text {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     height: 100%;
     margin: 0;
     transition: all .2s ease-in-out;
   }
   .menu-text:hover {
     cursor: pointer;
-    transform: scale(1.1);
   }
   .currentPg {
     color: white;
