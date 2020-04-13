@@ -1,6 +1,6 @@
 <template>
   <div class="animatedParent" v-if='projects[currentSlide]'>
-      <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
+    <img class="arrow back" src="../images/left-arrow.png" v-on:click="handleBack">
     <div class="carousel animated pulse">
       <div class="track-container">
         <div class='video-div'>
@@ -19,9 +19,13 @@
           <p>{{ projects[currentSlide].description }}</p>
         </div>
         <div class="carousel-nav">
-          <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
-          <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
-          <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
+          <button
+            v-for="(project, i) of projects.length"
+            v-bind:key="i"
+            class="carousel-indicator"
+            :class="currentSlide === i ? 'current-slide' : ''"
+            v-on:click="handleNavIndicatorClick(i)"
+        />
         </div>
       </div>
     </div>
@@ -46,7 +50,7 @@ export default {
   },
   methods: {
     handleNext: function() {
-      if (this.currentSlide < 2) {
+      if (this.currentSlide < this.projects.length - 1) {
         this.currentSlide++
       }
     },
