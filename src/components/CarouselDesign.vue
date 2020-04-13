@@ -15,14 +15,13 @@
     </div>
     <img class="arrow next" src="../images/right-arrow.png" v-on:click="handleNext">
     <div class="carousel-nav">
-      <button class="carousel-indicator" :class="currentSlide === 0 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(0)"/>
-      <button class="carousel-indicator" :class="currentSlide === 1 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(1)"/>
-      <button class="carousel-indicator" :class="currentSlide === 2 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(2)"/>
-      <button class="carousel-indicator" :class="currentSlide === 3 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(3)"/>
-      <button class="carousel-indicator" :class="currentSlide === 4 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(4)"/>
-      <button class="carousel-indicator" :class="currentSlide === 5 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(5)"/>
-      <button class="carousel-indicator" :class="currentSlide === 6 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(6)"/>
-      <button class="carousel-indicator" :class="currentSlide === 7 ? 'current-slide' : ''" v-on:click="handleNavIndicatorClick(7)"/>
+      <button
+        v-for="(project, i) of projects"
+        v-bind:key="i"
+        class="carousel-indicator"
+        :class="currentSlide === i ? 'current-slide' : ''"
+        v-on:click="handleNavIndicatorClick(i)"
+      />
     </div>
   </div>
 </template>
@@ -45,7 +44,7 @@ export default {
   },
   methods: {
     handleNext: function() {
-      if (this.currentSlide < 7) {
+      if (this.currentSlide < this.designProjects.length - 1) {
         this.currentSlide++
       }
     },
@@ -125,9 +124,8 @@ export default {
     text-align: center;
   }
   .carousel-indicator {
-    background: white;
+    background: rgb(226, 226, 226);
     height: 15px;
-    border: 1px solid;
     border-radius: 50%;
     margin: 5px;
   }
@@ -135,7 +133,7 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: grey;
+    background: black;
   }
   @media (max-width: 800px) {
     .track-container {

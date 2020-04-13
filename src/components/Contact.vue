@@ -10,7 +10,7 @@
             Need a developer?
           </h1>
           <p class="contact-text-2">
-            I'm ready and available.
+            Let's chat.
           </p>
         </div>
       </div>

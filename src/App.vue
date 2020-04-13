@@ -50,8 +50,8 @@ export default {
         {
           id: 1,
           title: 'Kwik-e-Mart',
-          description: 'Full stack mock e-commerce website',
-          details: 'Welcome to Kwik-e-Mart, a full stack CRUD application with RESTful API architecture. Users can filter and select groceries for their shopping cart, add a payment method, and edit / confirm their order before checkout.',
+          description: 'Mock online grocery store application',
+          details: 'Welcome to Kwik-e-Mart, a full stack CRUD application using RESTful API architecture. Users can filter and select groceries for their shopping cart, add a payment method, and edit / confirm their order before checkout.',
           stack: ['Vue', 'Vue Router', 'Node', 'Express', 'Axios', 'Sequelize', 'PostgreSQL'],
           github: [
             {
@@ -91,7 +91,7 @@ export default {
           title: 'Open Restaurant',
           description: 'Photos module for restaurant app',
           details: 'Built responsive image gallery with modal view showing photo details, flagging options, and intuitive navigation. Designed database schema to optimize loading speeds by hosting images in AWS S3 buckets.',
-          stack: ['HTML', 'CSS (grid, media query)', 'Javascript', 'React', 'Styled-Components', 'Express', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
+          stack: ['HTML', 'CSS (grid, media query)', 'Javascript', 'React', 'Styled-Components', 'Express', 'Ajax', 'MongoDB', 'Faker', 'Jest', 'Enzyme'],
           github: 'https://github.com/krummurk/photos-module',
           image: require('./images/restaurant.jpg'),
           video: 'https://www.youtube.com/embed/LZBo0UIRxvI'
@@ -120,7 +120,7 @@ export default {
           id: 7,
           title: 'My Bolus',
           description: 'Insulin dose calculator for diabetics',
-          details: 'Developed an app to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
+          details: 'Developed a full stack application to simulate modern insulin pump dosage algorithms based on user’s meal choice, current blood glucose (bg) level, insulin-to-carb ratio, bg correction factor, future exercise plans, and other factors. Below is a theoretical example of the kind of mental calculations insulin users must perform ahead of every meal.',
           stack: ['HTML', 'CSS', 'Javascript', 'React', 'Express', 'MongoDB'],
           github: 'https://github.com/matt-violet/My-Bolus',
           image: require('./images/vial.jpg'),
@@ -133,6 +133,16 @@ export default {
         {
           image: require('./images/Symposium2019.jpg'),
           description: 'Event Flyer, 2019',
+          design: true
+        },
+        {
+          image: require('./images/stories-from-the-threshold.jpg'),
+          description: 'Event Flyer, 2018',
+          design: true
+        },
+        {
+          image: require('./images/thinking-out-loud.jpg'),
+          description: 'Event Flyer, 2018',
           design: true
         },
         {

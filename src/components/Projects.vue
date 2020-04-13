@@ -23,7 +23,7 @@
             <h1 class='section-title'>Software Projects</h1>
           </div>
         </div>
-        <div class="software-projects" data-aos="zoom-in" data-aos-offset='300'>
+        <div class="software-projects" data-aos="zoom-in">
           <SoftwareProjects
             :softwareProjects="softwareProjects"
             @viewProjectDetails="viewProjDetails"

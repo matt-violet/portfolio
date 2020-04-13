@@ -124,10 +124,9 @@ export default {
     position : relative;
   }
   .carousel-indicator {
-    background: white;
+    background: rgb(226, 226, 226);
     width: 15px;
     height: 15px;
-    border: 1px solid;
     border-radius: 50%;
     margin: 5px;
   }
@@ -135,7 +134,7 @@ export default {
     cursor: pointer;
   }
   .carousel-indicator.current-slide {
-    background: darkslategrey;
+    background: black;
   }
   @media (max-width: 800px) {
     .carousel {
