@@ -5,13 +5,13 @@
       <h1 class='about-header'>My Story</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
         <p class='bio-text'>
-          From Oakland, CA and a graduate of UC Davis, I dedicated the first chapter of my career to non-profit marketing / communications, where I gained exposure to HTML, WordPress, and SEO maintaining websites.
+          I'm a multitalented software engineer with roots in the non-profit world. I specialize in designing and developing full stack web applications.
         </p>
         <p class='bio-text'>
-          I developed a stronger interest in programming in 2015. Shortly after my type one diabetes diagnosis I got my first "artificial pancreas", two electronic medical devices that worked together in a hybrid closed-loop system to manage my blood sugar levels. I was -- and still am -- fascinated by these devices. I'm equally fascinated by the "hacker communities" that decided <a href='https://openaps.org/' target='blank'>#WeAreNotWaiting</a> and paved the way to make this technology as safe and widely available as possible, years before the first commercial closed loops sytems. Details on the evolution of the "artificial pancreas" and my journey into coding are included in my informal presentation <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>Tech Innovation and T1D Care</a>.
+          My passion for programming comes from the role technology plays in my daily health, as a self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a> who has managed his type one diabetes with an "artificial pancreas" since 2016. With my health now literally tied to algorithms, I'm committed to learning and developing applications that have the potential to help others as much as these devices have helped me.
         </p>
         <p class='bio-text'>
-          With my health now literally tied to algorithms, I'm steadily reminded of the limitless possibilities of code and inspired to be the best developer I can be.
+          When not coding I can be found making music, Photoshop creations, and social distancing in my hometown of Oakland, CA.
         </p>
       </div>
     </div>

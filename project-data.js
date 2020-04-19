@@ -124,7 +124,12 @@ export const designProjects = [
     design: true
   },
   {
-    image: require('./src/images/HLTW.png'),
+    image: require('./src/images/city-of-dreams-flyer.jpg'),
+    description: 'City of Dreams brochure, 2012',
+    design: true
+  },
+  {
+    image: require('./src/images/HLTW.jpg'),
     description: 'Designed page layouts for the book "Hunter Leads the Way", 2017',
     design: true
   },

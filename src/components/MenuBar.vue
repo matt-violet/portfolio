@@ -2,13 +2,13 @@
   <div class="menu-wrapper">
     <div class="centered-menu-div">
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
-          ABOUT
+        <p v-on:click="$emit('onMenuClick', 'projects')" class='menu-text' :class="currentPage === 'projects' ? 'currentPg' : ''">
+          WORK
         </p>
       </div>
       <div class="menu-option">
-        <p v-on:click="$emit('onMenuClick', 'projects')" class='menu-text' :class="currentPage === 'projects' ? 'currentPg' : ''">
-          PROJECTS
+        <p v-on:click="$emit('onMenuClick', 'about')" class='menu-text' :class="currentPage === 'about' ? 'currentPg' : ''">
+          ABOUT
         </p>
       </div>
       <div class="menu-option">
@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      currentPage: 'about',
+      currentPage: 'projects',
       showMenu: true,
       lastScrollPosition: 0,
     }
@@ -79,7 +79,7 @@ export default {
     margin: 0 28px 0 0;
   }
   .menu-text {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     height: 100%;
     margin: 0;

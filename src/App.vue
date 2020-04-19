@@ -42,8 +42,8 @@ export default {
   data() {
     return {
       currentPg: '',
-      about: true,
-      projects: false,
+      about: false,
+      projects: true,
       contact: false,
       projectDetails: false,
       featuredProject: {},

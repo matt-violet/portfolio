@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="right">
-        <img src="../images/matt-oak-blank.png" class="right-side-img" data-aos="fade-up" data-aos-delay='300'>
+        <img src="../images/matt-violet.png" class="right-side-img" data-aos="fade-up" data-aos-delay='300'>
       </div>
     </div>
     <div class="projects-component" data-aos="flip-up">
@@ -202,7 +202,7 @@ export default {
     overflow: hidden;
   }
   .right-side-img {
-    height: 85%;
+    height: 80%;
     margin: 0 auto 0 30px;
     position: absolute;
     bottom: 0;

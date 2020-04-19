@@ -1,7 +1,7 @@
 <template>
   <div class="home-component" id="home">
     <div class="left">
-      <img src="../images/matt-violet.png" class="left-side-img" data-aos="fade-up" data-aos-delay='300'>
+      <img src="../images/matt-oak-blank.png" class="left-side-img" data-aos="fade-up" data-aos-delay='300'>
     </div>
     <div class="right">
       <div class="right-side-text" data-aos="fade-left" data-aos-delay='300'>
@@ -44,10 +44,10 @@ export default {
     overflow: hidden;
   }
   .left-side-img {
-    height: 80%;
+    height: 100%;
     position: absolute;
     bottom: 0;
-    right: 0px;
+    right: 20px;
   }
   .right-side-text {
     height: 120px;
