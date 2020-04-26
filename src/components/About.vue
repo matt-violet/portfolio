@@ -5,13 +5,15 @@
       <h1 class='about-header'>My Story</h1>
       <div class="about-me" data-aos="zoom-in" data-aos-delay='100'>
         <p class='bio-text'>
-          I'm a multitalented software engineer with roots in the non-profit world. I specialize in designing and developing full stack web applications.
+          <strong>I never could have anticipated my journey into software development,</strong> but now I can't see myself doing anything else.
         </p>
         <p class='bio-text'>
-          My passion for programming comes from the role technology plays in my daily health, as a self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a> who has managed his type one diabetes with an "artificial pancreas" since 2016. With my health now literally tied to algorithms, I'm committed to learning and developing applications that have the potential to help others as much as these devices have helped me.
+          Although my professional path has taken many twists and turns — from tutoring students of East Oakland's underserved schools, to empowering Burmese migrants in Thailand, to establishing a new communications department for an activist non-profit in Berkeley — <strong>I've always followed my passion</strong> to help others and solve problems.</p>
+        <p class='bio-text'>
+          My passion for programming comes from the role software plays in my personal health, as a <strong>self-identified <a href='https://drive.google.com/file/d/1D8tp35PoCCbMzuWLTPHFI5oGN7nFhIQ1/view?usp=sharing' target='_blank'>human cyborg</a> who has used an "artificial pancreas" to manage his type one diabetes since 2016.</strong> With my daily well-being now literally tied to algorithms, I'm invested in learning and developing applications that have the potential to help others as much as these devices have helped me.
         </p>
         <p class='bio-text'>
-          When not coding I can be found making music, Photoshop creations, and social distancing in my hometown of Oakland, CA.
+          When not coding I can be found DJing, making Photoshop creations, and social distancing in my hometown of Oakland, CA.
         </p>
       </div>
     </div>
